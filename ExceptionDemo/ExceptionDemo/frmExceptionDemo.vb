@@ -9,8 +9,12 @@ Public Class frmExceptionDemo
         Dim decAnswer As Decimal
 
         ' Get and convert
-        decFirstNum = Convert.ToDecimal(txtNumOne.Text)
-        decSecondNum = Convert.ToDecimal(txtNumTwo.Text)
+        Try
+            decFirstNum = Convert.ToDecimal(txtNumOne.Text)
+            decSecondNum = Convert.ToDecimal(txtNumTwo.Text)
+        Catch ex As OverflowException
+            MsgBox("The number was too large.")
+        End Try
 
         ' Computations
         Try

@@ -22,20 +22,20 @@ Partial Class frmExceptionDemo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.bynShowOutput = New System.Windows.Forms.Button()
+        Me.btnShowOutput = New System.Windows.Forms.Button()
         Me.lblOutput = New System.Windows.Forms.Label()
         Me.txtNumOne = New System.Windows.Forms.TextBox()
         Me.txtNumTwo = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'bynShowOutput
+        'btnShowOutput
         '
-        Me.bynShowOutput.Location = New System.Drawing.Point(80, 59)
-        Me.bynShowOutput.Name = "bynShowOutput"
-        Me.bynShowOutput.Size = New System.Drawing.Size(75, 23)
-        Me.bynShowOutput.TabIndex = 0
-        Me.bynShowOutput.Text = "Button1"
-        Me.bynShowOutput.UseVisualStyleBackColor = True
+        Me.btnShowOutput.Location = New System.Drawing.Point(80, 59)
+        Me.btnShowOutput.Name = "btnShowOutput"
+        Me.btnShowOutput.Size = New System.Drawing.Size(75, 23)
+        Me.btnShowOutput.TabIndex = 0
+        Me.btnShowOutput.Text = "Show Output"
+        Me.btnShowOutput.UseVisualStyleBackColor = True
         '
         'lblOutput
         '
@@ -68,14 +68,14 @@ Partial Class frmExceptionDemo
         Me.Controls.Add(Me.txtNumTwo)
         Me.Controls.Add(Me.txtNumOne)
         Me.Controls.Add(Me.lblOutput)
-        Me.Controls.Add(Me.bynShowOutput)
+        Me.Controls.Add(Me.btnShowOutput)
         Me.Name = "frmExceptionDemo"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents bynShowOutput As System.Windows.Forms.Button
+    Friend WithEvents btnShowOutput As System.Windows.Forms.Button
     Friend WithEvents lblOutput As System.Windows.Forms.Label
     Friend WithEvents txtNumOne As System.Windows.Forms.TextBox
     Friend WithEvents txtNumTwo As System.Windows.Forms.TextBox
