@@ -68,17 +68,17 @@ Public Class frmCompareGasCost
                 decYearsOwned = 10
         End Select
 
-        decSUVCost = CalculateGasCost(decCostPerGallon, decMilesTraveled, decYearsOwned)
+        decSUVCost = CalculateGasCost(decCostPerGallon, decMilesTraveled, decYearsOwned, decSUVMPG)
         lblSUVCostOutput.Text = decSUVCost.ToString("C")
 
 
     End Sub
 
-    Private Function CalculateGasCost(ByVal decCostPerGallon As Decimal, ByVal decMilesTraveled As Decimal, ByVal decYearsOwned As Decimal) As Decimal
-        ' The equation is: Gast Cost * ((Miles Per Year * Years Owned) / MPG)
+    Private Function CalculateGasCost(ByVal decCostPerGallon As Decimal, ByVal decMilesTraveled As Decimal, ByVal decYearsOwned As Decimal, decSUBMPGOUT As Decimal) As Decimal
+        ' The equation is: Gas Cost * ((Miles Per Year * Years Owned) / MPG)
         Dim decTotal As Decimal
 
-        decTotal = decCostPerGallon * decMilesTraveled * decYearsOwned
+        decTotal = decCostPerGallon * decMilesTraveled * decYearsOwned * decSUBMPGOUT
 
         Return decTotal
 
