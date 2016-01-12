@@ -35,11 +35,11 @@ Partial Class frmCompareGasCost
         Me.lblSUVCostOutput = New System.Windows.Forms.Label()
         Me.lblCompactCarCostOutput = New System.Windows.Forms.Label()
         Me.lblDifferenceOutput = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtMilesTraveled = New System.Windows.Forms.TextBox()
         Me.txtCostPerGallon = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.txtSUVMPG = New System.Windows.Forms.TextBox()
+        Me.txtCompactMPG = New System.Windows.Forms.TextBox()
+        Me.cboYearsOwned = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lblCostPerGallon
@@ -173,12 +173,12 @@ Partial Class frmCompareGasCost
         Me.lblDifferenceOutput.TabIndex = 11
         Me.lblDifferenceOutput.Text = "$0.00"
         '
-        'TextBox1
+        'txtMilesTraveled
         '
-        Me.TextBox1.Location = New System.Drawing.Point(442, 29)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(150, 20)
-        Me.TextBox1.TabIndex = 12
+        Me.txtMilesTraveled.Location = New System.Drawing.Point(442, 29)
+        Me.txtMilesTraveled.Name = "txtMilesTraveled"
+        Me.txtMilesTraveled.Size = New System.Drawing.Size(150, 20)
+        Me.txtMilesTraveled.TabIndex = 12
         '
         'txtCostPerGallon
         '
@@ -187,28 +187,28 @@ Partial Class frmCompareGasCost
         Me.txtCostPerGallon.Size = New System.Drawing.Size(150, 20)
         Me.txtCostPerGallon.TabIndex = 13
         '
-        'TextBox4
+        'txtSUVMPG
         '
-        Me.TextBox4.Location = New System.Drawing.Point(442, 74)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(150, 20)
-        Me.TextBox4.TabIndex = 15
+        Me.txtSUVMPG.Location = New System.Drawing.Point(442, 74)
+        Me.txtSUVMPG.Name = "txtSUVMPG"
+        Me.txtSUVMPG.Size = New System.Drawing.Size(150, 20)
+        Me.txtSUVMPG.TabIndex = 15
         '
-        'TextBox5
+        'txtCompactMPG
         '
-        Me.TextBox5.Location = New System.Drawing.Point(442, 96)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(150, 20)
-        Me.TextBox5.TabIndex = 16
+        Me.txtCompactMPG.Location = New System.Drawing.Point(442, 96)
+        Me.txtCompactMPG.Name = "txtCompactMPG"
+        Me.txtCompactMPG.Size = New System.Drawing.Size(150, 20)
+        Me.txtCompactMPG.TabIndex = 16
         '
-        'ComboBox1
+        'cboYearsOwned
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
-        Me.ComboBox1.Location = New System.Drawing.Point(442, 51)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(150, 21)
-        Me.ComboBox1.TabIndex = 17
+        Me.cboYearsOwned.FormattingEnabled = True
+        Me.cboYearsOwned.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
+        Me.cboYearsOwned.Location = New System.Drawing.Point(442, 51)
+        Me.cboYearsOwned.Name = "cboYearsOwned"
+        Me.cboYearsOwned.Size = New System.Drawing.Size(150, 21)
+        Me.cboYearsOwned.TabIndex = 17
         '
         'frmCompareGasCost
         '
@@ -216,11 +216,11 @@ Partial Class frmCompareGasCost
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(604, 276)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.cboYearsOwned)
+        Me.Controls.Add(Me.txtCompactMPG)
+        Me.Controls.Add(Me.txtSUVMPG)
         Me.Controls.Add(Me.txtCostPerGallon)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtMilesTraveled)
         Me.Controls.Add(Me.lblDifferenceOutput)
         Me.Controls.Add(Me.lblCompactCarCostOutput)
         Me.Controls.Add(Me.lblSUVCostOutput)
@@ -251,10 +251,10 @@ Partial Class frmCompareGasCost
     Friend WithEvents lblSUVCostOutput As System.Windows.Forms.Label
     Friend WithEvents lblCompactCarCostOutput As System.Windows.Forms.Label
     Friend WithEvents lblDifferenceOutput As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtMilesTraveled As System.Windows.Forms.TextBox
     Friend WithEvents txtCostPerGallon As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents txtSUVMPG As System.Windows.Forms.TextBox
+    Friend WithEvents txtCompactMPG As System.Windows.Forms.TextBox
+    Friend WithEvents cboYearsOwned As System.Windows.Forms.ComboBox
 
 End Class
