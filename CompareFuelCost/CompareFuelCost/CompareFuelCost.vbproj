@@ -72,11 +72,11 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="compareGasCost.vb">
+    <Compile Include="frmCompareGasCost.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="compareGasCost.Designer.vb">
-      <DependentUpon>compareGasCost.vb</DependentUpon>
+    <Compile Include="frmCompareGasCost.Designer.vb">
+      <DependentUpon>frmCompareGasCost.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -102,8 +102,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="compareGasCost.resx">
-      <DependentUpon>compareGasCost.vb</DependentUpon>
+    <EmbeddedResource Include="frmCompareGasCost.resx">
+      <DependentUpon>frmCompareGasCost.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

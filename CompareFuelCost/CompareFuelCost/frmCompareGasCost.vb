@@ -10,7 +10,7 @@
 
 Option Strict On
 
-Public Class compareGasCost
+Public Class frmCompareGasCost
 
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Hold splash screen for 10 seconds
@@ -20,10 +20,17 @@ Public Class compareGasCost
     Private Sub btnCalculateCost_Click(sender As System.Object, e As System.EventArgs) Handles btnCalculateCost.Click
         ' Variables
         Dim decCostPerGallon As Decimal
+        Dim strCostPerGallon As String
         Dim intMilesTraveled As Integer
-        Dim intVehiclesOwner As Integer
-        Dim decSUVMPG As Decimal
-        Dim decCompactMPG As Decimal
+        Dim intYearsOwned As Integer
+        Dim intSUVMPG As Integer
+        Dim intCompactMPG As Integer
+        Dim decSUVCost As Decimal
+        Dim decCompactCost As Decimal
+        Dim decDifference As Decimal
+
+        strCostPerGallon = txtCostPerGallon.Text
+        decCostPerGallon = Convert.ToDecimal(strCostPerGallon)
 
     End Sub
 End Class
