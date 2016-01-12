@@ -30,9 +30,9 @@ Partial Class frmExceptionDemo
         '
         'btnShowOutput
         '
-        Me.btnShowOutput.Location = New System.Drawing.Point(80, 59)
+        Me.btnShowOutput.Location = New System.Drawing.Point(12, 64)
         Me.btnShowOutput.Name = "btnShowOutput"
-        Me.btnShowOutput.Size = New System.Drawing.Size(75, 23)
+        Me.btnShowOutput.Size = New System.Drawing.Size(260, 23)
         Me.btnShowOutput.TabIndex = 0
         Me.btnShowOutput.Text = "Show Output"
         Me.btnShowOutput.UseVisualStyleBackColor = True
@@ -40,37 +40,37 @@ Partial Class frmExceptionDemo
         'lblOutput
         '
         Me.lblOutput.AutoSize = True
-        Me.lblOutput.Location = New System.Drawing.Point(80, 113)
+        Me.lblOutput.Location = New System.Drawing.Point(12, 90)
         Me.lblOutput.Name = "lblOutput"
         Me.lblOutput.Size = New System.Drawing.Size(39, 13)
         Me.lblOutput.TabIndex = 1
-        Me.lblOutput.Text = "Label1"
+        Me.lblOutput.Text = "Output"
         '
         'txtNumOne
         '
-        Me.txtNumOne.Location = New System.Drawing.Point(80, 153)
+        Me.txtNumOne.Location = New System.Drawing.Point(12, 12)
         Me.txtNumOne.Name = "txtNumOne"
-        Me.txtNumOne.Size = New System.Drawing.Size(100, 20)
+        Me.txtNumOne.Size = New System.Drawing.Size(260, 20)
         Me.txtNumOne.TabIndex = 2
         '
         'txtNumTwo
         '
-        Me.txtNumTwo.Location = New System.Drawing.Point(80, 180)
+        Me.txtNumTwo.Location = New System.Drawing.Point(12, 38)
         Me.txtNumTwo.Name = "txtNumTwo"
-        Me.txtNumTwo.Size = New System.Drawing.Size(100, 20)
+        Me.txtNumTwo.Size = New System.Drawing.Size(260, 20)
         Me.txtNumTwo.TabIndex = 3
         '
         'frmExceptionDemo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.ClientSize = New System.Drawing.Size(284, 112)
         Me.Controls.Add(Me.txtNumTwo)
         Me.Controls.Add(Me.txtNumOne)
         Me.Controls.Add(Me.lblOutput)
         Me.Controls.Add(Me.btnShowOutput)
         Me.Name = "frmExceptionDemo"
-        Me.Text = "Form1"
+        Me.Text = "Exception Demo"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
