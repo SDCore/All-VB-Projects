@@ -12,15 +12,14 @@ Public Class frmExceptionDemo
         Try
             decFirstNum = Convert.ToDecimal(txtNumOne.Text)
             decSecondNum = Convert.ToDecimal(txtNumTwo.Text)
-        Catch ex As OverflowException
-            MsgBox("The number was too large.")
-        End Try
-
-        ' Computations
-        Try
             decAnswer = decFirstNum / decSecondNum
         Catch ex As DivideByZeroException
             MsgBox("Attempting to divide by 0. Not allowed.")
+        Catch ex As OverflowException
+            MsgBox("The number was too large.")
+            txtNumOne.Clear()
+            txtNumTwo.Clear()
+            txtNumOne.Focus()
         End Try
 
         ' Output
