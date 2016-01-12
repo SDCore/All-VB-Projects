@@ -7,4 +7,4 @@ E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.vbp
 E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.exe
 E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.xml
 E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.pdb
-E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.compareGasCost.resources
+E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.frmCompareGasCost.resources
