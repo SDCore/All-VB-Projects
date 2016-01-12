@@ -1,0 +1,10 @@
+E:\Advanced VB\PizzaOrder\PizzaOrder\bin\Debug\PizzaOrder.exe
+E:\Advanced VB\PizzaOrder\PizzaOrder\bin\Debug\PizzaOrder.pdb
+E:\Advanced VB\PizzaOrder\PizzaOrder\bin\Debug\PizzaOrder.xml
+E:\Advanced VB\PizzaOrder\PizzaOrder\obj\x86\Debug\PizzaOrder.frmPizzaOrder.resources
+E:\Advanced VB\PizzaOrder\PizzaOrder\obj\x86\Debug\PizzaOrder.Resources.resources
+E:\Advanced VB\PizzaOrder\PizzaOrder\obj\x86\Debug\PizzaOrder.SplashScreen1.resources
+E:\Advanced VB\PizzaOrder\PizzaOrder\obj\x86\Debug\PizzaOrder.vbproj.GenerateResource.Cache
+E:\Advanced VB\PizzaOrder\PizzaOrder\obj\x86\Debug\PizzaOrder.exe
+E:\Advanced VB\PizzaOrder\PizzaOrder\obj\x86\Debug\PizzaOrder.xml
+E:\Advanced VB\PizzaOrder\PizzaOrder\obj\x86\Debug\PizzaOrder.pdb

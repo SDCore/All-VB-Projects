@@ -1,0 +1,18 @@
+C:\Users\160583\Documents\Advanced VB\Galaxy Hotel\GalaxyHotel\GalaxyHotel\bin\Debug\GalaxyHotel.exe
+C:\Users\160583\Documents\Advanced VB\Galaxy Hotel\GalaxyHotel\GalaxyHotel\bin\Debug\GalaxyHotel.pdb
+C:\Users\160583\Documents\Advanced VB\Galaxy Hotel\GalaxyHotel\GalaxyHotel\bin\Debug\GalaxyHotel.xml
+C:\Users\160583\Documents\Advanced VB\Galaxy Hotel\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.frmGalaxyHotel.resources
+C:\Users\160583\Documents\Advanced VB\Galaxy Hotel\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.Resources.resources
+C:\Users\160583\Documents\Advanced VB\Galaxy Hotel\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.vbproj.GenerateResource.Cache
+C:\Users\160583\Documents\Advanced VB\Galaxy Hotel\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.exe
+C:\Users\160583\Documents\Advanced VB\Galaxy Hotel\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.xml
+C:\Users\160583\Documents\Advanced VB\Galaxy Hotel\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.pdb
+E:\Advanced VB\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.exe
+E:\Advanced VB\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.xml
+E:\Advanced VB\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.pdb
+E:\Advanced VB\GalaxyHotel\GalaxyHotel\bin\Debug\GalaxyHotel.exe
+E:\Advanced VB\GalaxyHotel\GalaxyHotel\bin\Debug\GalaxyHotel.pdb
+E:\Advanced VB\GalaxyHotel\GalaxyHotel\bin\Debug\GalaxyHotel.xml
+E:\Advanced VB\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.frmGalaxyHotel.resources
+E:\Advanced VB\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.Resources.resources
+E:\Advanced VB\GalaxyHotel\GalaxyHotel\obj\x86\Debug\GalaxyHotel.vbproj.GenerateResource.Cache

@@ -1,0 +1,10 @@
+E:\Advanced VB\CompareFuelCost\CompareFuelCost\bin\Debug\CompareFuelCost.exe
+E:\Advanced VB\CompareFuelCost\CompareFuelCost\bin\Debug\CompareFuelCost.pdb
+E:\Advanced VB\CompareFuelCost\CompareFuelCost\bin\Debug\CompareFuelCost.xml
+E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.Resources.resources
+E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.applicationSplash.resources
+E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.vbproj.GenerateResource.Cache
+E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.exe
+E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.xml
+E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.pdb
+E:\Advanced VB\CompareFuelCost\CompareFuelCost\obj\x86\Debug\CompareFuelCost.compareGasCost.resources
