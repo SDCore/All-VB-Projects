@@ -31,6 +31,7 @@ Partial Class frmAluminumRecycling
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnCalculate = New System.Windows.Forms.Button()
         Me.txtAmount = New System.Windows.Forms.TextBox()
+        Me.lblOutput = New System.Windows.Forms.Label()
         CType(Me.picRecycling, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -119,11 +120,22 @@ Partial Class frmAluminumRecycling
         Me.txtAmount.Size = New System.Drawing.Size(187, 25)
         Me.txtAmount.TabIndex = 7
         '
+        'lblOutput
+        '
+        Me.lblOutput.AutoSize = True
+        Me.lblOutput.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOutput.Location = New System.Drawing.Point(30, 351)
+        Me.lblOutput.Name = "lblOutput"
+        Me.lblOutput.Size = New System.Drawing.Size(356, 21)
+        Me.lblOutput.TabIndex = 8
+        Me.lblOutput.Text = "0,000 cans need to be collected to reach your goal"
+        '
         'frmAluminumRecycling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(412, 354)
+        Me.ClientSize = New System.Drawing.Size(412, 383)
+        Me.Controls.Add(Me.lblOutput)
         Me.Controls.Add(Me.txtAmount)
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.btnClear)
@@ -147,5 +159,6 @@ Partial Class frmAluminumRecycling
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents btnCalculate As System.Windows.Forms.Button
     Friend WithEvents txtAmount As System.Windows.Forms.TextBox
+    Friend WithEvents lblOutput As System.Windows.Forms.Label
 
 End Class
