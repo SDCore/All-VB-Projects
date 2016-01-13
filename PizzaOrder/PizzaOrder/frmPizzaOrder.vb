@@ -1,5 +1,5 @@
 ﻿' Michael Voell
-' Pizza ORder
+' Pizza Order
 ' 1/13/2016
 ' Purpose: To learn about stuff.
 
