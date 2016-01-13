@@ -50,7 +50,7 @@ Public Class frmCompareGasCost
         Catch ex As FormatException
             MsgBox("Input was not a number. Not allowed.")
         Catch ex As Exception
-            MsgBox("General exception handled: Please see output for logs. Not allowed.")
+            MsgBox("General exception handled: Please see output for logs.")
         End Try
 
         ' Case Info
@@ -102,7 +102,7 @@ Public Class frmCompareGasCost
         Catch ex As FormatException
             MsgBox("Input was not a number. Not allowed.")
         Catch ex As Exception
-            MsgBox("General exception handled: Please see output for logs. Not allowed.")
+            MsgBox("General exception handled: Please see output for logs.")
         End Try
 
         ' Return decTotal to the original Sub for use in the calculation
