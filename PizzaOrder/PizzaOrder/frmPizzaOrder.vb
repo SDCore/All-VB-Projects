@@ -1,6 +1,14 @@
-﻿Option Strict On
+﻿' Michael Voell
+' Pizza ORder
+' 1/13/2016
+' Purpose: To learn about stuff.
+
+Option Strict On
 
 Public Class frmPizzaOrder
+
+    ' Global Variables
+    Private _decOrderTotal As Decimal
 
     Private Sub frmPizzaOrder_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Hold splash screen for 10 seconds
@@ -13,7 +21,6 @@ Public Class frmPizzaOrder
         Dim intQuantity As Integer
         Dim strQuantity As String
         Dim decSizePrice As Decimal
-        Dim decOrderTotal As Decimal
 
         ' Get Information & Convert
         intSizeSelected = cboSize.SelectedIndex
@@ -30,10 +37,12 @@ Public Class frmPizzaOrder
         End Select
 
         ' Calculations
-        decOrderTotal = CalculateOrderTotal(decSizePrice, intQuantity)
+        _decOrderTotal = CalculateOrderTotal(decSizePrice, intQuantity)
 
         ' Output
-        lblOutput.Text = decOrderTotal.ToString("C")
+        ShowOutput()
+
+        ' lblOutput.Text = decOrderTotal.ToString("C")
 
     End Sub
 
@@ -45,5 +54,12 @@ Public Class frmPizzaOrder
         Return decTotal
 
     End Function
+
+    Private Sub ShowOutput() ' Private is an access modifier; sub is the key word; Name of the procedure is the name; Inside () are the arguments recieved.
+
+
+        ' Output
+        lblOutput.Text = _decOrderTotal.ToString("C")
+    End Sub
 
 End Class
