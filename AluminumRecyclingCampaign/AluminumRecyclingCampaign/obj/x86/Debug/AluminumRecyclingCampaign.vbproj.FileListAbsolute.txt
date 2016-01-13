@@ -1,0 +1,9 @@
+E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\bin\Debug\AluminumRecyclingCampaign.exe
+E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\bin\Debug\AluminumRecyclingCampaign.pdb
+E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\bin\Debug\AluminumRecyclingCampaign.xml
+E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug\AluminumRecyclingCampaign.frmAluminumRecycling.resources
+E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug\AluminumRecyclingCampaign.Resources.resources
+E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug\AluminumRecyclingCampaign.vbproj.GenerateResource.Cache
+E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug\AluminumRecyclingCampaign.exe
+E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug\AluminumRecyclingCampaign.xml
+E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug\AluminumRecyclingCampaign.pdb
