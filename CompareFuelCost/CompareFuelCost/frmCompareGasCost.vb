@@ -3,8 +3,6 @@
 ' 1/11/2016
 ' Purpose: To compute the difference in cost between the cost of gas for an SUV and a Compact Car.
 
-' --TODO--
-
 Option Strict On
 
 Public Class frmCompareGasCost
