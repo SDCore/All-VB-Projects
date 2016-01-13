@@ -4,9 +4,6 @@
 ' Purpose: To compute the difference in cost between the cost of gas for an SUV and a Compact Car.
 
 ' --TODO--
-' Same function will be called twice to calculate the total fuel cost over the life for each car
-' Display total cost over the life of each cat and the difference between them
-' Validate input by using Try-Catch blocks
 
 Option Strict On
 
@@ -36,15 +33,27 @@ Public Class frmCompareGasCost
         ' Get / Convert Info
         intYearsOwned = cboYearsOwned.SelectedIndex
 
-        strCostPerGallon = txtCostPerGallon.Text
-        decCostPerGallon = Convert.ToDecimal(strCostPerGallon)
-        strMilesTraveled = txtMilesTraveled.Text
-        decMilesTraveled = Convert.ToDecimal(strMilesTraveled)
-        strSUVMPG = txtSUVMPG.Text
-        decSUVMPG = Convert.ToDecimal(strSUVMPG)
-        strCompactMPG = txtCompactMPG.Text
-        decCompactMPG = Convert.ToDecimal(strCompactMPG)
+        ' Catch Exceptions
+        Try
+            strCostPerGallon = txtCostPerGallon.Text
+            decCostPerGallon = Convert.ToDecimal(strCostPerGallon)
+            strMilesTraveled = txtMilesTraveled.Text
+            decMilesTraveled = Convert.ToDecimal(strMilesTraveled)
+            strSUVMPG = txtSUVMPG.Text
+            decSUVMPG = Convert.ToDecimal(strSUVMPG)
+            strCompactMPG = txtCompactMPG.Text
+            decCompactMPG = Convert.ToDecimal(strCompactMPG)
+        Catch ex As DivideByZeroException
+            MsgBox("Attempting to divide by 0. Not allowed.")
+        Catch ex As OverflowException
+            MsgBox("Overflow: Number too large. Not allowed.")
+        Catch ex As FormatException
+            MsgBox("Input was not a number. Not allowed.")
+        Catch ex As Exception
+            MsgBox("General exception handled: Please see output for logs. Not allowed.")
+        End Try
 
+        ' Case Info
         Select Case intYearsOwned
             Case 0
                 decYearsOwned = 1
@@ -77,15 +86,26 @@ Public Class frmCompareGasCost
         decDifference = decSUVCost - decCompactCost
         lblDifferenceOutput.Text = decDifference.ToString("C")
 
-
     End Sub
 
     Private Function CalculateGasCost(ByVal decCostPerGallon As Decimal, ByVal decMilesTraveled As Decimal, ByVal decYearsOwned As Decimal, decMPGOUT As Decimal) As Decimal
         ' The equation is: Gas Cost * ((Miles Per Year * Years Owned) / MPG)
         Dim decTotal As Decimal
 
-        decTotal = decCostPerGallon * ((decMilesTraveled * decYearsOwned) / decMPGOUT)
+        ' Catching more exceptions just in case they aren't caught in the initial convertion
+        Try
+            decTotal = decCostPerGallon * ((decMilesTraveled * decYearsOwned) / decMPGOUT)
+        Catch ex As DivideByZeroException
+            MsgBox("Attempting to divide by 0. Not allowed.")
+        Catch ex As OverflowException
+            MsgBox("Overflow: Number too large. Not allowed.")
+        Catch ex As FormatException
+            MsgBox("Input was not a number. Not allowed.")
+        Catch ex As Exception
+            MsgBox("General exception handled: Please see output for logs. Not allowed.")
+        End Try
 
+        ' Return decTotal to the original Sub for use in the calculation
         Return decTotal
 
     End Function
