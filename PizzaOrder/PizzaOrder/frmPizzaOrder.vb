@@ -37,7 +37,9 @@ Public Class frmPizzaOrder
         End Select
 
         ' Calculations
-        _decOrderTotal = CalculateOrderTotal(decSizePrice, intQuantity)
+        CalculateOrderTotal(decSizePrice, intQuantity)
+
+        ' _decOrderTotal = CalculateOrderTotal(decSizePrice, intQuantity)
 
         ' Output
         ShowOutput()
@@ -60,6 +62,10 @@ Public Class frmPizzaOrder
 
         ' Output
         lblOutput.Text = _decOrderTotal.ToString("C")
+    End Sub
+
+    Private Sub CalculateTotal(ByVal decSizeCost As Decimal, ByVal intNumOfPizzas As Integer)
+        lblOutput.Text = (decSizeCost * intNumOfPizzas).ToString("C")
     End Sub
 
 End Class

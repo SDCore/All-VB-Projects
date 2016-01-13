@@ -24,12 +24,12 @@ Partial Class frmPizzaOrder
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPizzaOrder))
         Me.pnlPanel = New System.Windows.Forms.Panel()
-        Me.cboSize = New System.Windows.Forms.ComboBox()
-        Me.lblSize = New System.Windows.Forms.Label()
-        Me.txtQuantity = New System.Windows.Forms.TextBox()
-        Me.lblQuantity = New System.Windows.Forms.Label()
-        Me.lblOutput = New System.Windows.Forms.Label()
         Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.lblOutput = New System.Windows.Forms.Label()
+        Me.lblQuantity = New System.Windows.Forms.Label()
+        Me.txtQuantity = New System.Windows.Forms.TextBox()
+        Me.lblSize = New System.Windows.Forms.Label()
+        Me.cboSize = New System.Windows.Forms.ComboBox()
         Me.pnlPanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -42,36 +42,30 @@ Partial Class frmPizzaOrder
         Me.pnlPanel.Controls.Add(Me.txtQuantity)
         Me.pnlPanel.Controls.Add(Me.lblSize)
         Me.pnlPanel.Controls.Add(Me.cboSize)
-        Me.pnlPanel.Location = New System.Drawing.Point(493, 12)
+        Me.pnlPanel.Location = New System.Drawing.Point(12, 12)
         Me.pnlPanel.Name = "pnlPanel"
-        Me.pnlPanel.Size = New System.Drawing.Size(200, 576)
+        Me.pnlPanel.Size = New System.Drawing.Size(227, 153)
         Me.pnlPanel.TabIndex = 0
         '
-        'cboSize
+        'btnSubmit
         '
-        Me.cboSize.FormattingEnabled = True
-        Me.cboSize.Items.AddRange(New Object() {"Small", "Medium", "Large"})
-        Me.cboSize.Location = New System.Drawing.Point(62, 3)
-        Me.cboSize.Name = "cboSize"
-        Me.cboSize.Size = New System.Drawing.Size(135, 21)
-        Me.cboSize.TabIndex = 1
+        Me.btnSubmit.Location = New System.Drawing.Point(3, 110)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(221, 40)
+        Me.btnSubmit.TabIndex = 6
+        Me.btnSubmit.Text = "Calculate Order"
+        Me.btnSubmit.UseVisualStyleBackColor = True
         '
-        'lblSize
+        'lblOutput
         '
-        Me.lblSize.AutoSize = True
-        Me.lblSize.ForeColor = System.Drawing.Color.White
-        Me.lblSize.Location = New System.Drawing.Point(3, 6)
-        Me.lblSize.Name = "lblSize"
-        Me.lblSize.Size = New System.Drawing.Size(55, 13)
-        Me.lblSize.TabIndex = 2
-        Me.lblSize.Text = "Pizza Size"
-        '
-        'txtQuantity
-        '
-        Me.txtQuantity.Location = New System.Drawing.Point(62, 30)
-        Me.txtQuantity.Name = "txtQuantity"
-        Me.txtQuantity.Size = New System.Drawing.Size(135, 20)
-        Me.txtQuantity.TabIndex = 3
+        Me.lblOutput.AutoSize = True
+        Me.lblOutput.BackColor = System.Drawing.Color.Black
+        Me.lblOutput.ForeColor = System.Drawing.Color.White
+        Me.lblOutput.Location = New System.Drawing.Point(93, 72)
+        Me.lblOutput.Name = "lblOutput"
+        Me.lblOutput.Size = New System.Drawing.Size(33, 13)
+        Me.lblOutput.TabIndex = 5
+        Me.lblOutput.Text = "Order"
         '
         'lblQuantity
         '
@@ -83,24 +77,31 @@ Partial Class frmPizzaOrder
         Me.lblQuantity.TabIndex = 4
         Me.lblQuantity.Text = "Quantity"
         '
-        'lblOutput
+        'txtQuantity
         '
-        Me.lblOutput.AutoSize = True
-        Me.lblOutput.ForeColor = System.Drawing.Color.White
-        Me.lblOutput.Location = New System.Drawing.Point(79, 77)
-        Me.lblOutput.Name = "lblOutput"
-        Me.lblOutput.Size = New System.Drawing.Size(33, 13)
-        Me.lblOutput.TabIndex = 5
-        Me.lblOutput.Text = "Order"
+        Me.txtQuantity.Location = New System.Drawing.Point(61, 26)
+        Me.txtQuantity.Name = "txtQuantity"
+        Me.txtQuantity.Size = New System.Drawing.Size(163, 20)
+        Me.txtQuantity.TabIndex = 3
         '
-        'btnSubmit
+        'lblSize
         '
-        Me.btnSubmit.Location = New System.Drawing.Point(6, 110)
-        Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(191, 23)
-        Me.btnSubmit.TabIndex = 6
-        Me.btnSubmit.Text = "Calculate Order"
-        Me.btnSubmit.UseVisualStyleBackColor = True
+        Me.lblSize.AutoSize = True
+        Me.lblSize.ForeColor = System.Drawing.Color.White
+        Me.lblSize.Location = New System.Drawing.Point(3, 6)
+        Me.lblSize.Name = "lblSize"
+        Me.lblSize.Size = New System.Drawing.Size(55, 13)
+        Me.lblSize.TabIndex = 2
+        Me.lblSize.Text = "Pizza Size"
+        '
+        'cboSize
+        '
+        Me.cboSize.FormattingEnabled = True
+        Me.cboSize.Items.AddRange(New Object() {"Small", "Medium", "Large"})
+        Me.cboSize.Location = New System.Drawing.Point(62, 3)
+        Me.cboSize.Name = "cboSize"
+        Me.cboSize.Size = New System.Drawing.Size(162, 21)
+        Me.cboSize.TabIndex = 1
         '
         'frmPizzaOrder
         '
@@ -108,7 +109,7 @@ Partial Class frmPizzaOrder
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(702, 600)
+        Me.ClientSize = New System.Drawing.Size(251, 177)
         Me.Controls.Add(Me.pnlPanel)
         Me.Name = "frmPizzaOrder"
         Me.Text = "Pizza Ordering System"
