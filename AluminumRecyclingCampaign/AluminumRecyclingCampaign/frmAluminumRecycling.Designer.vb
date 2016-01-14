@@ -27,7 +27,7 @@ Partial Class frmAluminumRecycling
         Me.picRecycling = New System.Windows.Forms.PictureBox()
         Me.lblRecyclingNeed = New System.Windows.Forms.Label()
         Me.cboRecyclingNeed = New System.Windows.Forms.ComboBox()
-        Me.lblGoalandCans = New System.Windows.Forms.Label()
+        Me.lblGoalAndCans = New System.Windows.Forms.Label()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnCalculate = New System.Windows.Forms.Button()
         Me.txtAmount = New System.Windows.Forms.TextBox()
@@ -79,15 +79,15 @@ Partial Class frmAluminumRecycling
         Me.cboRecyclingNeed.TabIndex = 3
         Me.cboRecyclingNeed.Text = "Select an Item"
         '
-        'lblGoalandCans
+        'lblGoalAndCans
         '
-        Me.lblGoalandCans.AutoSize = True
-        Me.lblGoalandCans.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGoalandCans.Location = New System.Drawing.Point(41, 264)
-        Me.lblGoalandCans.Name = "lblGoalandCans"
-        Me.lblGoalandCans.Size = New System.Drawing.Size(142, 17)
-        Me.lblGoalandCans.TabIndex = 4
-        Me.lblGoalandCans.Text = "Target Goal Amount: "
+        Me.lblGoalAndCans.AutoSize = True
+        Me.lblGoalAndCans.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGoalAndCans.Location = New System.Drawing.Point(41, 264)
+        Me.lblGoalAndCans.Name = "lblGoalAndCans"
+        Me.lblGoalAndCans.Size = New System.Drawing.Size(142, 17)
+        Me.lblGoalAndCans.TabIndex = 4
+        Me.lblGoalAndCans.Text = "Target Goal Amount: "
         '
         'btnClear
         '
@@ -152,7 +152,7 @@ Partial Class frmAluminumRecycling
         Me.Controls.Add(Me.txtAmount)
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.btnClear)
-        Me.Controls.Add(Me.lblGoalandCans)
+        Me.Controls.Add(Me.lblGoalAndCans)
         Me.Controls.Add(Me.cboRecyclingNeed)
         Me.Controls.Add(Me.lblRecyclingNeed)
         Me.Controls.Add(Me.picRecycling)
@@ -168,7 +168,7 @@ Partial Class frmAluminumRecycling
     Friend WithEvents picRecycling As System.Windows.Forms.PictureBox
     Friend WithEvents lblRecyclingNeed As System.Windows.Forms.Label
     Friend WithEvents cboRecyclingNeed As System.Windows.Forms.ComboBox
-    Friend WithEvents lblGoalandCans As System.Windows.Forms.Label
+    Friend WithEvents lblGoalAndCans As System.Windows.Forms.Label
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents btnCalculate As System.Windows.Forms.Button
     Friend WithEvents txtAmount As System.Windows.Forms.TextBox
