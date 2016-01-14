@@ -55,6 +55,20 @@ Public Class frmAluminumRecycling
     End Sub
 
     Private Sub btnCalculate_Click(sender As System.Object, e As System.EventArgs) Handles btnCalculate.Click
+        ' Variables
+        Dim intAmountWanted As Integer
+        Dim intRecyclingNeed As Integer
+        Dim decTargettotal As Decimal
+
+        ' Getting case information
+        intRecyclingNeed = cboRecyclingNeed.SelectedIndex
+        Select Case intRecyclingNeed
+            Case 0
+                FindTargetAmount(intAmountWanted)
+                lblOutput.Text = CStr(decTargettotal)
+            Case 1
+                AmountEarned()
+        End Select
 
     End Sub
 
@@ -63,12 +77,21 @@ Public Class frmAluminumRecycling
 
         ' Variables
         Dim intTargetTotal As Integer
+        Dim strAmountWanted As String
+        Dim decAmountWanted As Decimal
+        Dim decTargettotal As Decimal
+
+        ' Getting information from text box
+        strAmountWanted = txtAmount.Text.ToString()
+
+        ' Conversions
+        decAmountWanted = Convert.ToDecimal(strAmountWanted)
 
         ' Calculations
-
+        decTargettotal = CDec(24 * (decAmountWanted / 0.75))
 
         ' Return intTargetTotal to main sub
-        Return intTargetTotal
+        Return decTargettotal
 
     End Function
 

@@ -59,7 +59,6 @@ Public Class frmPizzaOrder
 
     Private Sub ShowOutput() ' Private is an access modifier; sub is the key word; Name of the procedure is the name; Inside () are the arguments recieved.
 
-
         ' Output
         lblOutput.Text = _decOrderTotal.ToString("C")
     End Sub
