@@ -58,5 +58,18 @@ Public Class frmAluminumRecycling
 
     End Sub
 
+    Private Function FindTargetAmount(ByVal intCanAmount As Integer) As Decimal
+        ' Equation will be: 24 * (Amount Wanted ($) / 0.75)
+
+        ' Variables
+        Dim intTargetTotal As Integer
+
+        ' Calculations
+
+
+        ' Return intTargetTotal to main sub
+        Return intTargetTotal
+
+    End Function
 
 End Class
