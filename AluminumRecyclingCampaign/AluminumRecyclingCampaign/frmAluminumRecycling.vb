@@ -63,15 +63,19 @@ Public Class frmAluminumRecycling
         Dim intAmountWanted As Integer
         Dim intRecyclingNeed As Integer
         Dim intTargetTotal As Integer
+        Dim intFindAmountTotal As Integer
 
         ' Getting case information
         intRecyclingNeed = cboRecyclingNeed.SelectedIndex
         Select Case intRecyclingNeed
             Case 0
+                CansNeeded()
                 intTargetTotal = CInt(FindTargetAmount(intAmountWanted))
                 lblOutput.Text = intTargetTotal.ToString()
             Case 1
                 AmountEarned()
+                intFindAmountTotal = CInt(FindAmountEarned(intAmountWanted))
+                lblOutput.Text = intFindAmountTotal.ToString("C")
         End Select
 
     End Sub
@@ -98,8 +102,26 @@ Public Class frmAluminumRecycling
 
     End Function
 
-    Private Function FindAmountEarned(ByVal intCashEarned As Integer) As Decimal
+    Private Function FindAmountEarned(ByVal intCansCollectedTotal As Integer) As Decimal
         ' Equation will be: 0.75 * (Cans Collected / 24)
+
+        ' Variables
+        Dim strCansCollected As String
+        Dim intCansCollected As Integer
+        Dim intCansTotal As Integer
+
+        ' Getting information for the string
+        strCansCollected = txtAmount.Text.ToString()
+
+        ' Conversions
+        intCansCollected = Convert.ToInt32(strCansCollected)
+
+        ' Calculations
+        intCansTotal = CInt(0.75 * (intCansCollected / 24))
+
+        ' Return intCansTotal to main sub
+        Return intCansTotal
+
     End Function
 
 End Class

@@ -95,10 +95,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SplashScreen1.Designer.vb">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    <Compile Include="splSplash.Designer.vb">
+      <DependentUpon>splSplash.vb</DependentUpon>
     </Compile>
-    <Compile Include="SplashScreen1.vb">
+    <Compile Include="splSplash.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -112,8 +112,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen1.resx">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    <EmbeddedResource Include="splSplash.resx">
+      <DependentUpon>splSplash.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -7,4 +7,4 @@ E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug
 E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug\AluminumRecyclingCampaign.exe
 E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug\AluminumRecyclingCampaign.xml
 E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug\AluminumRecyclingCampaign.pdb
-E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug\AluminumRecyclingCampaign.SplashScreen1.resources
+E:\Advanced VB\AluminumRecyclingCampaign\AluminumRecyclingCampaign\obj\x86\Debug\AluminumRecyclingCampaign.splSplash.resources
