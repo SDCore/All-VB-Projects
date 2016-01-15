@@ -15,6 +15,10 @@ Public Class frmAluminumRecycling
     Private _strGoalAmount As String = "Target Goal Amount: "
     Private _strCansCollected As String = "Cans Collected: "
 
+    Private Sub frmAluminumRecycling_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        Threading.Thread.Sleep(5000)
+    End Sub
+
     Private Sub btnClear_Click(sender As System.Object, e As System.EventArgs) Handles btnClear.Click
         cboRecyclingNeed.Text = "Select an Item"
         txtAmount.Text = ""
@@ -58,14 +62,14 @@ Public Class frmAluminumRecycling
         ' Variables
         Dim intAmountWanted As Integer
         Dim intRecyclingNeed As Integer
-        Dim decTargettotal As Decimal
+        Dim intTargetTotal As Integer
 
         ' Getting case information
         intRecyclingNeed = cboRecyclingNeed.SelectedIndex
         Select Case intRecyclingNeed
             Case 0
-                FindTargetAmount(intAmountWanted)
-                lblOutput.Text = CStr(decTargettotal)
+                intTargetTotal = CInt(FindTargetAmount(intAmountWanted))
+                lblOutput.Text = intTargetTotal.ToString()
             Case 1
                 AmountEarned()
         End Select
@@ -76,23 +80,26 @@ Public Class frmAluminumRecycling
         ' Equation will be: 24 * (Amount Wanted ($) / 0.75)
 
         ' Variables
-        Dim intTargetTotal As Integer
+        Dim intAmountWanted As Integer
         Dim strAmountWanted As String
-        Dim decAmountWanted As Decimal
-        Dim decTargettotal As Decimal
+        Dim intTargetTotal As Integer
 
         ' Getting information from text box
         strAmountWanted = txtAmount.Text.ToString()
 
         ' Conversions
-        decAmountWanted = Convert.ToDecimal(strAmountWanted)
+        intAmountWanted = Convert.ToInt32(strAmountWanted)
 
         ' Calculations
-        decTargettotal = CDec(24 * (decAmountWanted / 0.75))
+        intTargetTotal = CInt(24 * (intAmountWanted / 0.75))
 
         ' Return intTargetTotal to main sub
-        Return decTargettotal
+        Return intTargetTotal
 
+    End Function
+
+    Private Function FindAmountEarned(ByVal intCashEarned As Integer) As Decimal
+        ' Equation will be: 0.75 * (Cans Collected / 24)
     End Function
 
 End Class
