@@ -3,6 +3,9 @@
 ' 1/14/2016
 ' Purpose: Use subprocedures to calculate different types of equations.
 
+' --TODO--
+' 
+
 Option Strict On
 
 Public Class frmAluminumRecycling
@@ -16,7 +19,7 @@ Public Class frmAluminumRecycling
     Private _strCansCollected As String = "Cans Collected: "
 
     Private Sub frmAluminumRecycling_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        Threading.Thread.Sleep(5000)
+        Threading.Thread.Sleep(4000)
     End Sub
 
     Private Sub btnClear_Click(sender As System.Object, e As System.EventArgs) Handles btnClear.Click
@@ -88,14 +91,29 @@ Public Class frmAluminumRecycling
         Dim strAmountWanted As String
         Dim intTargetTotal As Integer
 
-        ' Getting information from text box
-        strAmountWanted = txtAmount.Text.ToString()
+        'Try / Catch exceptions
+        Try
+            ' Getting information from text box
+            strAmountWanted = txtAmount.Text.ToString()
 
-        ' Conversions
-        intAmountWanted = Convert.ToInt32(strAmountWanted)
+            ' Conversions
+            intAmountWanted = Convert.ToInt32(strAmountWanted)
 
-        ' Calculations
-        intTargetTotal = CInt(24 * (intAmountWanted / 0.75))
+            ' Calculations
+            intTargetTotal = CInt(24 * (intAmountWanted / 0.75))
+        Catch ex As DivideByZeroException
+            MsgBox("Attempting to divide by 0. Not allowed.")
+            CansNeeded()
+        Catch ex As OverflowException
+            MsgBox("The number was too large.")
+            CansNeeded()
+        Catch ex As FormatException
+            MsgBox("The input was not a number. Please use a number.")
+            CansNeeded()
+        Catch ex As Exception
+            MsgBox("General exception has been handled. Please try again.")
+            CansNeeded()
+        End Try
 
         ' Return intTargetTotal to main sub
         Return intTargetTotal
@@ -110,14 +128,29 @@ Public Class frmAluminumRecycling
         Dim intCansCollected As Integer
         Dim intCansTotal As Integer
 
-        ' Getting information for the string
-        strCansCollected = txtAmount.Text.ToString()
+        'Try / Catch exceptions
+        Try
+            ' Getting information for the string
+            strCansCollected = txtAmount.Text.ToString()
 
-        ' Conversions
-        intCansCollected = Convert.ToInt32(strCansCollected)
+            ' Conversions
+            intCansCollected = Convert.ToInt32(strCansCollected)
 
-        ' Calculations
-        intCansTotal = CInt(0.75 * (intCansCollected / 24))
+            ' Calculations
+            intCansTotal = CInt(0.75 * (intCansCollected / 24))
+        Catch ex As DivideByZeroException
+            MsgBox("Attempting to divide by 0. Not allowed.")
+            AmountEarned()
+        Catch ex As OverflowException
+            MsgBox("The number was too large.")
+            AmountEarned()
+        Catch ex As FormatException
+            MsgBox("The input was not a number. Please use a number.")
+            AmountEarned()
+        Catch ex As Exception
+            MsgBox("General exception has been handled. Please try again.")
+            AmountEarned()
+        End Try
 
         ' Return intCansTotal to main sub
         Return intCansTotal
