@@ -3,9 +3,6 @@
 ' 1/14/2016
 ' Purpose: Use subprocedures to calculate different types of equations.
 
-' --TODO--
-' 
-
 Option Strict On
 
 Public Class frmAluminumRecycling
