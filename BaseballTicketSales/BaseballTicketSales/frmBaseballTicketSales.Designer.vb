@@ -26,11 +26,11 @@ Partial Class frmBaseballTicketSales
         Me.imgBuyTickets = New System.Windows.Forms.PictureBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblTicketType = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboTicketType = New System.Windows.Forms.ComboBox()
         Me.lblNumberOfTickets = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtNumberOfTickets = New System.Windows.Forms.TextBox()
         Me.lblSeatType = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cboSeatType = New System.Windows.Forms.ComboBox()
         Me.btnComputeCost = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.lblTotalCost = New System.Windows.Forms.Label()
@@ -68,14 +68,15 @@ Partial Class frmBaseballTicketSales
         Me.lblTicketType.TabIndex = 2
         Me.lblTicketType.Text = "Select Type of Ticket:"
         '
-        'ComboBox1
+        'cboTicketType
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(153, 112)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(289, 21)
-        Me.ComboBox1.TabIndex = 3
-        Me.ComboBox1.Text = "Select an Item"
+        Me.cboTicketType.FormattingEnabled = True
+        Me.cboTicketType.Items.AddRange(New Object() {"Season Tickets", "Single Game Tickets"})
+        Me.cboTicketType.Location = New System.Drawing.Point(153, 112)
+        Me.cboTicketType.Name = "cboTicketType"
+        Me.cboTicketType.Size = New System.Drawing.Size(289, 21)
+        Me.cboTicketType.TabIndex = 3
+        Me.cboTicketType.Text = "Select an Item"
         '
         'lblNumberOfTickets
         '
@@ -86,13 +87,15 @@ Partial Class frmBaseballTicketSales
         Me.lblNumberOfTickets.Size = New System.Drawing.Size(118, 17)
         Me.lblNumberOfTickets.TabIndex = 4
         Me.lblNumberOfTickets.Text = "Number of Tickets:"
+        Me.lblNumberOfTickets.Visible = False
         '
-        'TextBox1
+        'txtNumberOfTickets
         '
-        Me.TextBox1.Location = New System.Drawing.Point(141, 143)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(301, 20)
-        Me.TextBox1.TabIndex = 5
+        Me.txtNumberOfTickets.Location = New System.Drawing.Point(141, 143)
+        Me.txtNumberOfTickets.Name = "txtNumberOfTickets"
+        Me.txtNumberOfTickets.Size = New System.Drawing.Size(301, 20)
+        Me.txtNumberOfTickets.TabIndex = 5
+        Me.txtNumberOfTickets.Visible = False
         '
         'lblSeatType
         '
@@ -103,15 +106,17 @@ Partial Class frmBaseballTicketSales
         Me.lblSeatType.Size = New System.Drawing.Size(68, 17)
         Me.lblSeatType.TabIndex = 6
         Me.lblSeatType.Text = "Seat Type:"
+        Me.lblSeatType.Visible = False
         '
-        'ComboBox2
+        'cboSeatType
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(91, 175)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(351, 21)
-        Me.ComboBox2.TabIndex = 7
-        Me.ComboBox2.Text = "Select an Item"
+        Me.cboSeatType.FormattingEnabled = True
+        Me.cboSeatType.Location = New System.Drawing.Point(91, 175)
+        Me.cboSeatType.Name = "cboSeatType"
+        Me.cboSeatType.Size = New System.Drawing.Size(351, 21)
+        Me.cboSeatType.TabIndex = 7
+        Me.cboSeatType.Text = "Select an Item"
+        Me.cboSeatType.Visible = False
         '
         'btnComputeCost
         '
@@ -125,6 +130,7 @@ Partial Class frmBaseballTicketSales
         Me.btnComputeCost.TabIndex = 8
         Me.btnComputeCost.Text = "Compute Ticket Cost"
         Me.btnComputeCost.UseVisualStyleBackColor = False
+        Me.btnComputeCost.Visible = False
         '
         'btnClear
         '
@@ -138,6 +144,7 @@ Partial Class frmBaseballTicketSales
         Me.btnClear.TabIndex = 9
         Me.btnClear.Text = "Clear Form"
         Me.btnClear.UseVisualStyleBackColor = False
+        Me.btnClear.Visible = False
         '
         'lblTotalCost
         '
@@ -148,6 +155,7 @@ Partial Class frmBaseballTicketSales
         Me.lblTotalCost.Size = New System.Drawing.Size(238, 17)
         Me.lblTotalCost.TabIndex = 10
         Me.lblTotalCost.Text = "Total cost of tickets purchased: $000.00"
+        Me.lblTotalCost.Visible = False
         '
         'frmBaseballTicketSales
         '
@@ -157,11 +165,11 @@ Partial Class frmBaseballTicketSales
         Me.Controls.Add(Me.lblTotalCost)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnComputeCost)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.cboSeatType)
         Me.Controls.Add(Me.lblSeatType)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtNumberOfTickets)
         Me.Controls.Add(Me.lblNumberOfTickets)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cboTicketType)
         Me.Controls.Add(Me.lblTicketType)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.imgBuyTickets)
@@ -175,11 +183,11 @@ Partial Class frmBaseballTicketSales
     Friend WithEvents imgBuyTickets As System.Windows.Forms.PictureBox
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents lblTicketType As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cboTicketType As System.Windows.Forms.ComboBox
     Friend WithEvents lblNumberOfTickets As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtNumberOfTickets As System.Windows.Forms.TextBox
     Friend WithEvents lblSeatType As System.Windows.Forms.Label
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents cboSeatType As System.Windows.Forms.ComboBox
     Friend WithEvents btnComputeCost As System.Windows.Forms.Button
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents lblTotalCost As System.Windows.Forms.Label
