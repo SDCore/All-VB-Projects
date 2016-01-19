@@ -3,6 +3,14 @@
 ' 1/19/2016
 ' Purpose: Compute the cost of baseball tickets depending on what the user chooses using sub procedures.
 
+' --TODO--
+' User selects item from Ticket Type combo box, nothing else is shown until something is chosen
+' User enters amount of tickets in textbox
+' User selects seat type in textbox
+' One of two functions will be called depending on seat/ticket type
+' Clear Form button
+' Try-Catch block to validate input
+
 Option Strict On
 
 Public Class frmBaseballTicketSales
@@ -54,5 +62,9 @@ Public Class frmBaseballTicketSales
         btnComputeCost.Visible = True
         btnClear.Visible = True
     End Sub
+
+    Private Function FindTicketAmount(ByVal intTicketAmount As Decimal, ByVal intNumberOfTickets As Decimal) As Decimal
+
+    End Function
 
 End Class
