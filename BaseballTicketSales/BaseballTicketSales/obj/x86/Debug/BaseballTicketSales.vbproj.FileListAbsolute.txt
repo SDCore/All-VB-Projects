@@ -1,0 +1,10 @@
+E:\Advanced VB\BaseballTicketSales\BaseballTicketSales\bin\Debug\BaseballTicketSales.exe
+E:\Advanced VB\BaseballTicketSales\BaseballTicketSales\bin\Debug\BaseballTicketSales.pdb
+E:\Advanced VB\BaseballTicketSales\BaseballTicketSales\bin\Debug\BaseballTicketSales.xml
+E:\Advanced VB\BaseballTicketSales\BaseballTicketSales\obj\x86\Debug\BaseballTicketSales.frmBaseballTicketSales.resources
+E:\Advanced VB\BaseballTicketSales\BaseballTicketSales\obj\x86\Debug\BaseballTicketSales.Resources.resources
+E:\Advanced VB\BaseballTicketSales\BaseballTicketSales\obj\x86\Debug\BaseballTicketSales.vbproj.GenerateResource.Cache
+E:\Advanced VB\BaseballTicketSales\BaseballTicketSales\obj\x86\Debug\BaseballTicketSales.exe
+E:\Advanced VB\BaseballTicketSales\BaseballTicketSales\obj\x86\Debug\BaseballTicketSales.xml
+E:\Advanced VB\BaseballTicketSales\BaseballTicketSales\obj\x86\Debug\BaseballTicketSales.pdb
+E:\Advanced VB\BaseballTicketSales\BaseballTicketSales\obj\x86\Debug\BaseballTicketSales.splSplash.resources

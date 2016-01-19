@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("BaseballTicketSales")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Mundelein High School")> 
-<Assembly: AssemblyProduct("BaseballTicketSales")> 
-<Assembly: AssemblyCopyright("Copyright © Mundelein High School 2016")> 
+<Assembly: AssemblyTitle("Baseball Ticket Sales")> 
+<Assembly: AssemblyDescription("Buy Baseball Tickets.")> 
+<Assembly: AssemblyCompany("Jayit Studio")> 
+<Assembly: AssemblyProduct("Baseball Ticket Sales")> 
+<Assembly: AssemblyCopyright("Copyright © Jayit Studio 2016")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
