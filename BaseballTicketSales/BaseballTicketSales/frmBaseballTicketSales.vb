@@ -64,6 +64,14 @@ Public Class frmBaseballTicketSales
     End Sub
 
     Private Function FindTicketAmount(ByVal intTicketAmount As Decimal, ByVal intNumberOfTickets As Decimal) As Decimal
+        ' Variables
+        Dim decTicketAmoTotal As Decimal
+        Dim decTicketNumTotal As Decimal
+        Dim decTotal As Decimal
+
+
+
+        Return decTotal
 
     End Function
 
