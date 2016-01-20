@@ -150,7 +150,7 @@ Partial Class frmBaseballTicketSales
         '
         Me.lblTotalCost.AutoSize = True
         Me.lblTotalCost.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalCost.Location = New System.Drawing.Point(101, 272)
+        Me.lblTotalCost.Location = New System.Drawing.Point(17, 272)
         Me.lblTotalCost.Name = "lblTotalCost"
         Me.lblTotalCost.Size = New System.Drawing.Size(238, 17)
         Me.lblTotalCost.TabIndex = 10

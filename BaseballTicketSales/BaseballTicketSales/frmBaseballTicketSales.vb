@@ -10,6 +10,7 @@
 ' One of two functions will be called depending on seat/ticket type
 ' Clear Form button
 ' Try-Catch block to validate input
+' Comment everything
 
 Option Strict On
 
@@ -34,6 +35,37 @@ Public Class frmBaseballTicketSales
             Case 1
                 SingleTickets()
                 MakeVisible()
+        End Select
+
+    End Sub
+
+    Private Sub btnComputeCost_Click(sender As System.Object, e As System.EventArgs) Handles btnComputeCost.Click
+        ' Variables
+        Dim intAmountOfTickets As Integer
+        Dim intTicketCost As Integer
+        Dim intSeatCost As Integer
+        Dim intCostTotal As Integer
+
+        intAmountOfTickets = CInt(txtNumberOfTickets.Text)
+        intSeatCost = cboSeatType.SelectedIndex
+
+        Select Case intSeatCost
+            Case 0
+                intTicketCost = CInt(FindTicketAmount(55, intAmountOfTickets))
+                lblTotalCost.Visible = True
+                lblTotalCost.Text = "The total cost will be: " & intTicketCost.ToString("C")
+            Case 1
+                intTicketCost = CInt(FindTicketAmount(35, intAmountOfTickets))
+                lblTotalCost.Visible = True
+                lblTotalCost.Text = "The total cost will be: " & intTicketCost.ToString("C")
+            Case 2
+                intTicketCost = CInt(FindTicketAmount(25, intAmountOfTickets))
+                lblTotalCost.Visible = True
+                lblTotalCost.Text = "The total cost will be: " & intTicketCost.ToString("C")
+            Case 3
+                intTicketCost = CInt(FindTicketAmount(15, intAmountOfTickets))
+                lblTotalCost.Visible = True
+                lblTotalCost.Text = "The total cost will be: " & intTicketCost.ToString("C")
         End Select
 
     End Sub
@@ -65,13 +97,12 @@ Public Class frmBaseballTicketSales
 
     Private Function FindTicketAmount(ByVal intTicketAmount As Decimal, ByVal intNumberOfTickets As Decimal) As Decimal
         ' Variables
-        Dim decTicketAmoTotal As Decimal
-        Dim decTicketNumTotal As Decimal
-        Dim decTotal As Decimal
+        Dim strTotal As Decimal
+        Dim intCostTotal As Integer
 
+        intCostTotal = CInt(intTicketAmount * intNumberOfTickets)
 
-
-        Return decTotal
+        Return intCostTotal
 
     End Function
 
