@@ -17,10 +17,22 @@ Option Strict On
 Public Class frmBaseballTicketSales
 
     ' Class Variables
-
+    Private _intClearLabel As String = "Total cost for tickets: $0.00"
 
     Private Sub frmBaseballTicketSales_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Threading.Thread.Sleep(5000)
+    End Sub
+
+    Private Sub btnClear_Click(sender As System.Object, e As System.EventArgs) Handles btnClear.Click
+        lblNumberOfTickets.Visible = False
+        txtNumberOfTickets.Visible = False
+        txtNumberOfTickets.Clear()
+        lblSeatType.Visible = False
+        cboSeatType.Visible = False
+        btnComputeCost.Visible = False
+        btnClear.Visible = False
+        lblTotalCost.Visible = False
+        lblTotalCost.Text = _intClearLabel
     End Sub
 
     Private Sub cboTicketType_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cboTicketType.SelectedIndexChanged
@@ -54,30 +66,30 @@ Public Class frmBaseballTicketSales
             Case 0
                 Select Case intSeatCost
                     Case 0
-                        intTicketCost = CInt(FindSeasonTicket(2500, intAmountOfTickets))
+                        intTicketCost = CInt(FindTicketCost(2500, intAmountOfTickets))
                         lblTotalCost.Visible = True
                         lblTotalCost.Text = "Season Ticket Cost: " & intTicketCost.ToString("C")
                     Case 1
-                        intTicketCost = CInt(FindSeasonTicket(1500, intAmountOfTickets))
+                        intTicketCost = CInt(FindTicketCost(1500, intAmountOfTickets))
                         lblTotalCost.Visible = True
                         lblTotalCost.Text = "Season Ticket Cost: " & intTicketCost.ToString("C")
                 End Select
             Case 1
                 Select Case intSeatCost
                     Case 0
-                        intTicketCost = CInt(FindSingleTicket(55, intAmountOfTickets))
+                        intTicketCost = CInt(FindTicketCost(55, intAmountOfTickets))
                         lblTotalCost.Visible = True
                         lblTotalCost.Text = "Single Ticket Cost: " & intTicketCost.ToString("C")
                     Case 1
-                        intTicketCost = CInt(FindSingleTicket(35, intAmountOfTickets))
+                        intTicketCost = CInt(FindTicketCost(35, intAmountOfTickets))
                         lblTotalCost.Visible = True
                         lblTotalCost.Text = "Single Ticket Cost: " & intTicketCost.ToString("C")
                     Case 2
-                        intTicketCost = CInt(FindSingleTicket(25, intAmountOfTickets))
+                        intTicketCost = CInt(FindTicketCost(25, intAmountOfTickets))
                         lblTotalCost.Visible = True
                         lblTotalCost.Text = "Single Ticket Cost: " & intTicketCost.ToString("C")
                     Case 3
-                        intTicketCost = CInt(FindSingleTicket(15, intAmountOfTickets))
+                        intTicketCost = CInt(FindTicketCost(15, intAmountOfTickets))
                         lblTotalCost.Visible = True
                         lblTotalCost.Text = "Single Ticket Cost: " & intTicketCost.ToString("C")
                 End Select
@@ -110,17 +122,8 @@ Public Class frmBaseballTicketSales
         btnClear.Visible = True
     End Sub
 
-    Private Function FindSingleTicket(ByVal intTicketAmount As Integer, ByVal intNumberOfTickets As Integer) As Decimal
+    Private Function FindTicketCost(ByVal intTicketAmount As Integer, ByVal intNumberOfTickets As Integer) As Decimal
         ' Variables
-        Dim intCostTotal As Integer
-
-        intCostTotal = intTicketAmount * intNumberOfTickets
-
-        Return intCostTotal
-
-    End Function
-
-    Private Function FindSeasonTicket(ByVal intTicketAmount As Integer, ByVal intNumberOfTickets As Integer) As Decimal
         Dim intCostTotal As Integer
 
         intCostTotal = intTicketAmount * intNumberOfTickets
