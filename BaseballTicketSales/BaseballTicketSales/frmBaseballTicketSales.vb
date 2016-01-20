@@ -24,6 +24,7 @@ Public Class frmBaseballTicketSales
     End Sub
 
     Private Sub btnClear_Click(sender As System.Object, e As System.EventArgs) Handles btnClear.Click
+        ' Clearing all items and making them all invisible until user selects a ticket type
         lblNumberOfTickets.Visible = False
         txtNumberOfTickets.Visible = False
         txtNumberOfTickets.Clear()
@@ -42,9 +43,11 @@ Public Class frmBaseballTicketSales
         intTicketType = cboTicketType.SelectedIndex
         Select Case intTicketType
             Case 0
+                ' Setting the ticket type depending on what is selected
                 SeasonTickets()
                 MakeVisible()
             Case 1
+                ' Setting the ticket type depending on what is selected
                 SingleTickets()
                 MakeVisible()
         End Select
@@ -58,12 +61,16 @@ Public Class frmBaseballTicketSales
         Dim intSeatCost As Integer
         Dim intTicketType As Integer
 
+        ' Calculations
         intAmountOfTickets = CInt(txtNumberOfTickets.Text)
         intSeatCost = cboSeatType.SelectedIndex
         intTicketType = cboTicketType.SelectedIndex
 
+        ' Double case... who knew?
+        ' Getting the ticket type
         Select Case intTicketType
             Case 0
+                ' If the ticket type is a season ticket, set the case values to this
                 Select Case intSeatCost
                     Case 0
                         intTicketCost = CInt(FindTicketCost(2500, intAmountOfTickets))
@@ -75,6 +82,7 @@ Public Class frmBaseballTicketSales
                         lblTotalCost.Text = "Season Ticket Cost: " & intTicketCost.ToString("C")
                 End Select
             Case 1
+                ' If the ticket type is a season ticket, set the case values to this
                 Select Case intSeatCost
                     Case 0
                         intTicketCost = CInt(FindTicketCost(55, intAmountOfTickets))
@@ -98,6 +106,7 @@ Public Class frmBaseballTicketSales
     End Sub
 
     Private Sub SeasonTickets()
+        ' Adding items to Combo Box
         cboSeatType.Items.Clear()
         cboSeatType.Text = "Select an Item"
         cboSeatType.Items.Add("Box Seats - $2500")
@@ -105,6 +114,7 @@ Public Class frmBaseballTicketSales
     End Sub
 
     Private Sub SingleTickets()
+        ' Adding items to Combo Box
         cboSeatType.Items.Clear()
         cboSeatType.Text = "Select an Item"
         cboSeatType.Items.Add("Box Seats - $55")
@@ -114,6 +124,7 @@ Public Class frmBaseballTicketSales
     End Sub
 
     Private Sub MakeVisible()
+        ' Making things visible when a Ticket Type is chosen
         lblNumberOfTickets.Visible = True
         txtNumberOfTickets.Visible = True
         lblSeatType.Visible = True
@@ -126,8 +137,10 @@ Public Class frmBaseballTicketSales
         ' Variables
         Dim intCostTotal As Integer
 
+        ' Calculations
         intCostTotal = intTicketAmount * intNumberOfTickets
 
+        ' Returning intCostTotal to main sub
         Return intCostTotal
 
     End Function
