@@ -4,11 +4,6 @@
 ' Purpose: Compute the cost of baseball tickets depending on what the user chooses using sub procedures.
 
 ' --TODO--
-' User selects item from Ticket Type combo box, nothing else is shown until something is chosen
-' User enters amount of tickets in textbox
-' User selects seat type in textbox
-' One of two functions will be called depending on seat/ticket type
-' Clear Form button
 ' Try-Catch block to validate input
 ' Comment everything
 
@@ -82,7 +77,7 @@ Public Class frmBaseballTicketSales
                         lblTotalCost.Text = "Season Ticket Cost: " & intTicketCost.ToString("C")
                 End Select
             Case 1
-                ' If the ticket type is a season ticket, set the case values to this
+                ' If the ticket type is a single ticket, set the case values to this
                 Select Case intSeatCost
                     Case 0
                         intTicketCost = CInt(FindTicketCost(55, intAmountOfTickets))
