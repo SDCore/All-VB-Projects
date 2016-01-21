@@ -3,10 +3,6 @@
 ' 1/19/2016
 ' Purpose: Compute the cost of baseball tickets depending on what the user chooses using sub procedures.
 
-' --TODO--
-' Try-Catch block to validate input
-' Comment everything
-
 Option Strict On
 
 Public Class frmBaseballTicketSales
@@ -56,8 +52,28 @@ Public Class frmBaseballTicketSales
         Dim intSeatCost As Integer
         Dim intTicketType As Integer
 
-        ' Calculations
-        intAmountOfTickets = CInt(txtNumberOfTickets.Text)
+        ' Calculations and Try / Catch
+
+        Try
+            intAmountOfTickets = CInt(txtNumberOfTickets.Text)
+        Catch ex As OverflowException
+            MsgBox("Overflow exception. Input number too high.")
+            txtNumberOfTickets.Clear()
+            txtNumberOfTickets.Focus()
+        Catch ex As FormatException
+            MsgBox("Incorrect format. Please use only numbers.")
+            txtNumberOfTickets.Clear()
+            txtNumberOfTickets.Focus()
+        Catch ex As ArgumentNullException
+            MsgBox("No input. Please input a number.")
+            txtNumberOfTickets.Clear()
+            txtNumberOfTickets.Focus()
+        Catch ex As Exception
+            MsgBox("General exception handeled. No output.")
+            txtNumberOfTickets.Clear()
+            txtNumberOfTickets.Focus()
+        End Try
+
         intSeatCost = cboSeatType.SelectedIndex
         intTicketType = cboTicketType.SelectedIndex
 
