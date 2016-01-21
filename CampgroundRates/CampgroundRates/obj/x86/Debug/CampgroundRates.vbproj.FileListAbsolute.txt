@@ -1,0 +1,10 @@
+E:\Advanced VB\CampgroundRates\CampgroundRates\bin\Debug\CampgroundRates.exe
+E:\Advanced VB\CampgroundRates\CampgroundRates\bin\Debug\CampgroundRates.pdb
+E:\Advanced VB\CampgroundRates\CampgroundRates\bin\Debug\CampgroundRates.xml
+E:\Advanced VB\CampgroundRates\CampgroundRates\obj\x86\Debug\CampgroundRates.frmCampgroundRates.resources
+E:\Advanced VB\CampgroundRates\CampgroundRates\obj\x86\Debug\CampgroundRates.Resources.resources
+E:\Advanced VB\CampgroundRates\CampgroundRates\obj\x86\Debug\CampgroundRates.vbproj.GenerateResource.Cache
+E:\Advanced VB\CampgroundRates\CampgroundRates\obj\x86\Debug\CampgroundRates.exe
+E:\Advanced VB\CampgroundRates\CampgroundRates\obj\x86\Debug\CampgroundRates.xml
+E:\Advanced VB\CampgroundRates\CampgroundRates\obj\x86\Debug\CampgroundRates.pdb
+E:\Advanced VB\CampgroundRates\CampgroundRates\obj\x86\Debug\CampgroundRates.splSplash.resources
