@@ -26,6 +26,8 @@ Partial Class frmCampgroundRates
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.cboStayType = New System.Windows.Forms.ComboBox()
+        Me.lblNumberOfNights = New System.Windows.Forms.Label()
+        Me.txtNumberOfNights = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,12 +54,31 @@ Partial Class frmCampgroundRates
         '
         'cboStayType
         '
+        Me.cboStayType.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboStayType.FormattingEnabled = True
         Me.cboStayType.Location = New System.Drawing.Point(13, 241)
         Me.cboStayType.Name = "cboStayType"
-        Me.cboStayType.Size = New System.Drawing.Size(459, 21)
+        Me.cboStayType.Size = New System.Drawing.Size(459, 25)
         Me.cboStayType.TabIndex = 2
         Me.cboStayType.Text = "Select an Item"
+        '
+        'lblNumberOfNights
+        '
+        Me.lblNumberOfNights.AutoSize = True
+        Me.lblNumberOfNights.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNumberOfNights.Location = New System.Drawing.Point(12, 275)
+        Me.lblNumberOfNights.Name = "lblNumberOfNights"
+        Me.lblNumberOfNights.Size = New System.Drawing.Size(114, 17)
+        Me.lblNumberOfNights.TabIndex = 3
+        Me.lblNumberOfNights.Text = "Number of Nights"
+        '
+        'txtNumberOfNights
+        '
+        Me.txtNumberOfNights.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNumberOfNights.Location = New System.Drawing.Point(132, 272)
+        Me.txtNumberOfNights.Name = "txtNumberOfNights"
+        Me.txtNumberOfNights.Size = New System.Drawing.Size(340, 25)
+        Me.txtNumberOfNights.TabIndex = 4
         '
         'frmCampgroundRates
         '
@@ -65,6 +86,8 @@ Partial Class frmCampgroundRates
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(484, 462)
+        Me.Controls.Add(Me.txtNumberOfNights)
+        Me.Controls.Add(Me.lblNumberOfNights)
         Me.Controls.Add(Me.cboStayType)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.PictureBox1)
@@ -78,5 +101,7 @@ Partial Class frmCampgroundRates
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents cboStayType As System.Windows.Forms.ComboBox
+    Friend WithEvents lblNumberOfNights As System.Windows.Forms.Label
+    Friend WithEvents txtNumberOfNights As System.Windows.Forms.TextBox
 
 End Class
