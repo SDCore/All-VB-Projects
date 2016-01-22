@@ -35,6 +35,7 @@ Partial Class frmCampgroundRates
         Me.lblDiscountOutput = New System.Windows.Forms.Label()
         Me.lblTotalOutput = New System.Windows.Forms.Label()
         Me.lblDivider = New System.Windows.Forms.Label()
+        Me.btnCalculateCost = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -123,7 +124,7 @@ Partial Class frmCampgroundRates
         '
         Me.lblSubtotalOutput.AutoSize = True
         Me.lblSubtotalOutput.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSubtotalOutput.Location = New System.Drawing.Point(166, 347)
+        Me.lblSubtotalOutput.Location = New System.Drawing.Point(166, 393)
         Me.lblSubtotalOutput.Name = "lblSubtotalOutput"
         Me.lblSubtotalOutput.Size = New System.Drawing.Size(117, 21)
         Me.lblSubtotalOutput.TabIndex = 8
@@ -133,7 +134,7 @@ Partial Class frmCampgroundRates
         '
         Me.lblDiscountOutput.AutoSize = True
         Me.lblDiscountOutput.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDiscountOutput.Location = New System.Drawing.Point(166, 370)
+        Me.lblDiscountOutput.Location = New System.Drawing.Point(166, 416)
         Me.lblDiscountOutput.Name = "lblDiscountOutput"
         Me.lblDiscountOutput.Size = New System.Drawing.Size(117, 21)
         Me.lblDiscountOutput.TabIndex = 9
@@ -143,7 +144,7 @@ Partial Class frmCampgroundRates
         '
         Me.lblTotalOutput.AutoSize = True
         Me.lblTotalOutput.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalOutput.Location = New System.Drawing.Point(166, 412)
+        Me.lblTotalOutput.Location = New System.Drawing.Point(166, 458)
         Me.lblTotalOutput.Name = "lblTotalOutput"
         Me.lblTotalOutput.Size = New System.Drawing.Size(90, 21)
         Me.lblTotalOutput.TabIndex = 10
@@ -154,19 +155,30 @@ Partial Class frmCampgroundRates
         Me.lblDivider.AutoSize = True
         Me.lblDivider.BackColor = System.Drawing.Color.Transparent
         Me.lblDivider.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDivider.Location = New System.Drawing.Point(-62, 391)
+        Me.lblDivider.Location = New System.Drawing.Point(-62, 437)
         Me.lblDivider.Name = "lblDivider"
         Me.lblDivider.Size = New System.Drawing.Size(605, 21)
         Me.lblDivider.TabIndex = 11
         Me.lblDivider.Text = "_________________________________________________________________________________" & _
     "____"
         '
+        'btnCalculateCost
+        '
+        Me.btnCalculateCost.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalculateCost.Location = New System.Drawing.Point(15, 335)
+        Me.btnCalculateCost.Name = "btnCalculateCost"
+        Me.btnCalculateCost.Size = New System.Drawing.Size(457, 51)
+        Me.btnCalculateCost.TabIndex = 12
+        Me.btnCalculateCost.Text = "Calculate Cost"
+        Me.btnCalculateCost.UseVisualStyleBackColor = True
+        '
         'frmCampgroundRates
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(484, 462)
+        Me.ClientSize = New System.Drawing.Size(484, 484)
+        Me.Controls.Add(Me.btnCalculateCost)
         Me.Controls.Add(Me.lblDivider)
         Me.Controls.Add(Me.lblTotalOutput)
         Me.Controls.Add(Me.lblDiscountOutput)
@@ -198,5 +210,6 @@ Partial Class frmCampgroundRates
     Friend WithEvents lblDiscountOutput As System.Windows.Forms.Label
     Friend WithEvents lblTotalOutput As System.Windows.Forms.Label
     Friend WithEvents lblDivider As System.Windows.Forms.Label
+    Friend WithEvents btnCalculateCost As System.Windows.Forms.Button
 
 End Class
