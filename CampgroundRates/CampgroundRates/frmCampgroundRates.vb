@@ -21,7 +21,6 @@ Public Class frmCampgroundRates
         ' Variables
         Dim decTentCost As Decimal
         Dim decNightsStaying As Decimal
-        Dim decDiscount As Decimal
 
         decNightsStaying = CDec(txtNumberOfNights.Text)
 
@@ -73,7 +72,7 @@ Public Class frmCampgroundRates
         Return decDiscountedTotal
     End Function
 
-    Private Function FindTax() As Decimal
+    Private Function FindTax(ByVal decDiscountedTotal As Decimal) As Decimal
         ' Tax: 7.5%
 
         ' Variables
