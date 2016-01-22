@@ -4,7 +4,6 @@
 ' Purpose: To calculate the cost of a stay at campgrounds under different conditions.
 
 ' --TODO--
-' Subprocedure -> Type of Tent Cost * Amount of Nights Staying = Subtotal. Do not displaying amount (keep for next equation)
 ' Pass the subtotal + discount into a Function. Determine = Subtotal / Discount. Subtotal = Determine. Pass to calling method
 ' Another function should compute 7.5% tax. Total = Subtotal / 7.5%. TheTotal = Total + Subtotal. Pass back to calling method
 ' Pass all values to a sub procedure to displaying results.
@@ -45,6 +44,17 @@ Public Class frmCampgroundRates
 
         ' Calculations
         decSubTotal = decTheTentCost * decTheNightsStaying
+        ' MAKE THIS IN A SUBPROCEDURE
+        ' lblSubtotalOutput.Text = "SubTotal: " & decSubTotal.ToString("C")
 
     End Sub
+
+    Private Function FindDiscount(ByVal decSubTotal As Decimal, ByVal decDiscountAmount As Decimal) As Decimal
+        Dim decDiscountedTotal As Decimal
+
+
+
+        Return decDiscountedTotal
+    End Function
+
 End Class
