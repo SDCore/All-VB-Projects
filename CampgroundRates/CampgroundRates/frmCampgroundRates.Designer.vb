@@ -36,6 +36,7 @@ Partial Class frmCampgroundRates
         Me.lblTotalOutput = New System.Windows.Forms.Label()
         Me.lblDivider = New System.Windows.Forms.Label()
         Me.btnCalculateCost = New System.Windows.Forms.Button()
+        Me.lblTaxes = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -144,7 +145,7 @@ Partial Class frmCampgroundRates
         '
         Me.lblTotalOutput.AutoSize = True
         Me.lblTotalOutput.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalOutput.Location = New System.Drawing.Point(166, 458)
+        Me.lblTotalOutput.Location = New System.Drawing.Point(166, 486)
         Me.lblTotalOutput.Name = "lblTotalOutput"
         Me.lblTotalOutput.Size = New System.Drawing.Size(90, 21)
         Me.lblTotalOutput.TabIndex = 10
@@ -155,7 +156,7 @@ Partial Class frmCampgroundRates
         Me.lblDivider.AutoSize = True
         Me.lblDivider.BackColor = System.Drawing.Color.Transparent
         Me.lblDivider.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDivider.Location = New System.Drawing.Point(-62, 437)
+        Me.lblDivider.Location = New System.Drawing.Point(-62, 465)
         Me.lblDivider.Name = "lblDivider"
         Me.lblDivider.Size = New System.Drawing.Size(605, 21)
         Me.lblDivider.TabIndex = 11
@@ -172,12 +173,23 @@ Partial Class frmCampgroundRates
         Me.btnCalculateCost.Text = "Calculate Cost"
         Me.btnCalculateCost.UseVisualStyleBackColor = True
         '
+        'lblTaxes
+        '
+        Me.lblTaxes.AutoSize = True
+        Me.lblTaxes.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTaxes.Location = New System.Drawing.Point(166, 442)
+        Me.lblTaxes.Name = "lblTaxes"
+        Me.lblTaxes.Size = New System.Drawing.Size(79, 21)
+        Me.lblTaxes.TabIndex = 13
+        Me.lblTaxes.Text = "Tax: $0.00"
+        '
         'frmCampgroundRates
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(484, 484)
+        Me.ClientSize = New System.Drawing.Size(484, 514)
+        Me.Controls.Add(Me.lblTaxes)
         Me.Controls.Add(Me.btnCalculateCost)
         Me.Controls.Add(Me.lblDivider)
         Me.Controls.Add(Me.lblTotalOutput)
@@ -211,5 +223,6 @@ Partial Class frmCampgroundRates
     Friend WithEvents lblTotalOutput As System.Windows.Forms.Label
     Friend WithEvents lblDivider As System.Windows.Forms.Label
     Friend WithEvents btnCalculateCost As System.Windows.Forms.Button
+    Friend WithEvents lblTaxes As System.Windows.Forms.Label
 
 End Class

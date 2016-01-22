@@ -4,7 +4,6 @@
 ' Purpose: To calculate the cost of a stay at campgrounds under different conditions.
 
 ' --TODO--
-' Pass the subtotal + discount into a Function. Determine = Subtotal / Discount. Subtotal = Determine. Pass to calling method
 ' Another function should compute 7.5% tax. Total = Subtotal / 7.5%. TheTotal = Total + Subtotal. Pass back to calling method
 ' Pass all values to a sub procedure to displaying results.
 ' Subprocedure displays: Subtotal Billing Amount for your Stay, Taxes for your Stay, and Final Total
@@ -41,20 +40,47 @@ Public Class frmCampgroundRates
     Private Sub CalculateSubTotal(ByVal decTheTentCost As Decimal, ByVal decTheNightsStaying As Decimal)
         ' Variables
         Dim decSubTotal As Decimal
+        Dim decDiscount As Decimal
 
         ' Calculations
         decSubTotal = decTheTentCost * decTheNightsStaying
+
         ' MAKE THIS IN A SUBPROCEDURE
         ' lblSubtotalOutput.Text = "SubTotal: " & decSubTotal.ToString("C")
+
+        decDiscount = cboDiscount.SelectedIndex
+        Select Case decDiscount
+            Case 0
+                FindDiscount(decSubTotal, 0)
+            Case 1
+                FindDiscount(decSubTotal, CDec(0.1))
+            Case 2
+                FindDiscount(decSubTotal, CDec(0.12))
+        End Select
 
     End Sub
 
     Private Function FindDiscount(ByVal decSubTotal As Decimal, ByVal decDiscountAmount As Decimal) As Decimal
         Dim decDiscountedTotal As Decimal
+        Dim decDiscounted As Decimal
 
+        decDiscounted = decSubTotal * decDiscountAmount
+        decDiscountedTotal = decSubTotal - decDiscounted
 
+        ' MAKE THIS IN A SUBPROCEDURE
+        ' lblDiscountOutput.Text = "Discount: -" & decDiscounted.ToString("C")
 
         Return decDiscountedTotal
+    End Function
+
+    Private Function FindTax() As Decimal
+        ' Tax: 7.5%
+
+        ' Variables
+        Dim decTaxTotal As Decimal
+
+        Return decTaxTotal
+
     End Function
 
 End Class
