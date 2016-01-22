@@ -31,6 +31,10 @@ Partial Class frmCampgroundRates
         Me.lblStayType = New System.Windows.Forms.Label()
         Me.lblDiscount = New System.Windows.Forms.Label()
         Me.cboDiscount = New System.Windows.Forms.ComboBox()
+        Me.lblSubtotalOutput = New System.Windows.Forms.Label()
+        Me.lblDiscountOutput = New System.Windows.Forms.Label()
+        Me.lblTotalOutput = New System.Windows.Forms.Label()
+        Me.lblDivider = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -115,12 +119,58 @@ Partial Class frmCampgroundRates
         Me.cboDiscount.TabIndex = 7
         Me.cboDiscount.Text = "Select an Item"
         '
+        'lblSubtotalOutput
+        '
+        Me.lblSubtotalOutput.AutoSize = True
+        Me.lblSubtotalOutput.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSubtotalOutput.Location = New System.Drawing.Point(166, 347)
+        Me.lblSubtotalOutput.Name = "lblSubtotalOutput"
+        Me.lblSubtotalOutput.Size = New System.Drawing.Size(117, 21)
+        Me.lblSubtotalOutput.TabIndex = 8
+        Me.lblSubtotalOutput.Text = "SubTotal: $0.00"
+        '
+        'lblDiscountOutput
+        '
+        Me.lblDiscountOutput.AutoSize = True
+        Me.lblDiscountOutput.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDiscountOutput.Location = New System.Drawing.Point(166, 370)
+        Me.lblDiscountOutput.Name = "lblDiscountOutput"
+        Me.lblDiscountOutput.Size = New System.Drawing.Size(117, 21)
+        Me.lblDiscountOutput.TabIndex = 9
+        Me.lblDiscountOutput.Text = "Discount: $0.00"
+        '
+        'lblTotalOutput
+        '
+        Me.lblTotalOutput.AutoSize = True
+        Me.lblTotalOutput.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalOutput.Location = New System.Drawing.Point(166, 412)
+        Me.lblTotalOutput.Name = "lblTotalOutput"
+        Me.lblTotalOutput.Size = New System.Drawing.Size(90, 21)
+        Me.lblTotalOutput.TabIndex = 10
+        Me.lblTotalOutput.Text = "Total: $0.00"
+        '
+        'lblDivider
+        '
+        Me.lblDivider.AutoSize = True
+        Me.lblDivider.BackColor = System.Drawing.Color.Transparent
+        Me.lblDivider.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDivider.Location = New System.Drawing.Point(-62, 391)
+        Me.lblDivider.Name = "lblDivider"
+        Me.lblDivider.Size = New System.Drawing.Size(605, 21)
+        Me.lblDivider.TabIndex = 11
+        Me.lblDivider.Text = "_________________________________________________________________________________" & _
+    "____"
+        '
         'frmCampgroundRates
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(484, 462)
+        Me.Controls.Add(Me.lblDivider)
+        Me.Controls.Add(Me.lblTotalOutput)
+        Me.Controls.Add(Me.lblDiscountOutput)
+        Me.Controls.Add(Me.lblSubtotalOutput)
         Me.Controls.Add(Me.cboDiscount)
         Me.Controls.Add(Me.lblDiscount)
         Me.Controls.Add(Me.lblStayType)
@@ -144,5 +194,9 @@ Partial Class frmCampgroundRates
     Friend WithEvents lblStayType As System.Windows.Forms.Label
     Friend WithEvents lblDiscount As System.Windows.Forms.Label
     Friend WithEvents cboDiscount As System.Windows.Forms.ComboBox
+    Friend WithEvents lblSubtotalOutput As System.Windows.Forms.Label
+    Friend WithEvents lblDiscountOutput As System.Windows.Forms.Label
+    Friend WithEvents lblTotalOutput As System.Windows.Forms.Label
+    Friend WithEvents lblDivider As System.Windows.Forms.Label
 
 End Class
