@@ -28,6 +28,9 @@ Partial Class frmCampgroundRates
         Me.cboStayType = New System.Windows.Forms.ComboBox()
         Me.lblNumberOfNights = New System.Windows.Forms.Label()
         Me.txtNumberOfNights = New System.Windows.Forms.TextBox()
+        Me.lblStayType = New System.Windows.Forms.Label()
+        Me.lblDiscount = New System.Windows.Forms.Label()
+        Me.cboDiscount = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -56,9 +59,10 @@ Partial Class frmCampgroundRates
         '
         Me.cboStayType.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboStayType.FormattingEnabled = True
-        Me.cboStayType.Location = New System.Drawing.Point(13, 241)
+        Me.cboStayType.Items.AddRange(New Object() {"Tent Site - $20", "RV Site - $35", "Cabin Rental - $55"})
+        Me.cboStayType.Location = New System.Drawing.Point(170, 241)
         Me.cboStayType.Name = "cboStayType"
-        Me.cboStayType.Size = New System.Drawing.Size(459, 25)
+        Me.cboStayType.Size = New System.Drawing.Size(302, 25)
         Me.cboStayType.TabIndex = 2
         Me.cboStayType.Text = "Select an Item"
         '
@@ -80,12 +84,46 @@ Partial Class frmCampgroundRates
         Me.txtNumberOfNights.Size = New System.Drawing.Size(340, 25)
         Me.txtNumberOfNights.TabIndex = 4
         '
+        'lblStayType
+        '
+        Me.lblStayType.AutoSize = True
+        Me.lblStayType.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStayType.Location = New System.Drawing.Point(12, 244)
+        Me.lblStayType.Name = "lblStayType"
+        Me.lblStayType.Size = New System.Drawing.Size(152, 17)
+        Me.lblStayType.TabIndex = 5
+        Me.lblStayType.Text = "What are you Staying In?"
+        '
+        'lblDiscount
+        '
+        Me.lblDiscount.AutoSize = True
+        Me.lblDiscount.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDiscount.Location = New System.Drawing.Point(12, 306)
+        Me.lblDiscount.Name = "lblDiscount"
+        Me.lblDiscount.Size = New System.Drawing.Size(58, 17)
+        Me.lblDiscount.TabIndex = 6
+        Me.lblDiscount.Text = "Discount"
+        '
+        'cboDiscount
+        '
+        Me.cboDiscount.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboDiscount.FormattingEnabled = True
+        Me.cboDiscount.Items.AddRange(New Object() {"None", "AAA (10%)", "Military (12%)"})
+        Me.cboDiscount.Location = New System.Drawing.Point(76, 303)
+        Me.cboDiscount.Name = "cboDiscount"
+        Me.cboDiscount.Size = New System.Drawing.Size(396, 25)
+        Me.cboDiscount.TabIndex = 7
+        Me.cboDiscount.Text = "Select an Item"
+        '
         'frmCampgroundRates
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(484, 462)
+        Me.Controls.Add(Me.cboDiscount)
+        Me.Controls.Add(Me.lblDiscount)
+        Me.Controls.Add(Me.lblStayType)
         Me.Controls.Add(Me.txtNumberOfNights)
         Me.Controls.Add(Me.lblNumberOfNights)
         Me.Controls.Add(Me.cboStayType)
@@ -103,5 +141,8 @@ Partial Class frmCampgroundRates
     Friend WithEvents cboStayType As System.Windows.Forms.ComboBox
     Friend WithEvents lblNumberOfNights As System.Windows.Forms.Label
     Friend WithEvents txtNumberOfNights As System.Windows.Forms.TextBox
+    Friend WithEvents lblStayType As System.Windows.Forms.Label
+    Friend WithEvents lblDiscount As System.Windows.Forms.Label
+    Friend WithEvents cboDiscount As System.Windows.Forms.ComboBox
 
 End Class
