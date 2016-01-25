@@ -40,9 +40,6 @@ Public Class frmCampgroundRates
         ' Variables
         Dim decSubTotal As Decimal
         Dim decDiscount As Decimal
-        Dim decTaxTotal As Decimal
-        Dim decFinalTotal As Decimal
-        Dim decDiscountedTotal As Decimal
 
         ' Calculations
         decSubTotal = decTheTentCost * decTheNightsStaying
