@@ -40,6 +40,9 @@ Public Class frmCampgroundRates
         ' Variables
         Dim decSubTotal As Decimal
         Dim decDiscount As Decimal
+        Dim decTaxTotal As Decimal
+        Dim decFinalTotal As Decimal
+        Dim decDiscountedTotal As Decimal
 
         ' Calculations
         decSubTotal = decTheTentCost * decTheNightsStaying
@@ -69,12 +72,12 @@ Public Class frmCampgroundRates
         ' MAKE THIS IN A SUBPROCEDURE
         lblDiscountOutput.Text = "Discount: -" & decDiscounted.ToString("C")
 
-        FindTax(decDiscountedTotal, decSubTotal)
+        FindTax(decDiscountedTotal, decSubTotal, decDiscounted)
 
         Return decDiscountedTotal
     End Function
 
-    Private Function FindTax(ByVal decDiscountedTotal As Decimal, ByVal decSubtotal As Decimal) As Decimal
+    Private Function FindTax(ByVal decDiscountedTotal As Decimal, ByVal decSubtotal As Decimal, ByVal decDiscounted As Decimal) As Decimal
         ' Tax: 7.5%
 
         ' Variables
@@ -83,12 +86,24 @@ Public Class frmCampgroundRates
 
         decTaxes = CDec(decDiscountedTotal / 0.75)
 
-        decTaxTotal = decSubTotal - decTaxes
+        decTaxTotal = decSubtotal - decTaxes
 
         lblTaxes.Text = "Taxes: " & decTaxTotal.ToString("C")
 
+        FindTotal(decDiscounted, decTaxTotal)
+
         Return decTaxTotal
 
+    End Function
+
+    Private Function FindTotal(ByVal decDiscount As Decimal, ByVal decTax As Decimal) As Decimal
+        ' Variables
+        Dim decFinalTotal As Decimal
+
+        decFinalTotal = decTax / decDiscount
+        lblTotalOutput.Text = decFinalTotal.ToString("C")
+
+        Return decFinalTotal
     End Function
 
 End Class
