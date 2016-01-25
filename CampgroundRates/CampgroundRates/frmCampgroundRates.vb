@@ -5,8 +5,6 @@
 
 ' --TODO--
 ' Another function should compute 7.5% tax. Total = Subtotal / 7.5%. TheTotal = Total + Subtotal. Pass back to calling method
-' Pass all values to a sub procedure to displaying results.
-' Subprocedure displays: Subtotal Billing Amount for your Stay, Taxes for your Stay, and Final Total
 ' Input values need a Try-Catch block
 
 Option Strict On
