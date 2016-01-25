@@ -22,8 +22,10 @@ Public Class frmCampgroundRates
         Dim decTentCost As Decimal
         Dim decNightsStaying As Decimal
 
+        ' Setting decNightsStaying to the appropriate text box
         decNightsStaying = CDec(txtNumberOfNights.Text)
 
+        ' Getting choices from ComboBox and setting approriate function tags
         decTentCost = cboStayType.SelectedIndex
         Select Case decTentCost
             Case 0
@@ -47,6 +49,7 @@ Public Class frmCampgroundRates
         ' MAKE THIS IN A SUBPROCEDURE
         lblSubtotalOutput.Text = "SubTotal: " & decSubTotal.ToString("C")
 
+        ' Getting choices from ComboBox and setting approriate function tags
         decDiscount = cboDiscount.SelectedIndex
         Select Case decDiscount
             Case 0
@@ -60,17 +63,21 @@ Public Class frmCampgroundRates
     End Sub
 
     Private Function FindDiscount(ByVal decSubTotal As Decimal, ByVal decDiscountAmount As Decimal) As Decimal
+        ' Variables
         Dim decDiscountedTotal As Decimal
         Dim decDiscounted As Decimal
 
+        ' Calculations
         decDiscounted = decSubTotal * decDiscountAmount
         decDiscountedTotal = decSubTotal - decDiscounted
 
         ' MAKE THIS IN A SUBPROCEDURE
         lblDiscountOutput.Text = "Discount: -" & decDiscounted.ToString("C")
 
+        ' More calculations, but in a different function
         FindTax(decDiscountedTotal, decSubTotal, decDiscounted)
 
+        ' Returning decDiscountedTotal to original class
         Return decDiscountedTotal
     End Function
 
@@ -81,14 +88,17 @@ Public Class frmCampgroundRates
         Dim decTaxes As Decimal
         Dim decTaxTotal As Decimal
 
+        ' Calculations
         decTaxes = CDec(decDiscountedTotal / 0.75)
-
         decTaxTotal = decSubtotal - decTaxes
 
+        ' Outputting to Label
         lblTaxes.Text = "Taxes: " & decTaxTotal.ToString("C")
 
+        ' More calculations, but in a different function
         FindTotal(decDiscounted, decTaxTotal)
 
+        ' Returning decTaxTotal to original class
         Return decTaxTotal
 
     End Function
@@ -97,9 +107,11 @@ Public Class frmCampgroundRates
         ' Variables
         Dim decFinalTotal As Decimal
 
+        ' Calculations
         decFinalTotal = decTax / decDiscount
         lblTotalOutput.Text = decFinalTotal.ToString("C")
 
+        ' Returning decFinalTotal to original class
         Return decFinalTotal
     End Function
 
