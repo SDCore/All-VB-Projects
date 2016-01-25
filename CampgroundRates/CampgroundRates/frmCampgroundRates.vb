@@ -45,7 +45,7 @@ Public Class frmCampgroundRates
         decSubTotal = decTheTentCost * decTheNightsStaying
 
         ' MAKE THIS IN A SUBPROCEDURE
-        ' lblSubtotalOutput.Text = "SubTotal: " & decSubTotal.ToString("C")
+        lblSubtotalOutput.Text = "SubTotal: " & decSubTotal.ToString("C")
 
         decDiscount = cboDiscount.SelectedIndex
         Select Case decDiscount
@@ -62,12 +62,16 @@ Public Class frmCampgroundRates
     Private Function FindDiscount(ByVal decSubTotal As Decimal, ByVal decDiscountAmount As Decimal) As Decimal
         Dim decDiscountedTotal As Decimal
         Dim decDiscounted As Decimal
+        Dim decTaxCalc As Decimal
 
         decDiscounted = decSubTotal * decDiscountAmount
         decDiscountedTotal = decSubTotal - decDiscounted
 
         ' MAKE THIS IN A SUBPROCEDURE
-        ' lblDiscountOutput.Text = "Discount: -" & decDiscounted.ToString("C")
+        lblDiscountOutput.Text = "Discount: -" & decDiscounted.ToString("C")
+
+        ' Calculations
+        decTaxCalc = decSubTotal - decDiscounted
 
         Return decDiscountedTotal
     End Function
@@ -77,6 +81,8 @@ Public Class frmCampgroundRates
 
         ' Variables
         Dim decTaxTotal As Decimal
+
+
 
         Return decTaxTotal
 
