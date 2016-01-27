@@ -106,7 +106,7 @@ Public Class frmCampgroundRates
         Dim decFinalTotal As Decimal
 
         ' Calculations
-        decFinalTotal = decTax / decDiscount
+        decFinalTotal = decTax * decDiscount
         lblTotalOutput.Text = decFinalTotal.ToString("C")
 
         ' Returning decFinalTotal to original class
