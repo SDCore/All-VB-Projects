@@ -1,6 +1,6 @@
 ﻿Public Class frmFormOne
 
-    Public Shared _strName As String = "Michael V"
+    Public Shared _strName As String = "Michael V" ' These variables are shared across all objects within the application
 
     Private Sub btnShowNewForm_Click(sender As System.Object, e As System.EventArgs) Handles btnShowNewForm.Click
         Dim frmSecond As New frmFormTwo ' Declaring an reference variable and creating an frmFormTwo instance
