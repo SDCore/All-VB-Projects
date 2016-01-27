@@ -3,10 +3,6 @@
 ' 1/22/2016
 ' Purpose: To calculate the cost of a stay at campgrounds under different conditions.
 
-' --TODO--
-' Another function should compute 7.5% tax. Total = Subtotal / 7.5%. TheTotal = Total + Subtotal. Pass back to calling method
-' Input values need a Try-Catch block
-
 Option Strict On
 
 Public Class frmCampgroundRates
@@ -21,7 +17,21 @@ Public Class frmCampgroundRates
         Dim decNightsStaying As Decimal
 
         ' Setting decNightsStaying to the appropriate text box
-        decNightsStaying = CDec(txtNumberOfNights.Text)
+        Try
+            decNightsStaying = CDec(txtNumberOfNights.Text)
+        Catch ex As DivideByZeroException
+            MsgBox("Cannot divide by 0")
+            txtNumberOfNights.Clear()
+            txtNumberOfNights.Focus()
+        Catch ex As FormatException
+            MsgBox("Inproper format. Please use only numbers.")
+            txtNumberOfNights.Clear()
+            txtNumberOfNights.Focus()
+        Catch ex As Exception
+            MsgBox("General exception caught.")
+            txtNumberOfNights.Clear()
+            txtNumberOfNights.Focus()
+        End Try
 
         ' Getting choices from ComboBox and setting approriate function tags
         decTentCost = cboStayType.SelectedIndex
@@ -94,23 +104,39 @@ Public Class frmCampgroundRates
         lblTaxes.Text = "Taxes: " & decTaxTotal.ToString("C")
 
         ' More calculations, but in a different function
-        FindTotal(decDiscounted, decTaxTotal)
+        FindTotal(decDiscountedTotal, decTaxTotal, decSubtotal)
 
         ' Returning decTaxTotal to original class
         Return decTaxTotal
 
     End Function
 
-    Private Function FindTotal(ByVal decDiscount As Decimal, ByVal decTax As Decimal) As Decimal
+    Private Function FindTotal(ByVal decDiscount As Decimal, ByVal decTax As Decimal, decSubTotal As Decimal) As Decimal
         ' Variables
         Dim decFinalTotal As Decimal
+        Dim decFinalsFinal As Decimal
 
         ' Calculations
-        decFinalTotal = decTax * decDiscount
-        lblTotalOutput.Text = decFinalTotal.ToString("C")
+        Try
+            decFinalTotal = decTax / decSubTotal
+        Catch ex As DivideByZeroException
+            MsgBox("Cannot divide by 0")
+            txtNumberOfNights.Clear()
+            txtNumberOfNights.Focus()
+        Catch ex As FormatException
+            MsgBox("Inproper format. Please use only numbers.")
+            txtNumberOfNights.Clear()
+            txtNumberOfNights.Focus()
+        Catch ex As Exception
+            MsgBox("General exception caught.")
+            txtNumberOfNights.Clear()
+            txtNumberOfNights.Focus()
+        End Try
+        decFinalsFinal = decFinalTotal + decSubTotal
+        lblTotalOutput.Text = decFinalsFinal.ToString("C")
 
         ' Returning decFinalTotal to original class
-        Return decFinalTotal
+        Return decFinalsFinal
     End Function
 
 End Class
