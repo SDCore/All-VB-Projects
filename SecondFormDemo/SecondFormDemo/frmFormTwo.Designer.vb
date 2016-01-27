@@ -23,22 +23,33 @@ Partial Class frmFormTwo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblOutput = New System.Windows.Forms.Label()
+        Me.btnShowOutput = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblOutput
         '
         Me.lblOutput.AutoSize = True
-        Me.lblOutput.Location = New System.Drawing.Point(13, 13)
+        Me.lblOutput.Location = New System.Drawing.Point(10, 9)
         Me.lblOutput.Name = "lblOutput"
         Me.lblOutput.Size = New System.Drawing.Size(39, 13)
         Me.lblOutput.TabIndex = 0
         Me.lblOutput.Text = "Output"
         '
+        'btnShowOutput
+        '
+        Me.btnShowOutput.Location = New System.Drawing.Point(13, 25)
+        Me.btnShowOutput.Name = "btnShowOutput"
+        Me.btnShowOutput.Size = New System.Drawing.Size(259, 23)
+        Me.btnShowOutput.TabIndex = 1
+        Me.btnShowOutput.Text = "Show Output"
+        Me.btnShowOutput.UseVisualStyleBackColor = True
+        '
         'frmFormTwo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 38)
+        Me.ClientSize = New System.Drawing.Size(284, 56)
+        Me.Controls.Add(Me.btnShowOutput)
         Me.Controls.Add(Me.lblOutput)
         Me.Name = "frmFormTwo"
         Me.Text = "fmrFormTwo"
@@ -47,4 +58,5 @@ Partial Class frmFormTwo
 
     End Sub
     Friend WithEvents lblOutput As System.Windows.Forms.Label
+    Friend WithEvents btnShowOutput As System.Windows.Forms.Button
 End Class
