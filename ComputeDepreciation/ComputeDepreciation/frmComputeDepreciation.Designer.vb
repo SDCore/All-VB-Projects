@@ -107,23 +107,26 @@ Partial Class frmComputeDepreciation
         '
         'btnCalculate
         '
-        Me.btnCalculate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalculate.BackColor = System.Drawing.Color.Black
+        Me.btnCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCalculate.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalculate.ForeColor = System.Drawing.Color.White
         Me.btnCalculate.Location = New System.Drawing.Point(18, 166)
         Me.btnCalculate.Name = "btnCalculate"
         Me.btnCalculate.Size = New System.Drawing.Size(519, 38)
         Me.btnCalculate.TabIndex = 4
         Me.btnCalculate.Text = "Calculate Depreciation"
-        Me.btnCalculate.UseVisualStyleBackColor = True
+        Me.btnCalculate.UseVisualStyleBackColor = False
         '
         'lblItem
         '
         Me.lblItem.AutoSize = True
         Me.lblItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblItem.Location = New System.Drawing.Point(173, 207)
+        Me.lblItem.Location = New System.Drawing.Point(170, 207)
         Me.lblItem.Name = "lblItem"
-        Me.lblItem.Size = New System.Drawing.Size(194, 17)
+        Me.lblItem.Size = New System.Drawing.Size(200, 17)
         Me.lblItem.TabIndex = 5
-        Me.lblItem.Text = "Depreiation of item: ITEMNAME"
+        Me.lblItem.Text = "Depreciation of Item: ITEMNAME"
         '
         'lblQuantity
         '
