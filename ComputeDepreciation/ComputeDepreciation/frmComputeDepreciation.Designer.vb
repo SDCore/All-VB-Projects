@@ -26,8 +26,8 @@ Partial Class frmComputeDepreciation
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.lblInventoryItem = New System.Windows.Forms.Label()
         Me.grpDepreciationMethod = New System.Windows.Forms.GroupBox()
-        Me.rdoStraightLine = New System.Windows.Forms.RadioButton()
         Me.rdoDoubleBalance = New System.Windows.Forms.RadioButton()
+        Me.rdoStraightLine = New System.Windows.Forms.RadioButton()
         Me.btnCalculate = New System.Windows.Forms.Button()
         Me.lblItem = New System.Windows.Forms.Label()
         Me.lblQuantity = New System.Windows.Forms.Label()
@@ -46,6 +46,7 @@ Partial Class frmComputeDepreciation
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Lucida Sans Typewriter", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.ForeColor = System.Drawing.Color.DimGray
         Me.lblTitle.Location = New System.Drawing.Point(12, 9)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(525, 33)
@@ -82,17 +83,6 @@ Partial Class frmComputeDepreciation
         Me.grpDepreciationMethod.TabStop = False
         Me.grpDepreciationMethod.Text = "Select Depreciation Method"
         '
-        'rdoStraightLine
-        '
-        Me.rdoStraightLine.AutoSize = True
-        Me.rdoStraightLine.Location = New System.Drawing.Point(7, 23)
-        Me.rdoStraightLine.Name = "rdoStraightLine"
-        Me.rdoStraightLine.Size = New System.Drawing.Size(99, 21)
-        Me.rdoStraightLine.TabIndex = 0
-        Me.rdoStraightLine.TabStop = True
-        Me.rdoStraightLine.Text = "Straight-Line"
-        Me.rdoStraightLine.UseVisualStyleBackColor = True
-        '
         'rdoDoubleBalance
         '
         Me.rdoDoubleBalance.AutoSize = True
@@ -103,6 +93,17 @@ Partial Class frmComputeDepreciation
         Me.rdoDoubleBalance.TabStop = True
         Me.rdoDoubleBalance.Text = "Double-Declining Balance"
         Me.rdoDoubleBalance.UseVisualStyleBackColor = True
+        '
+        'rdoStraightLine
+        '
+        Me.rdoStraightLine.AutoSize = True
+        Me.rdoStraightLine.Location = New System.Drawing.Point(7, 23)
+        Me.rdoStraightLine.Name = "rdoStraightLine"
+        Me.rdoStraightLine.Size = New System.Drawing.Size(99, 21)
+        Me.rdoStraightLine.TabIndex = 0
+        Me.rdoStraightLine.TabStop = True
+        Me.rdoStraightLine.Text = "Straight-Line"
+        Me.rdoStraightLine.UseVisualStyleBackColor = True
         '
         'btnCalculate
         '
@@ -136,34 +137,42 @@ Partial Class frmComputeDepreciation
         '
         'lstPresentYear
         '
+        Me.lstPresentYear.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstPresentYear.FormattingEnabled = True
+        Me.lstPresentYear.ItemHeight = 17
         Me.lstPresentYear.Location = New System.Drawing.Point(18, 290)
         Me.lstPresentYear.Name = "lstPresentYear"
-        Me.lstPresentYear.Size = New System.Drawing.Size(112, 121)
+        Me.lstPresentYear.Size = New System.Drawing.Size(112, 123)
         Me.lstPresentYear.TabIndex = 7
         '
         'lstTotalDepreciation
         '
+        Me.lstTotalDepreciation.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstTotalDepreciation.FormattingEnabled = True
+        Me.lstTotalDepreciation.ItemHeight = 17
         Me.lstTotalDepreciation.Location = New System.Drawing.Point(403, 290)
         Me.lstTotalDepreciation.Name = "lstTotalDepreciation"
-        Me.lstTotalDepreciation.Size = New System.Drawing.Size(130, 121)
+        Me.lstTotalDepreciation.Size = New System.Drawing.Size(130, 123)
         Me.lstTotalDepreciation.TabIndex = 8
         '
         'lstYearDepreciation
         '
+        Me.lstYearDepreciation.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstYearDepreciation.FormattingEnabled = True
+        Me.lstYearDepreciation.ItemHeight = 17
         Me.lstYearDepreciation.Location = New System.Drawing.Point(252, 290)
         Me.lstYearDepreciation.Name = "lstYearDepreciation"
-        Me.lstYearDepreciation.Size = New System.Drawing.Size(145, 121)
+        Me.lstYearDepreciation.Size = New System.Drawing.Size(145, 123)
         Me.lstYearDepreciation.TabIndex = 9
         '
         'lstPresentValue
         '
+        Me.lstPresentValue.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstPresentValue.FormattingEnabled = True
+        Me.lstPresentValue.ItemHeight = 17
         Me.lstPresentValue.Location = New System.Drawing.Point(136, 290)
         Me.lstPresentValue.Name = "lstPresentValue"
-        Me.lstPresentValue.Size = New System.Drawing.Size(110, 121)
+        Me.lstPresentValue.Size = New System.Drawing.Size(110, 123)
         Me.lstPresentValue.TabIndex = 10
         '
         'lblPresentYear
