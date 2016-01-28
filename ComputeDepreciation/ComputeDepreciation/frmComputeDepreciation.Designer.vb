@@ -140,6 +140,7 @@ Partial Class frmComputeDepreciation
         '
         'lstPresentYear
         '
+        Me.lstPresentYear.BackColor = System.Drawing.Color.White
         Me.lstPresentYear.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstPresentYear.FormattingEnabled = True
         Me.lstPresentYear.ItemHeight = 17
@@ -222,7 +223,7 @@ Partial Class frmComputeDepreciation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(545, 421)
         Me.Controls.Add(Me.lblPresentValue)
         Me.Controls.Add(Me.lblYearDepreciation)
