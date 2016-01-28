@@ -9,8 +9,14 @@
         Dim objWriter As New IO.StreamWriter("E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\roster.txt")
 
         For intCount = 0 To strNames.Length - 1
-            strNames(intCount) = InputBox("Enter Name " & intCount, "Enter Information", "")
+            strNames(intCount) = InputBox("Enter Name " & (intCount + 1), "Enter Information", "")
+            intID(intCount) = InputBox("Enter ID # for Student " & (intCount + 1), "Enter Information", "")
+
+            objWriter.WriteLine(strNames(intCount)) ' Writes the array element of the Name to the text file
+            objWriter.WriteLine(intID(intCount)) ' Writes the array element of the ID to the text file
         Next
+
+        objWriter.Close()
 
     End Sub
 End Class
