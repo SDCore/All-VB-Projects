@@ -1,0 +1,9 @@
+E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\bin\Debug\WritingToTextFileDemo.exe
+E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\bin\Debug\WritingToTextFileDemo.pdb
+E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\bin\Debug\WritingToTextFileDemo.xml
+E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\obj\x86\Debug\WritingToTextFileDemo.frmWriteToTextFile.resources
+E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\obj\x86\Debug\WritingToTextFileDemo.Resources.resources
+E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\obj\x86\Debug\WritingToTextFileDemo.vbproj.GenerateResource.Cache
+E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\obj\x86\Debug\WritingToTextFileDemo.exe
+E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\obj\x86\Debug\WritingToTextFileDemo.xml
+E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\obj\x86\Debug\WritingToTextFileDemo.pdb
