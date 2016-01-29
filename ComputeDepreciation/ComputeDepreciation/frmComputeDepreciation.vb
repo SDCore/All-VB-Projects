@@ -29,5 +29,6 @@
     Private Sub frmComputeDepreciation_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Dim objReader As IO.StreamReader
         Dim strFileLocation As String = "E:\Advanced VB\ComputeDepreciation\ComputeDepreciation\inventory.txt"
+        Dim intCount As Integer
     End Sub
 End Class

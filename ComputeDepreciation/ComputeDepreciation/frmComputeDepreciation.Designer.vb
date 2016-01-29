@@ -55,7 +55,7 @@ Partial Class frmComputeDepreciation
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Lucida Sans Typewriter", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.DimGray
-        Me.lblTitle.Location = New System.Drawing.Point(12, 21)
+        Me.lblTitle.Location = New System.Drawing.Point(14, 27)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(525, 33)
         Me.lblTitle.TabIndex = 0
@@ -65,9 +65,10 @@ Partial Class frmComputeDepreciation
         '
         Me.cboInventoryItem.FormattingEnabled = True
         Me.cboInventoryItem.Items.AddRange(New Object() {"C101", "C102", "P203", "P204", "H407", "F305", "T209", "C507"})
-        Me.cboInventoryItem.Location = New System.Drawing.Point(18, 94)
+        Me.cboInventoryItem.Location = New System.Drawing.Point(12, 101)
+        Me.cboInventoryItem.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboInventoryItem.Name = "cboInventoryItem"
-        Me.cboInventoryItem.Size = New System.Drawing.Size(228, 21)
+        Me.cboInventoryItem.Size = New System.Drawing.Size(276, 25)
         Me.cboInventoryItem.TabIndex = 1
         Me.cboInventoryItem.Text = "Select an Item"
         '
@@ -75,7 +76,7 @@ Partial Class frmComputeDepreciation
         '
         Me.lblInventoryItem.AutoSize = True
         Me.lblInventoryItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInventoryItem.Location = New System.Drawing.Point(15, 74)
+        Me.lblInventoryItem.Location = New System.Drawing.Point(12, 80)
         Me.lblInventoryItem.Name = "lblInventoryItem"
         Me.lblInventoryItem.Size = New System.Drawing.Size(128, 17)
         Me.lblInventoryItem.TabIndex = 2
@@ -86,9 +87,11 @@ Partial Class frmComputeDepreciation
         Me.grpDepreciationMethod.Controls.Add(Me.rdoDoubleBalance)
         Me.grpDepreciationMethod.Controls.Add(Me.rdoStraightLine)
         Me.grpDepreciationMethod.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpDepreciationMethod.Location = New System.Drawing.Point(252, 74)
+        Me.grpDepreciationMethod.Location = New System.Drawing.Point(294, 80)
+        Me.grpDepreciationMethod.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grpDepreciationMethod.Name = "grpDepreciationMethod"
-        Me.grpDepreciationMethod.Size = New System.Drawing.Size(285, 85)
+        Me.grpDepreciationMethod.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.grpDepreciationMethod.Size = New System.Drawing.Size(332, 77)
         Me.grpDepreciationMethod.TabIndex = 3
         Me.grpDepreciationMethod.TabStop = False
         Me.grpDepreciationMethod.Text = "Select Depreciation Method"
@@ -96,7 +99,8 @@ Partial Class frmComputeDepreciation
         'rdoDoubleBalance
         '
         Me.rdoDoubleBalance.AutoSize = True
-        Me.rdoDoubleBalance.Location = New System.Drawing.Point(7, 51)
+        Me.rdoDoubleBalance.Location = New System.Drawing.Point(8, 51)
+        Me.rdoDoubleBalance.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.rdoDoubleBalance.Name = "rdoDoubleBalance"
         Me.rdoDoubleBalance.Size = New System.Drawing.Size(174, 21)
         Me.rdoDoubleBalance.TabIndex = 1
@@ -107,7 +111,8 @@ Partial Class frmComputeDepreciation
         'rdoStraightLine
         '
         Me.rdoStraightLine.AutoSize = True
-        Me.rdoStraightLine.Location = New System.Drawing.Point(7, 23)
+        Me.rdoStraightLine.Location = New System.Drawing.Point(8, 22)
+        Me.rdoStraightLine.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.rdoStraightLine.Name = "rdoStraightLine"
         Me.rdoStraightLine.Size = New System.Drawing.Size(99, 21)
         Me.rdoStraightLine.TabIndex = 0
@@ -121,9 +126,10 @@ Partial Class frmComputeDepreciation
         Me.btnCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCalculate.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCalculate.ForeColor = System.Drawing.Color.White
-        Me.btnCalculate.Location = New System.Drawing.Point(18, 166)
+        Me.btnCalculate.Location = New System.Drawing.Point(15, 160)
+        Me.btnCalculate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnCalculate.Name = "btnCalculate"
-        Me.btnCalculate.Size = New System.Drawing.Size(519, 38)
+        Me.btnCalculate.Size = New System.Drawing.Size(611, 50)
         Me.btnCalculate.TabIndex = 4
         Me.btnCalculate.Text = "Calculate Depreciation"
         Me.btnCalculate.UseVisualStyleBackColor = False
@@ -132,7 +138,7 @@ Partial Class frmComputeDepreciation
         '
         Me.lblItemOutput.AutoSize = True
         Me.lblItemOutput.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblItemOutput.Location = New System.Drawing.Point(170, 207)
+        Me.lblItemOutput.Location = New System.Drawing.Point(201, 214)
         Me.lblItemOutput.Name = "lblItemOutput"
         Me.lblItemOutput.Size = New System.Drawing.Size(200, 17)
         Me.lblItemOutput.TabIndex = 5
@@ -143,7 +149,7 @@ Partial Class frmComputeDepreciation
         '
         Me.lblQuantityOutput.AutoSize = True
         Me.lblQuantityOutput.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblQuantityOutput.Location = New System.Drawing.Point(235, 227)
+        Me.lblQuantityOutput.Location = New System.Drawing.Point(269, 231)
         Me.lblQuantityOutput.Name = "lblQuantityOutput"
         Me.lblQuantityOutput.Size = New System.Drawing.Size(70, 17)
         Me.lblQuantityOutput.TabIndex = 6
@@ -156,9 +162,10 @@ Partial Class frmComputeDepreciation
         Me.lstPresentYear.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstPresentYear.FormattingEnabled = True
         Me.lstPresentYear.ItemHeight = 17
-        Me.lstPresentYear.Location = New System.Drawing.Point(18, 290)
+        Me.lstPresentYear.Location = New System.Drawing.Point(15, 305)
+        Me.lstPresentYear.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lstPresentYear.Name = "lstPresentYear"
-        Me.lstPresentYear.Size = New System.Drawing.Size(112, 123)
+        Me.lstPresentYear.Size = New System.Drawing.Size(130, 157)
         Me.lstPresentYear.TabIndex = 7
         Me.lstPresentYear.Visible = False
         '
@@ -167,9 +174,10 @@ Partial Class frmComputeDepreciation
         Me.lstTotalDepreciation.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstTotalDepreciation.FormattingEnabled = True
         Me.lstTotalDepreciation.ItemHeight = 17
-        Me.lstTotalDepreciation.Location = New System.Drawing.Point(403, 290)
+        Me.lstTotalDepreciation.Location = New System.Drawing.Point(459, 305)
+        Me.lstTotalDepreciation.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lstTotalDepreciation.Name = "lstTotalDepreciation"
-        Me.lstTotalDepreciation.Size = New System.Drawing.Size(130, 123)
+        Me.lstTotalDepreciation.Size = New System.Drawing.Size(165, 157)
         Me.lstTotalDepreciation.TabIndex = 8
         Me.lstTotalDepreciation.Visible = False
         '
@@ -178,9 +186,10 @@ Partial Class frmComputeDepreciation
         Me.lstYearDepreciation.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstYearDepreciation.FormattingEnabled = True
         Me.lstYearDepreciation.ItemHeight = 17
-        Me.lstYearDepreciation.Location = New System.Drawing.Point(252, 290)
+        Me.lstYearDepreciation.Location = New System.Drawing.Point(285, 305)
+        Me.lstYearDepreciation.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lstYearDepreciation.Name = "lstYearDepreciation"
-        Me.lstYearDepreciation.Size = New System.Drawing.Size(145, 123)
+        Me.lstYearDepreciation.Size = New System.Drawing.Size(168, 157)
         Me.lstYearDepreciation.TabIndex = 9
         Me.lstYearDepreciation.Visible = False
         '
@@ -189,9 +198,10 @@ Partial Class frmComputeDepreciation
         Me.lstPresentValue.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstPresentValue.FormattingEnabled = True
         Me.lstPresentValue.ItemHeight = 17
-        Me.lstPresentValue.Location = New System.Drawing.Point(136, 290)
+        Me.lstPresentValue.Location = New System.Drawing.Point(151, 305)
+        Me.lstPresentValue.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lstPresentValue.Name = "lstPresentValue"
-        Me.lstPresentValue.Size = New System.Drawing.Size(110, 123)
+        Me.lstPresentValue.Size = New System.Drawing.Size(128, 157)
         Me.lstPresentValue.TabIndex = 10
         Me.lstPresentValue.Visible = False
         '
@@ -199,7 +209,7 @@ Partial Class frmComputeDepreciation
         '
         Me.lblPresentYear.AutoSize = True
         Me.lblPresentYear.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPresentYear.Location = New System.Drawing.Point(15, 270)
+        Me.lblPresentYear.Location = New System.Drawing.Point(12, 284)
         Me.lblPresentYear.Name = "lblPresentYear"
         Me.lblPresentYear.Size = New System.Drawing.Size(81, 17)
         Me.lblPresentYear.TabIndex = 11
@@ -210,7 +220,7 @@ Partial Class frmComputeDepreciation
         '
         Me.lblTotalDepreciation.AutoSize = True
         Me.lblTotalDepreciation.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalDepreciation.Location = New System.Drawing.Point(400, 253)
+        Me.lblTotalDepreciation.Location = New System.Drawing.Point(456, 267)
         Me.lblTotalDepreciation.Name = "lblTotalDepreciation"
         Me.lblTotalDepreciation.Size = New System.Drawing.Size(82, 34)
         Me.lblTotalDepreciation.TabIndex = 12
@@ -221,7 +231,7 @@ Partial Class frmComputeDepreciation
         '
         Me.lblYearDepreciation.AutoSize = True
         Me.lblYearDepreciation.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblYearDepreciation.Location = New System.Drawing.Point(249, 253)
+        Me.lblYearDepreciation.Location = New System.Drawing.Point(282, 267)
         Me.lblYearDepreciation.Name = "lblYearDepreciation"
         Me.lblYearDepreciation.Size = New System.Drawing.Size(82, 34)
         Me.lblYearDepreciation.TabIndex = 13
@@ -232,7 +242,7 @@ Partial Class frmComputeDepreciation
         '
         Me.lblPresentValue.AutoSize = True
         Me.lblPresentValue.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPresentValue.Location = New System.Drawing.Point(133, 270)
+        Me.lblPresentValue.Location = New System.Drawing.Point(148, 284)
         Me.lblPresentValue.Name = "lblPresentValue"
         Me.lblPresentValue.Size = New System.Drawing.Size(87, 17)
         Me.lblPresentValue.TabIndex = 14
@@ -249,7 +259,8 @@ Partial Class frmComputeDepreciation
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(545, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 3, 0, 3)
+        Me.MenuStrip1.Size = New System.Drawing.Size(636, 25)
         Me.MenuStrip1.TabIndex = 16
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -280,10 +291,10 @@ Partial Class frmComputeDepreciation
         '
         'frmComputeDepreciation
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(545, 421)
+        Me.ClientSize = New System.Drawing.Size(636, 475)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.lblPresentValue)
         Me.Controls.Add(Me.lblYearDepreciation)
@@ -300,6 +311,8 @@ Partial Class frmComputeDepreciation
         Me.Controls.Add(Me.lblInventoryItem)
         Me.Controls.Add(Me.cboInventoryItem)
         Me.Controls.Add(Me.lblTitle)
+        Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "frmComputeDepreciation"
         Me.Text = "Compute Depreciation by Method"
         Me.grpDepreciationMethod.ResumeLayout(False)
