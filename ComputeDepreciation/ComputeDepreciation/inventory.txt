@@ -1,0 +1,32 @@
+Desktop Computer
+C101
+699.99
+12
+Laptop Computer
+C102
+1299.99
+4
+Laser Printer
+P203
+299.99
+6
+Photocopier
+P204
+3800.00
+1
+Pocket PC
+H407
+229.99
+9
+Fax Machine
+F305
+688.18
+2
+Delivery Van
+T209
+22999.00
+1
+Company Car
+C507
+18606.77
+2
