@@ -137,6 +137,7 @@ Partial Class frmComputeDepreciation
         Me.lblItemOutput.Size = New System.Drawing.Size(200, 17)
         Me.lblItemOutput.TabIndex = 5
         Me.lblItemOutput.Text = "Depreciation of Item: ITEMNAME"
+        Me.lblItemOutput.Visible = False
         '
         'lblQuantityOutput
         '
@@ -147,6 +148,7 @@ Partial Class frmComputeDepreciation
         Me.lblQuantityOutput.Size = New System.Drawing.Size(70, 17)
         Me.lblQuantityOutput.TabIndex = 6
         Me.lblQuantityOutput.Text = "Quantity: 0"
+        Me.lblQuantityOutput.Visible = False
         '
         'lstPresentYear
         '
@@ -158,6 +160,7 @@ Partial Class frmComputeDepreciation
         Me.lstPresentYear.Name = "lstPresentYear"
         Me.lstPresentYear.Size = New System.Drawing.Size(112, 123)
         Me.lstPresentYear.TabIndex = 7
+        Me.lstPresentYear.Visible = False
         '
         'lstTotalDepreciation
         '
@@ -168,6 +171,7 @@ Partial Class frmComputeDepreciation
         Me.lstTotalDepreciation.Name = "lstTotalDepreciation"
         Me.lstTotalDepreciation.Size = New System.Drawing.Size(130, 123)
         Me.lstTotalDepreciation.TabIndex = 8
+        Me.lstTotalDepreciation.Visible = False
         '
         'lstYearDepreciation
         '
@@ -178,6 +182,7 @@ Partial Class frmComputeDepreciation
         Me.lstYearDepreciation.Name = "lstYearDepreciation"
         Me.lstYearDepreciation.Size = New System.Drawing.Size(145, 123)
         Me.lstYearDepreciation.TabIndex = 9
+        Me.lstYearDepreciation.Visible = False
         '
         'lstPresentValue
         '
@@ -188,6 +193,7 @@ Partial Class frmComputeDepreciation
         Me.lstPresentValue.Name = "lstPresentValue"
         Me.lstPresentValue.Size = New System.Drawing.Size(110, 123)
         Me.lstPresentValue.TabIndex = 10
+        Me.lstPresentValue.Visible = False
         '
         'lblPresentYear
         '
@@ -198,6 +204,7 @@ Partial Class frmComputeDepreciation
         Me.lblPresentYear.Size = New System.Drawing.Size(81, 17)
         Me.lblPresentYear.TabIndex = 11
         Me.lblPresentYear.Text = "Present Year"
+        Me.lblPresentYear.Visible = False
         '
         'lblTotalDepreciation
         '
@@ -208,6 +215,7 @@ Partial Class frmComputeDepreciation
         Me.lblTotalDepreciation.Size = New System.Drawing.Size(82, 34)
         Me.lblTotalDepreciation.TabIndex = 12
         Me.lblTotalDepreciation.Text = "Total" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Depreciation"
+        Me.lblTotalDepreciation.Visible = False
         '
         'lblYearDepreciation
         '
@@ -218,6 +226,7 @@ Partial Class frmComputeDepreciation
         Me.lblYearDepreciation.Size = New System.Drawing.Size(82, 34)
         Me.lblYearDepreciation.TabIndex = 13
         Me.lblYearDepreciation.Text = "Year" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Depreciation"
+        Me.lblYearDepreciation.Visible = False
         '
         'lblPresentValue
         '
@@ -228,6 +237,7 @@ Partial Class frmComputeDepreciation
         Me.lblPresentValue.Size = New System.Drawing.Size(87, 17)
         Me.lblPresentValue.TabIndex = 14
         Me.lblPresentValue.Text = "Present Value"
+        Me.lblPresentValue.Visible = False
         '
         'ContextMenuStrip1
         '

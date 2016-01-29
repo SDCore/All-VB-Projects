@@ -20,5 +20,9 @@
         lstYearDepreciation.Visible = False
         lstTotalDepreciation.Items.Clear()
         lstTotalDepreciation.Visible = False
+        lblPresentYear.Visible = False
+        lblPresentValue.Visible = False
+        lblYearDepreciation.Visible = False
+        lblTotalDepreciation.Visible = False
     End Sub
 End Class
