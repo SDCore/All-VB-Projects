@@ -55,7 +55,7 @@ Partial Class frmComputeDepreciation
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Lucida Sans Typewriter", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.DimGray
-        Me.lblTitle.Location = New System.Drawing.Point(14, 27)
+        Me.lblTitle.Location = New System.Drawing.Point(59, 27)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(525, 33)
         Me.lblTitle.TabIndex = 0

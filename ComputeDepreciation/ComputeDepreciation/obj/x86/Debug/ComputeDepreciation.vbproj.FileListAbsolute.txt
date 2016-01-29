@@ -7,3 +7,4 @@ E:\Advanced VB\ComputeDepreciation\ComputeDepreciation\obj\x86\Debug\ComputeDepr
 E:\Advanced VB\ComputeDepreciation\ComputeDepreciation\obj\x86\Debug\ComputeDepreciation.exe
 E:\Advanced VB\ComputeDepreciation\ComputeDepreciation\obj\x86\Debug\ComputeDepreciation.xml
 E:\Advanced VB\ComputeDepreciation\ComputeDepreciation\obj\x86\Debug\ComputeDepreciation.pdb
+E:\Advanced VB\ComputeDepreciation\ComputeDepreciation\obj\x86\Debug\ComputeDepreciation.frmSortedInventory.resources
