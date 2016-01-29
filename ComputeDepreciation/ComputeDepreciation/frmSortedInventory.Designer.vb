@@ -24,6 +24,7 @@ Partial Class frmSortedInventory
     Private Sub InitializeComponent()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.btnReturn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -39,18 +40,35 @@ Partial Class frmSortedInventory
         '
         'ListBox1
         '
+        Me.ListBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 17
         Me.ListBox1.Items.AddRange(New Object() {"Company Car", "Delivery Van", "Desktop Computer", "Fax Machine", "Laptop Computer", "Laser Printer", "Photocopier", "Pocket PC"})
         Me.ListBox1.Location = New System.Drawing.Point(18, 46)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(519, 108)
+        Me.ListBox1.Size = New System.Drawing.Size(519, 140)
         Me.ListBox1.TabIndex = 2
+        '
+        'btnReturn
+        '
+        Me.btnReturn.BackColor = System.Drawing.Color.Black
+        Me.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReturn.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReturn.ForeColor = System.Drawing.Color.White
+        Me.btnReturn.Location = New System.Drawing.Point(18, 193)
+        Me.btnReturn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnReturn.Name = "btnReturn"
+        Me.btnReturn.Size = New System.Drawing.Size(519, 50)
+        Me.btnReturn.TabIndex = 5
+        Me.btnReturn.Text = "Return to Application"
+        Me.btnReturn.UseVisualStyleBackColor = False
         '
         'frmSortedInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(551, 165)
+        Me.ClientSize = New System.Drawing.Size(551, 249)
+        Me.Controls.Add(Me.btnReturn)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "frmSortedInventory"
@@ -61,4 +79,5 @@ Partial Class frmSortedInventory
     End Sub
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents btnReturn As System.Windows.Forms.Button
 End Class
