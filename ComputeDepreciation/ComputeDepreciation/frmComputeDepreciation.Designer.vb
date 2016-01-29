@@ -22,15 +22,16 @@ Partial Class frmComputeDepreciation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboInventoryItem = New System.Windows.Forms.ComboBox()
         Me.lblInventoryItem = New System.Windows.Forms.Label()
         Me.grpDepreciationMethod = New System.Windows.Forms.GroupBox()
         Me.rdoDoubleBalance = New System.Windows.Forms.RadioButton()
         Me.rdoStraightLine = New System.Windows.Forms.RadioButton()
         Me.btnCalculate = New System.Windows.Forms.Button()
-        Me.lblItem = New System.Windows.Forms.Label()
-        Me.lblQuantity = New System.Windows.Forms.Label()
+        Me.lblItemOutput = New System.Windows.Forms.Label()
+        Me.lblQuantityOutput = New System.Windows.Forms.Label()
         Me.lstPresentYear = New System.Windows.Forms.ListBox()
         Me.lstTotalDepreciation = New System.Windows.Forms.ListBox()
         Me.lstYearDepreciation = New System.Windows.Forms.ListBox()
@@ -39,7 +40,14 @@ Partial Class frmComputeDepreciation
         Me.lblTotalDepreciation = New System.Windows.Forms.Label()
         Me.lblYearDepreciation = New System.Windows.Forms.Label()
         Me.lblPresentValue = New System.Windows.Forms.Label()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DisplayInventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.grpDepreciationMethod.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -47,19 +55,21 @@ Partial Class frmComputeDepreciation
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Lucida Sans Typewriter", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.DimGray
-        Me.lblTitle.Location = New System.Drawing.Point(12, 9)
+        Me.lblTitle.Location = New System.Drawing.Point(12, 21)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(525, 33)
         Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "Light Span Computers Inventory"
         '
-        'ComboBox1
+        'cboInventoryItem
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(18, 94)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(228, 21)
-        Me.ComboBox1.TabIndex = 1
+        Me.cboInventoryItem.FormattingEnabled = True
+        Me.cboInventoryItem.Items.AddRange(New Object() {"C101", "C102", "P203", "P204", "H407", "F305", "T209", "C507"})
+        Me.cboInventoryItem.Location = New System.Drawing.Point(18, 94)
+        Me.cboInventoryItem.Name = "cboInventoryItem"
+        Me.cboInventoryItem.Size = New System.Drawing.Size(228, 21)
+        Me.cboInventoryItem.TabIndex = 1
+        Me.cboInventoryItem.Text = "Select an Item"
         '
         'lblInventoryItem
         '
@@ -118,25 +128,27 @@ Partial Class frmComputeDepreciation
         Me.btnCalculate.Text = "Calculate Depreciation"
         Me.btnCalculate.UseVisualStyleBackColor = False
         '
-        'lblItem
+        'lblItemOutput
         '
-        Me.lblItem.AutoSize = True
-        Me.lblItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblItem.Location = New System.Drawing.Point(170, 207)
-        Me.lblItem.Name = "lblItem"
-        Me.lblItem.Size = New System.Drawing.Size(200, 17)
-        Me.lblItem.TabIndex = 5
-        Me.lblItem.Text = "Depreciation of Item: ITEMNAME"
+        Me.lblItemOutput.AutoSize = True
+        Me.lblItemOutput.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblItemOutput.Location = New System.Drawing.Point(170, 207)
+        Me.lblItemOutput.Name = "lblItemOutput"
+        Me.lblItemOutput.Size = New System.Drawing.Size(200, 17)
+        Me.lblItemOutput.TabIndex = 5
+        Me.lblItemOutput.Text = "Depreciation of Item: ITEMNAME"
+        Me.lblItemOutput.Visible = False
         '
-        'lblQuantity
+        'lblQuantityOutput
         '
-        Me.lblQuantity.AutoSize = True
-        Me.lblQuantity.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblQuantity.Location = New System.Drawing.Point(235, 227)
-        Me.lblQuantity.Name = "lblQuantity"
-        Me.lblQuantity.Size = New System.Drawing.Size(70, 17)
-        Me.lblQuantity.TabIndex = 6
-        Me.lblQuantity.Text = "Quantity: 0"
+        Me.lblQuantityOutput.AutoSize = True
+        Me.lblQuantityOutput.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblQuantityOutput.Location = New System.Drawing.Point(235, 227)
+        Me.lblQuantityOutput.Name = "lblQuantityOutput"
+        Me.lblQuantityOutput.Size = New System.Drawing.Size(70, 17)
+        Me.lblQuantityOutput.TabIndex = 6
+        Me.lblQuantityOutput.Text = "Quantity: 0"
+        Me.lblQuantityOutput.Visible = False
         '
         'lstPresentYear
         '
@@ -148,6 +160,7 @@ Partial Class frmComputeDepreciation
         Me.lstPresentYear.Name = "lstPresentYear"
         Me.lstPresentYear.Size = New System.Drawing.Size(112, 123)
         Me.lstPresentYear.TabIndex = 7
+        Me.lstPresentYear.Visible = False
         '
         'lstTotalDepreciation
         '
@@ -158,6 +171,7 @@ Partial Class frmComputeDepreciation
         Me.lstTotalDepreciation.Name = "lstTotalDepreciation"
         Me.lstTotalDepreciation.Size = New System.Drawing.Size(130, 123)
         Me.lstTotalDepreciation.TabIndex = 8
+        Me.lstTotalDepreciation.Visible = False
         '
         'lstYearDepreciation
         '
@@ -168,6 +182,7 @@ Partial Class frmComputeDepreciation
         Me.lstYearDepreciation.Name = "lstYearDepreciation"
         Me.lstYearDepreciation.Size = New System.Drawing.Size(145, 123)
         Me.lstYearDepreciation.TabIndex = 9
+        Me.lstYearDepreciation.Visible = False
         '
         'lstPresentValue
         '
@@ -178,6 +193,7 @@ Partial Class frmComputeDepreciation
         Me.lstPresentValue.Name = "lstPresentValue"
         Me.lstPresentValue.Size = New System.Drawing.Size(110, 123)
         Me.lstPresentValue.TabIndex = 10
+        Me.lstPresentValue.Visible = False
         '
         'lblPresentYear
         '
@@ -188,6 +204,7 @@ Partial Class frmComputeDepreciation
         Me.lblPresentYear.Size = New System.Drawing.Size(81, 17)
         Me.lblPresentYear.TabIndex = 11
         Me.lblPresentYear.Text = "Present Year"
+        Me.lblPresentYear.Visible = False
         '
         'lblTotalDepreciation
         '
@@ -198,6 +215,7 @@ Partial Class frmComputeDepreciation
         Me.lblTotalDepreciation.Size = New System.Drawing.Size(82, 34)
         Me.lblTotalDepreciation.TabIndex = 12
         Me.lblTotalDepreciation.Text = "Total" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Depreciation"
+        Me.lblTotalDepreciation.Visible = False
         '
         'lblYearDepreciation
         '
@@ -208,6 +226,7 @@ Partial Class frmComputeDepreciation
         Me.lblYearDepreciation.Size = New System.Drawing.Size(82, 34)
         Me.lblYearDepreciation.TabIndex = 13
         Me.lblYearDepreciation.Text = "Year" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Depreciation"
+        Me.lblYearDepreciation.Visible = False
         '
         'lblPresentValue
         '
@@ -218,6 +237,46 @@ Partial Class frmComputeDepreciation
         Me.lblPresentValue.Size = New System.Drawing.Size(87, 17)
         Me.lblPresentValue.TabIndex = 14
         Me.lblPresentValue.Text = "Present Value"
+        Me.lblPresentValue.Visible = False
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(545, 24)
+        Me.MenuStrip1.TabIndex = 16
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DisplayInventoryToolStripMenuItem, Me.ClearToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'DisplayInventoryToolStripMenuItem
+        '
+        Me.DisplayInventoryToolStripMenuItem.Name = "DisplayInventoryToolStripMenuItem"
+        Me.DisplayInventoryToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.DisplayInventoryToolStripMenuItem.Text = "Display Inventory"
+        '
+        'ClearToolStripMenuItem
+        '
+        Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.ClearToolStripMenuItem.Text = "Clear"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'frmComputeDepreciation
         '
@@ -225,6 +284,7 @@ Partial Class frmComputeDepreciation
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(545, 421)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.lblPresentValue)
         Me.Controls.Add(Me.lblYearDepreciation)
         Me.Controls.Add(Me.lblTotalDepreciation)
@@ -233,30 +293,32 @@ Partial Class frmComputeDepreciation
         Me.Controls.Add(Me.lstYearDepreciation)
         Me.Controls.Add(Me.lstTotalDepreciation)
         Me.Controls.Add(Me.lstPresentYear)
-        Me.Controls.Add(Me.lblQuantity)
-        Me.Controls.Add(Me.lblItem)
+        Me.Controls.Add(Me.lblQuantityOutput)
+        Me.Controls.Add(Me.lblItemOutput)
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.grpDepreciationMethod)
         Me.Controls.Add(Me.lblInventoryItem)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cboInventoryItem)
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "frmComputeDepreciation"
         Me.Text = "Compute Depreciation by Method"
         Me.grpDepreciationMethod.ResumeLayout(False)
         Me.grpDepreciationMethod.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents lblTitle As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cboInventoryItem As System.Windows.Forms.ComboBox
     Friend WithEvents lblInventoryItem As System.Windows.Forms.Label
     Friend WithEvents grpDepreciationMethod As System.Windows.Forms.GroupBox
     Friend WithEvents rdoDoubleBalance As System.Windows.Forms.RadioButton
     Friend WithEvents rdoStraightLine As System.Windows.Forms.RadioButton
     Friend WithEvents btnCalculate As System.Windows.Forms.Button
-    Friend WithEvents lblItem As System.Windows.Forms.Label
-    Friend WithEvents lblQuantity As System.Windows.Forms.Label
+    Friend WithEvents lblItemOutput As System.Windows.Forms.Label
+    Friend WithEvents lblQuantityOutput As System.Windows.Forms.Label
     Friend WithEvents lstPresentYear As System.Windows.Forms.ListBox
     Friend WithEvents lstTotalDepreciation As System.Windows.Forms.ListBox
     Friend WithEvents lstYearDepreciation As System.Windows.Forms.ListBox
@@ -265,5 +327,11 @@ Partial Class frmComputeDepreciation
     Friend WithEvents lblTotalDepreciation As System.Windows.Forms.Label
     Friend WithEvents lblYearDepreciation As System.Windows.Forms.Label
     Friend WithEvents lblPresentValue As System.Windows.Forms.Label
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DisplayInventoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ClearToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
