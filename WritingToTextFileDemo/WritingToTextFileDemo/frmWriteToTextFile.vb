@@ -1,6 +1,7 @@
 ﻿Public Class frmWriteToTextFile
 
     Private Sub btnShowOutput_Click(sender As System.Object, e As System.EventArgs) Handles btnShowOutput.Click
+        ' Parallel arrays
         Dim strNames(5) As String
         Dim intID(5) As Integer
 
@@ -17,11 +18,28 @@
                 objWriter.WriteLine(intID(intCount)) ' Writes the array element of the ID to the text file
             Else
                 MsgBox("File not available. Please re-run program when it is available.")
+                Close()
             End If
 
         Next
 
         objWriter.Close()
+
+        ' Read from array
+        Dim objReader As IO.StreamReader
+
+        If IO.File.Exists("E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\roster.txt") Then
+            objReader = IO.File.OpenText("E:\Advanced VB\WritingToTextFileDemo\WritingToTextFileDemo\roster.txt")
+            Do While objReader.Peek <> -1
+                lstOutput.Items.Add(objReader.ReadLine())
+            Loop
+
+        Else
+            MsgBox("File is not available. Please re-run program when it is available.")
+            Close()
+        End If
+
+        objReader.Close()
 
     End Sub
 End Class
