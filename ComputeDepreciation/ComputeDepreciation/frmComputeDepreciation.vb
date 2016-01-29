@@ -1,4 +1,11 @@
-﻿Public Class frmComputeDepreciation
+﻿' Michael Voell
+' Compute Depreciation
+' 1/29/2016
+' Purpose: To calculate the depreciation of inventory items over time using information from a text file.
+
+Option Strict On
+
+Public Class frmComputeDepreciation
 
     Private Sub ExitToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ExitToolStripMenuItem.Click
         Close()
