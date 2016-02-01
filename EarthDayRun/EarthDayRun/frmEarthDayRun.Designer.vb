@@ -45,7 +45,7 @@ Partial Class frmEarthDayRun
         '
         'btnComputeFunds
         '
-        Me.btnComputeFunds.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnComputeFunds.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.btnComputeFunds.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnComputeFunds.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnComputeFunds.ForeColor = System.Drawing.Color.White

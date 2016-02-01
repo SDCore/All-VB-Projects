@@ -18,7 +18,10 @@ Public Class frmEarthDayRun
     End Sub
 
     Private Sub ClearToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ClearToolStripMenuItem.Click
-
+        lstRunners.Items.Clear()
+        lblRunnerCountOutput.Text = "00"
+        lblAverageAgesOutput.Text = "00"
+        lblTotalFundsOutput.Text = "$0,000.00"
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ExitToolStripMenuItem.Click
