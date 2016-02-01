@@ -1,0 +1,9 @@
+E:\Advanced VB\EarthDayRun\EarthDayRun\bin\Debug\EarthDayRun.exe
+E:\Advanced VB\EarthDayRun\EarthDayRun\bin\Debug\EarthDayRun.pdb
+E:\Advanced VB\EarthDayRun\EarthDayRun\bin\Debug\EarthDayRun.xml
+E:\Advanced VB\EarthDayRun\EarthDayRun\obj\x86\Debug\EarthDayRun.frmEarthDayRun.resources
+E:\Advanced VB\EarthDayRun\EarthDayRun\obj\x86\Debug\EarthDayRun.Resources.resources
+E:\Advanced VB\EarthDayRun\EarthDayRun\obj\x86\Debug\EarthDayRun.vbproj.GenerateResource.Cache
+E:\Advanced VB\EarthDayRun\EarthDayRun\obj\x86\Debug\EarthDayRun.exe
+E:\Advanced VB\EarthDayRun\EarthDayRun\obj\x86\Debug\EarthDayRun.xml
+E:\Advanced VB\EarthDayRun\EarthDayRun\obj\x86\Debug\EarthDayRun.pdb
