@@ -32,6 +32,13 @@ Partial Class frmEarthDayRun
         Me.txtTitle = New System.Windows.Forms.Label()
         Me.lblRunners = New System.Windows.Forms.Label()
         Me.lstRunners = New System.Windows.Forms.ListBox()
+        Me.lblPresentInventory = New System.Windows.Forms.Label()
+        Me.lblRunnerCount = New System.Windows.Forms.Label()
+        Me.lblRunnerCountOutput = New System.Windows.Forms.Label()
+        Me.lblAverageAgesOutput = New System.Windows.Forms.Label()
+        Me.lblAverageAge = New System.Windows.Forms.Label()
+        Me.lblTotalFundsOutput = New System.Windows.Forms.Label()
+        Me.lblTotalFunds = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.picEarthDay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -112,16 +119,93 @@ Partial Class frmEarthDayRun
         'lstRunners
         '
         Me.lstRunners.FormattingEnabled = True
-        Me.lstRunners.Location = New System.Drawing.Point(16, 52)
+        Me.lstRunners.Location = New System.Drawing.Point(12, 51)
         Me.lstRunners.Name = "lstRunners"
-        Me.lstRunners.Size = New System.Drawing.Size(215, 420)
+        Me.lstRunners.Size = New System.Drawing.Size(273, 420)
         Me.lstRunners.TabIndex = 5
+        '
+        'lblPresentInventory
+        '
+        Me.lblPresentInventory.AutoSize = True
+        Me.lblPresentInventory.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPresentInventory.Location = New System.Drawing.Point(297, 27)
+        Me.lblPresentInventory.Name = "lblPresentInventory"
+        Me.lblPresentInventory.Size = New System.Drawing.Size(132, 21)
+        Me.lblPresentInventory.TabIndex = 6
+        Me.lblPresentInventory.Text = "Present Inventory"
+        '
+        'lblRunnerCount
+        '
+        Me.lblRunnerCount.AutoSize = True
+        Me.lblRunnerCount.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRunnerCount.Location = New System.Drawing.Point(301, 71)
+        Me.lblRunnerCount.Name = "lblRunnerCount"
+        Me.lblRunnerCount.Size = New System.Drawing.Size(156, 17)
+        Me.lblRunnerCount.TabIndex = 7
+        Me.lblRunnerCount.Text = "Present Count of Runners"
+        '
+        'lblRunnerCountOutput
+        '
+        Me.lblRunnerCountOutput.AutoSize = True
+        Me.lblRunnerCountOutput.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRunnerCountOutput.Location = New System.Drawing.Point(438, 88)
+        Me.lblRunnerCountOutput.Name = "lblRunnerCountOutput"
+        Me.lblRunnerCountOutput.Size = New System.Drawing.Size(19, 13)
+        Me.lblRunnerCountOutput.TabIndex = 8
+        Me.lblRunnerCountOutput.Text = "00"
+        '
+        'lblAverageAgesOutput
+        '
+        Me.lblAverageAgesOutput.AutoSize = True
+        Me.lblAverageAgesOutput.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAverageAgesOutput.Location = New System.Drawing.Point(438, 142)
+        Me.lblAverageAgesOutput.Name = "lblAverageAgesOutput"
+        Me.lblAverageAgesOutput.Size = New System.Drawing.Size(19, 13)
+        Me.lblAverageAgesOutput.TabIndex = 10
+        Me.lblAverageAgesOutput.Text = "00"
+        '
+        'lblAverageAge
+        '
+        Me.lblAverageAge.AutoSize = True
+        Me.lblAverageAge.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAverageAge.Location = New System.Drawing.Point(301, 125)
+        Me.lblAverageAge.Name = "lblAverageAge"
+        Me.lblAverageAge.Size = New System.Drawing.Size(147, 17)
+        Me.lblAverageAge.TabIndex = 9
+        Me.lblAverageAge.Text = "Average Age of runners"
+        '
+        'lblTotalFundsOutput
+        '
+        Me.lblTotalFundsOutput.AutoSize = True
+        Me.lblTotalFundsOutput.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalFundsOutput.Location = New System.Drawing.Point(402, 195)
+        Me.lblTotalFundsOutput.Name = "lblTotalFundsOutput"
+        Me.lblTotalFundsOutput.Size = New System.Drawing.Size(55, 13)
+        Me.lblTotalFundsOutput.TabIndex = 12
+        Me.lblTotalFundsOutput.Text = "$0,000.00"
+        '
+        'lblTotalFunds
+        '
+        Me.lblTotalFunds.AutoSize = True
+        Me.lblTotalFunds.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalFunds.Location = New System.Drawing.Point(301, 178)
+        Me.lblTotalFunds.Name = "lblTotalFunds"
+        Me.lblTotalFunds.Size = New System.Drawing.Size(116, 17)
+        Me.lblTotalFunds.TabIndex = 11
+        Me.lblTotalFunds.Text = "Total funds Raised"
         '
         'frmEarthDayRun
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(838, 558)
+        Me.Controls.Add(Me.lblTotalFundsOutput)
+        Me.Controls.Add(Me.lblTotalFunds)
+        Me.Controls.Add(Me.lblAverageAgesOutput)
+        Me.Controls.Add(Me.lblAverageAge)
+        Me.Controls.Add(Me.lblRunnerCountOutput)
+        Me.Controls.Add(Me.lblRunnerCount)
+        Me.Controls.Add(Me.lblPresentInventory)
         Me.Controls.Add(Me.lstRunners)
         Me.Controls.Add(Me.lblRunners)
         Me.Controls.Add(Me.txtTitle)
@@ -149,5 +233,12 @@ Partial Class frmEarthDayRun
     Friend WithEvents txtTitle As System.Windows.Forms.Label
     Friend WithEvents lblRunners As System.Windows.Forms.Label
     Friend WithEvents lstRunners As System.Windows.Forms.ListBox
+    Friend WithEvents lblPresentInventory As System.Windows.Forms.Label
+    Friend WithEvents lblRunnerCount As System.Windows.Forms.Label
+    Friend WithEvents lblRunnerCountOutput As System.Windows.Forms.Label
+    Friend WithEvents lblAverageAgesOutput As System.Windows.Forms.Label
+    Friend WithEvents lblAverageAge As System.Windows.Forms.Label
+    Friend WithEvents lblTotalFundsOutput As System.Windows.Forms.Label
+    Friend WithEvents lblTotalFunds As System.Windows.Forms.Label
 
 End Class
