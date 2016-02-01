@@ -9,7 +9,6 @@
 ' Program assigns the text file contents to three arrays that hold the runner's name, age, and amount of funds raised (Has a total of 22 elements)
 ' When Calculate button is pressed, program computes the total of runners added to the text file, average age of runners, and total funds raised
 ' Program displays names of runners in sorted alphabetical order and their ages
-' File Menu with Clear and Exit displayed, clearing the form and exiting the form respectively
 
 Public Class frmEarthDayRun
 
