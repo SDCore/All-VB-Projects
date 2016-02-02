@@ -76,13 +76,13 @@ Partial Class frmEarthDayRun
         'ClearToolStripMenuItem
         '
         Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
-        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(101, 22)
         Me.ClearToolStripMenuItem.Text = "Clear"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(101, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'picEarthDay
@@ -118,10 +118,12 @@ Partial Class frmEarthDayRun
         '
         'lstRunners
         '
+        Me.lstRunners.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstRunners.FormattingEnabled = True
+        Me.lstRunners.ItemHeight = 17
         Me.lstRunners.Location = New System.Drawing.Point(12, 51)
         Me.lstRunners.Name = "lstRunners"
-        Me.lstRunners.Size = New System.Drawing.Size(273, 420)
+        Me.lstRunners.Size = New System.Drawing.Size(273, 412)
         Me.lstRunners.TabIndex = 5
         '
         'lblPresentInventory
