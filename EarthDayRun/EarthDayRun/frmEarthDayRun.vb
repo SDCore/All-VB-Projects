@@ -28,6 +28,7 @@ Public Class frmEarthDayRun
                     If intCount Mod 3 = 1 Then
                         lstRunners.Sorted = True
                         lstRunners.Items.Add(line)
+                        lblRunnerCountOutput.Text = lstRunners.Items.Count.ToString()
                     End If
                 Loop
             End Using
