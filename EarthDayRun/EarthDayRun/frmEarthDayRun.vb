@@ -11,23 +11,31 @@
 
 Option Strict On
 
+Imports System.IO
+
 Public Class frmEarthDayRun
 
     Private Sub btnComputeFunds_Click(sender As System.Object, e As System.EventArgs) Handles btnComputeFunds.Click
-        Dim objReader As IO.StreamReader
+        ' Variables
+        Dim intCount As Integer = 0
+        Dim filePath = "E:\Advanced VB\EarthDayRun\EarthDayRun\earthdayrun.txt"
 
-        If IO.File.Exists("E:\Advanced VB\EarthDayRun\EarthDayRun\earthdayrun.txt") Then
-            objReader = IO.File.OpenText("E:\Advanced VB\EarthDayRun\EarthDayRun\earthdayrun.txt")
-            Do While objReader.Peek <> -1
-                lstRunners.Items.Add(objReader.ReadLine())
-            Loop
-
+        ' Checking to see if file exists
+        If IO.File.Exists(filePath) Then
+            Using reader As New StreamReader(filePath)
+                Do Until reader.EndOfStream
+                    Dim line = reader.ReadLine()
+                    intCount += 1
+                    If intCount Mod 3 = 1 Then
+                        lstRunners.Items.Add(line)
+                    End If
+                Loop
+            End Using
         Else
-            MsgBox("File is not available. Please re-run program when it is available.")
+            ' Displaying an error if the file cannot be found
+            MsgBox("File is not available.")
             Close()
         End If
-
-        objReader.Close()
 
     End Sub
 
