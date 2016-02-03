@@ -4,7 +4,6 @@
 ' Purpose: To determine the total contributions recieved by the fund raising runners at the Earth Day 5K Run.
 
 ' --TODO--
-' Application opens a text file named earthdayrun.txt
 ' Program assigns the text file contents to three arrays that hold the runner's name, age, and amount of funds raised (Has a total of 22 elements)
 ' When Calculate button is pressed, program computes the total of runners added to the text file, average age of runners, and total funds raised
 ' Program displays names of runners in sorted alphabetical order and their ages
@@ -27,6 +26,7 @@ Public Class frmEarthDayRun
                     Dim line = reader.ReadLine()
                     intCount += 1
                     If intCount Mod 3 = 1 Then
+                        lstRunners.Sorted = True
                         lstRunners.Items.Add(line)
                     End If
                 Loop
