@@ -18,4 +18,12 @@
         Next
 
     End Sub
+
+    Private Sub mnuFileClear_Click(sender As System.Object, e As System.EventArgs) Handles mnuFileClear.Click
+        lstOutput.Items.Clear()
+    End Sub
+
+    Private Sub mnuFileExit_Click(sender As System.Object, e As System.EventArgs) Handles mnuFileExit.Click
+        Close()
+    End Sub
 End Class
