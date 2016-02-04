@@ -28,20 +28,21 @@ Partial Class frmSortArray
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFileClear = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFileExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lblOutput = New System.Windows.Forms.Label()
         Me.mnuFileStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'lstOutput
         '
         Me.lstOutput.FormattingEnabled = True
-        Me.lstOutput.Location = New System.Drawing.Point(13, 31)
+        Me.lstOutput.Location = New System.Drawing.Point(12, 31)
         Me.lstOutput.Name = "lstOutput"
         Me.lstOutput.Size = New System.Drawing.Size(259, 95)
         Me.lstOutput.TabIndex = 0
         '
         'btnShowOutput
         '
-        Me.btnShowOutput.Location = New System.Drawing.Point(13, 132)
+        Me.btnShowOutput.Location = New System.Drawing.Point(12, 145)
         Me.btnShowOutput.Name = "btnShowOutput"
         Me.btnShowOutput.Size = New System.Drawing.Size(259, 23)
         Me.btnShowOutput.TabIndex = 1
@@ -76,11 +77,21 @@ Partial Class frmSortArray
         Me.mnuFileExit.Size = New System.Drawing.Size(152, 22)
         Me.mnuFileExit.Text = "E&xit"
         '
+        'lblOutput
+        '
+        Me.lblOutput.AutoSize = True
+        Me.lblOutput.Location = New System.Drawing.Point(12, 129)
+        Me.lblOutput.Name = "lblOutput"
+        Me.lblOutput.Size = New System.Drawing.Size(39, 13)
+        Me.lblOutput.TabIndex = 3
+        Me.lblOutput.Text = "Label1"
+        '
         'frmSortArray
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 166)
+        Me.ClientSize = New System.Drawing.Size(284, 176)
+        Me.Controls.Add(Me.lblOutput)
         Me.Controls.Add(Me.btnShowOutput)
         Me.Controls.Add(Me.lstOutput)
         Me.Controls.Add(Me.mnuFileStrip)
@@ -99,5 +110,6 @@ Partial Class frmSortArray
     Friend WithEvents mnuFile As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuFileClear As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuFileExit As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents lblOutput As System.Windows.Forms.Label
 
 End Class
