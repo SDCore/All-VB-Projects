@@ -39,6 +39,9 @@ Partial Class frmEarthDayRun
         Me.lblAverageAge = New System.Windows.Forms.Label()
         Me.lblTotalFundsOutput = New System.Windows.Forms.Label()
         Me.lblTotalFunds = New System.Windows.Forms.Label()
+        Me.lstAgeOutput = New System.Windows.Forms.ListBox()
+        Me.lblTestOne = New System.Windows.Forms.Label()
+        Me.lblTestTwo = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.picEarthDay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,7 +64,7 @@ Partial Class frmEarthDayRun
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.fileFileStrip})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(838, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1132, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -196,11 +199,40 @@ Partial Class frmEarthDayRun
         Me.lblTotalFunds.TabIndex = 11
         Me.lblTotalFunds.Text = "Total funds Raised"
         '
+        'lstAgeOutput
+        '
+        Me.lstAgeOutput.FormattingEnabled = True
+        Me.lstAgeOutput.Location = New System.Drawing.Point(832, 27)
+        Me.lstAgeOutput.Name = "lstAgeOutput"
+        Me.lstAgeOutput.Size = New System.Drawing.Size(120, 524)
+        Me.lstAgeOutput.TabIndex = 13
+        '
+        'lblTestOne
+        '
+        Me.lblTestOne.AutoSize = True
+        Me.lblTestOne.Location = New System.Drawing.Point(1006, 51)
+        Me.lblTestOne.Name = "lblTestOne"
+        Me.lblTestOne.Size = New System.Drawing.Size(40, 13)
+        Me.lblTestOne.TabIndex = 14
+        Me.lblTestOne.Text = "Label1"
+        '
+        'lblTestTwo
+        '
+        Me.lblTestTwo.AutoSize = True
+        Me.lblTestTwo.Location = New System.Drawing.Point(1009, 71)
+        Me.lblTestTwo.Name = "lblTestTwo"
+        Me.lblTestTwo.Size = New System.Drawing.Size(40, 13)
+        Me.lblTestTwo.TabIndex = 15
+        Me.lblTestTwo.Text = "Label2"
+        '
         'frmEarthDayRun
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(838, 558)
+        Me.ClientSize = New System.Drawing.Size(1132, 558)
+        Me.Controls.Add(Me.lblTestTwo)
+        Me.Controls.Add(Me.lblTestOne)
+        Me.Controls.Add(Me.lstAgeOutput)
         Me.Controls.Add(Me.lblTotalFundsOutput)
         Me.Controls.Add(Me.lblTotalFunds)
         Me.Controls.Add(Me.lblAverageAgesOutput)
@@ -243,5 +275,8 @@ Partial Class frmEarthDayRun
     Friend WithEvents lblAverageAge As System.Windows.Forms.Label
     Friend WithEvents lblTotalFundsOutput As System.Windows.Forms.Label
     Friend WithEvents lblTotalFunds As System.Windows.Forms.Label
+    Friend WithEvents lstAgeOutput As System.Windows.Forms.ListBox
+    Friend WithEvents lblTestOne As System.Windows.Forms.Label
+    Friend WithEvents lblTestTwo As System.Windows.Forms.Label
 
 End Class

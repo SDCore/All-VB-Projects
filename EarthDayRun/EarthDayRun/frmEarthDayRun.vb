@@ -17,6 +17,8 @@ Public Class frmEarthDayRun
     Private Sub btnComputeFunds_Click(sender As System.Object, e As System.EventArgs) Handles btnComputeFunds.Click
         ' Variables
         Dim intCount As Integer = 0
+        Dim intCount2 As Integer = 0
+        Dim intAverageAgeAccum As Integer
         Dim filePath = "E:\Advanced VB\EarthDayRun\EarthDayRun\earthdayrun.txt"
 
         ' Checking to see if file exists
@@ -30,6 +32,11 @@ Public Class frmEarthDayRun
                         lstRunners.Items.Add(line)
                         lblRunnerCountOutput.Text = lstRunners.Items.Count.ToString()
                     End If
+                    If intCount Mod 3 = 2 Then
+                        lstAgeOutput.Sorted = True
+                        lstAgeOutput.Items.Add(line)
+                        
+                    End If
                 Loop
             End Using
         Else
@@ -37,6 +44,9 @@ Public Class frmEarthDayRun
             MsgBox("File is not available.")
             Close()
         End If
+
+        
+
 
     End Sub
 
