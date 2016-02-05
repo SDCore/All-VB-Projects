@@ -20,7 +20,8 @@ Public Class frmEarthDayRun
         Dim intAverageAgeAccum As Integer = 0
         Dim intAverageTotal As Integer
         Dim intAverageTotalAdd As Integer
-        Dim i As Int32
+        Dim intTotal, intAge, intAverage As Double
+        Dim Str As String
         Dim filePath = "E:\Advanced VB\EarthDayRun\EarthDayRun\earthdayrun.txt"
 
         ' Checking to see if file exists
@@ -37,35 +38,15 @@ Public Class frmEarthDayRun
                     If intCount Mod 3 = 2 Then
                         lstAgeOutput.Sorted = True
                         lstAgeOutput.Items.Add(line)
-                        For Each item As Object In lstAgeOutput.Items()
-                            While intAverageAgeAccum < CDbl(lstRunners.Items.Count.ToString())
-                                intAverageAgeAccum += 1
-                                For i = 0 To lstAgeOutput.Items.Count - 1
-                                    intAverageTotalAdd = CInt(lstAgeOutput.Items(i))
-                                Next
-                            End While
-                        Next
-                        lblTestOne.Text = CStr(intAverageAgeAccum)
-                        lblTestTwo.Text = CStr(intAverageTotalAdd)
-                        lblAverageAgesOutput.Text = CStr(intAverageTotal)
 
-                        ' For i = 0 To lstAgeOutput.Items.Count - 1
-                        ' For Each item In lstAgeOutput.Items()
-                        '     intAverageAgeAccum = CInt(intAverageAgeAccum + 1)
-                        '     intAverageTotalAdd = CInt(intAverageAgeAccum + CInt(lstRunners.Items(i)))
-                        ' Next
-                        ' While intAverageAgeAccum < CDbl(lstRunners.Items.Count.ToString())
-                        ' intAverageAgeAccum = intAverageAgeAccum + 1
-                        ' For Each item In lstAgeOutput.Items()
-                        ' For i = 0 To lstAgeOutput.Items.Count - 1
-                        ' intAverageTotalAdd = CInt(lstAgeOutput.Items(i))
-                        ' Next
-                        ' Next
-                        ' End While
-                        ' lblTestOne.Text = CStr(intAverageAgeAccum)
-                        ' lblTestTwo.Text = CStr(intAverageTotalAdd)
-                        ' lblAverageAgesOutput.Text = CStr(intAverageTotal)
-                        ' Next
+                        For Each Str In Me.lstAgeOutput.Items
+                            intCount2 = intCount2 + 1
+                            intAge = Val(Str)
+                            intTotal = intTotal + intAge
+                        Next
+                        intAverage = intTotal / intCount2
+                        lblAverageAgesOutput.Text = intAverage.ToString("N0")
+
                     End If
                 Loop
             End Using
