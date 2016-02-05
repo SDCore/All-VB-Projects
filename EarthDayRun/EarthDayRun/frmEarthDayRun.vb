@@ -4,8 +4,7 @@
 ' Purpose: To determine the total contributions recieved by the fund raising runners at the Earth Day 5K Run.
 
 ' --TODO--
-' When Calculate button is pressed, program computes the total of runners added to the text file, average age of runners, and total funds raised
-' Program displays names of runners in sorted alphabetical order and their ages
+' When Calculate button is pressed, program computes the total funds raised
 
 Option Strict On
 
@@ -18,8 +17,6 @@ Public Class frmEarthDayRun
         Dim intCount As Integer = 0
         Dim intCount2 As Integer = 0
         Dim intAverageAgeAccum As Integer = 0
-        Dim intAverageTotal As Integer
-        Dim intAverageTotalAdd As Integer
         Dim intTotal, intAge, intAverage As Double
         Dim Str As String
         Dim filePath = "E:\Advanced VB\EarthDayRun\EarthDayRun\earthdayrun.txt"
