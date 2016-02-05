@@ -18,7 +18,9 @@ Public Class frmEarthDayRun
         ' Variables
         Dim intCount As Integer = 0
         Dim intCount2 As Integer = 0
-        Dim intAverageAgeAccum As Integer
+        Dim intAverageAgeAccum As Integer = 0
+        Dim intAverageTotal As Integer
+        Dim intAverageTotalAdd As Integer
         Dim filePath = "E:\Advanced VB\EarthDayRun\EarthDayRun\earthdayrun.txt"
 
         ' Checking to see if file exists
@@ -35,7 +37,24 @@ Public Class frmEarthDayRun
                     If intCount Mod 3 = 2 Then
                         lstAgeOutput.Sorted = True
                         lstAgeOutput.Items.Add(line)
-                        
+
+                        ' For i = 0 To lstAgeOutput.Items.Count - 1
+                        ' For Each item In lstAgeOutput.Items()
+                        '     intAverageAgeAccum = CInt(intAverageAgeAccum + 1)
+                        '     intAverageTotalAdd = CInt(intAverageAgeAccum + CInt(lstRunners.Items(i)))
+                        ' Next
+                        ' While intAverageAgeAccum < CDbl(lstRunners.Items.Count.ToString())
+                        ' intAverageAgeAccum = intAverageAgeAccum + 1
+                        ' For Each item In lstAgeOutput.Items()
+                        ' For i = 0 To lstAgeOutput.Items.Count - 1
+                        ' intAverageTotalAdd = CInt(lstAgeOutput.Items(i))
+                        ' Next
+                        ' Next
+                        ' End While
+                        ' lblTestOne.Text = CStr(intAverageAgeAccum)
+                        ' lblTestTwo.Text = CStr(intAverageTotalAdd)
+                        ' lblAverageAgesOutput.Text = CStr(intAverageTotal)
+                        ' Next
                     End If
                 Loop
             End Using
@@ -45,7 +64,10 @@ Public Class frmEarthDayRun
             Close()
         End If
 
-        
+        'Dim i As Int32
+        'For i = 0 To ListBox.Items.Count - 1
+        'scoreaccumulator = scoreaccumulator + ListBox.Items(i)
+        'Next i
 
 
     End Sub
@@ -60,4 +82,5 @@ Public Class frmEarthDayRun
     Private Sub ExitToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ExitToolStripMenuItem.Click
         Close()
     End Sub
+
 End Class
