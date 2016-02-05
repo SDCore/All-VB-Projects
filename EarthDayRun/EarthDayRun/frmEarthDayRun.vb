@@ -4,7 +4,6 @@
 ' Purpose: To determine the total contributions recieved by the fund raising runners at the Earth Day 5K Run.
 
 ' --TODO--
-' Program assigns the text file contents to three arrays that hold the runner's name, age, and amount of funds raised (Has a total of 22 elements)
 ' When Calculate button is pressed, program computes the total of runners added to the text file, average age of runners, and total funds raised
 ' Program displays names of runners in sorted alphabetical order and their ages
 
@@ -21,6 +20,7 @@ Public Class frmEarthDayRun
         Dim intAverageAgeAccum As Integer = 0
         Dim intAverageTotal As Integer
         Dim intAverageTotalAdd As Integer
+        Dim i As Int32
         Dim filePath = "E:\Advanced VB\EarthDayRun\EarthDayRun\earthdayrun.txt"
 
         ' Checking to see if file exists
@@ -37,6 +37,17 @@ Public Class frmEarthDayRun
                     If intCount Mod 3 = 2 Then
                         lstAgeOutput.Sorted = True
                         lstAgeOutput.Items.Add(line)
+                        For Each item As Object In lstAgeOutput.Items()
+                            While intAverageAgeAccum < CDbl(lstRunners.Items.Count.ToString())
+                                intAverageAgeAccum += 1
+                                For i = 0 To lstAgeOutput.Items.Count - 1
+                                    intAverageTotalAdd = CInt(lstAgeOutput.Items(i))
+                                Next
+                            End While
+                        Next
+                        lblTestOne.Text = CStr(intAverageAgeAccum)
+                        lblTestTwo.Text = CStr(intAverageTotalAdd)
+                        lblAverageAgesOutput.Text = CStr(intAverageTotal)
 
                         ' For i = 0 To lstAgeOutput.Items.Count - 1
                         ' For Each item In lstAgeOutput.Items()
