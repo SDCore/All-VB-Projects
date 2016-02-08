@@ -13,51 +13,6 @@ Imports System.IO
 Public Class frmEarthDayRun
 
     Private Sub btnComputeFunds_Click(sender As System.Object, e As System.EventArgs) Handles btnComputeFunds.Click
-        ' Variables
-        Dim intCount As Integer = 0
-        Dim intCount2 As Integer = 0
-        Dim intAverageAgeAccum As Integer = 0
-        Dim intTotal, intAge, intAverage As Double
-        Dim Str As String
-        Dim filePath = "E:\Advanced VB\EarthDayRun\EarthDayRun\earthdayrun.txt"
-
-        ' Checking to see if file exists
-        If IO.File.Exists(filePath) Then
-            Using reader As New StreamReader(filePath)
-                Do Until reader.EndOfStream
-                    Dim line = reader.ReadLine()
-                    intCount += 1
-                    If intCount Mod 3 = 1 Then
-                        lstRunners.Sorted = True
-                        lstRunners.Items.Add(line)
-                        lblRunnerCountOutput.Text = lstRunners.Items.Count.ToString()
-                    End If
-                    If intCount Mod 3 = 2 Then
-                        lstAgeOutput.Sorted = True
-                        lstAgeOutput.Items.Add(line)
-
-                        For Each Str In Me.lstAgeOutput.Items
-                            intCount2 = intCount2 + 1
-                            intAge = Val(Str)
-                            intTotal = intTotal + intAge
-                        Next
-                        intAverage = intTotal / intCount2
-                        lblAverageAgesOutput.Text = intAverage.ToString("N0")
-
-                    End If
-                Loop
-            End Using
-        Else
-            ' Displaying an error if the file cannot be found
-            MsgBox("File is not available.")
-            Close()
-        End If
-
-        'Dim i As Int32
-        'For i = 0 To ListBox.Items.Count - 1
-        'scoreaccumulator = scoreaccumulator + ListBox.Items(i)
-        'Next i
-
 
     End Sub
 
