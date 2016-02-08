@@ -11,6 +11,17 @@
 
 Public Class frmProjectedPopulation
 
+    Private Sub frmProjectedPopulation_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        ' Variables
+        Dim objReader As IO.StreamReader
+        Dim filePath As String = "E:\Advanced VB\ProjectedPopulationGrowth\ProjectedPopulationGrowth\cities.txt"
+
+        ' Checking is file exists... and everything else
+        If IO.File.Exists(filePath) Then
+
+        End If
+    End Sub
+
     Private Sub cboSelectCity_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cboSelectCity.SelectedIndexChanged
 
     End Sub
@@ -26,4 +37,5 @@ Public Class frmProjectedPopulation
     Private Sub ExitToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ExitToolStripMenuItem.Click
         Close()
     End Sub
+
 End Class
