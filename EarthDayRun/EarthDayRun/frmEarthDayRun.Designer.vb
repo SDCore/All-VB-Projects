@@ -37,10 +37,7 @@ Partial Class frmEarthDayRun
         Me.lblRunnerCountOutput = New System.Windows.Forms.Label()
         Me.lblAverageAgesOutput = New System.Windows.Forms.Label()
         Me.lblAverageAge = New System.Windows.Forms.Label()
-        Me.lblTotalFundsOutput = New System.Windows.Forms.Label()
-        Me.lblTotalFunds = New System.Windows.Forms.Label()
         Me.lstAgeOutput = New System.Windows.Forms.ListBox()
-        Me.lstMoneyOutput = New System.Windows.Forms.ListBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.picEarthDay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -55,7 +52,7 @@ Partial Class frmEarthDayRun
         Me.btnComputeFunds.Name = "btnComputeFunds"
         Me.btnComputeFunds.Size = New System.Drawing.Size(813, 63)
         Me.btnComputeFunds.TabIndex = 0
-        Me.btnComputeFunds.Text = "Calculate Funds Raised"
+        Me.btnComputeFunds.Text = "Calculate"
         Me.btnComputeFunds.UseVisualStyleBackColor = False
         '
         'MenuStrip1
@@ -63,7 +60,7 @@ Partial Class frmEarthDayRun
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.fileFileStrip})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1390, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(839, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -178,26 +175,6 @@ Partial Class frmEarthDayRun
         Me.lblAverageAge.TabIndex = 9
         Me.lblAverageAge.Text = "Average Age of runners"
         '
-        'lblTotalFundsOutput
-        '
-        Me.lblTotalFundsOutput.AutoSize = True
-        Me.lblTotalFundsOutput.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalFundsOutput.Location = New System.Drawing.Point(402, 195)
-        Me.lblTotalFundsOutput.Name = "lblTotalFundsOutput"
-        Me.lblTotalFundsOutput.Size = New System.Drawing.Size(55, 13)
-        Me.lblTotalFundsOutput.TabIndex = 12
-        Me.lblTotalFundsOutput.Text = "$0,000.00"
-        '
-        'lblTotalFunds
-        '
-        Me.lblTotalFunds.AutoSize = True
-        Me.lblTotalFunds.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalFunds.Location = New System.Drawing.Point(301, 178)
-        Me.lblTotalFunds.Name = "lblTotalFunds"
-        Me.lblTotalFunds.Size = New System.Drawing.Size(116, 17)
-        Me.lblTotalFunds.TabIndex = 11
-        Me.lblTotalFunds.Text = "Total funds Raised"
-        '
         'lstAgeOutput
         '
         Me.lstAgeOutput.FormattingEnabled = True
@@ -206,23 +183,12 @@ Partial Class frmEarthDayRun
         Me.lstAgeOutput.Size = New System.Drawing.Size(10, 524)
         Me.lstAgeOutput.TabIndex = 13
         '
-        'lstMoneyOutput
-        '
-        Me.lstMoneyOutput.FormattingEnabled = True
-        Me.lstMoneyOutput.Location = New System.Drawing.Point(881, 27)
-        Me.lstMoneyOutput.Name = "lstMoneyOutput"
-        Me.lstMoneyOutput.Size = New System.Drawing.Size(120, 524)
-        Me.lstMoneyOutput.TabIndex = 14
-        '
         'frmEarthDayRun
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1390, 558)
-        Me.Controls.Add(Me.lstMoneyOutput)
+        Me.ClientSize = New System.Drawing.Size(839, 558)
         Me.Controls.Add(Me.lstAgeOutput)
-        Me.Controls.Add(Me.lblTotalFundsOutput)
-        Me.Controls.Add(Me.lblTotalFunds)
         Me.Controls.Add(Me.lblAverageAgesOutput)
         Me.Controls.Add(Me.lblAverageAge)
         Me.Controls.Add(Me.lblRunnerCountOutput)
@@ -261,9 +227,6 @@ Partial Class frmEarthDayRun
     Friend WithEvents lblRunnerCountOutput As System.Windows.Forms.Label
     Friend WithEvents lblAverageAgesOutput As System.Windows.Forms.Label
     Friend WithEvents lblAverageAge As System.Windows.Forms.Label
-    Friend WithEvents lblTotalFundsOutput As System.Windows.Forms.Label
-    Friend WithEvents lblTotalFunds As System.Windows.Forms.Label
     Friend WithEvents lstAgeOutput As System.Windows.Forms.ListBox
-    Friend WithEvents lstMoneyOutput As System.Windows.Forms.ListBox
 
 End Class
