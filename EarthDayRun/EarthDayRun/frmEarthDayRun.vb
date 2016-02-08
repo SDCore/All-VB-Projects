@@ -3,9 +3,6 @@
 ' 2/1/2016
 ' Purpose: To determine the total contributions recieved by the fund raising runners at the Earth Day 5K Run.
 
-' --TODO--
-' When Calculate button is pressed, program computes the total funds raised
-
 Option Strict On
 
 Imports System.IO
@@ -53,13 +50,6 @@ Public Class frmEarthDayRun
             MsgBox("File is not available.")
             Close()
         End If
-
-        'Dim i As Int32
-        'For i = 0 To ListBox.Items.Count - 1
-        'scoreaccumulator = scoreaccumulator + ListBox.Items(i)
-        'Next i
-
-
 
     End Sub
 
