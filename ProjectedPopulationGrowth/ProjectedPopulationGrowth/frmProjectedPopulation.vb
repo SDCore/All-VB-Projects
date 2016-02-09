@@ -49,11 +49,18 @@ Public Class frmProjectedPopulation
     Private Sub cboSelectCity_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cboSelectCity.SelectedIndexChanged
         ' Variables
         Dim intSelectedCity As Integer
+        Dim intCount As Integer
 
+        ' ComboBox from Array
         If cboSelectCity.SelectedIndex >= 0 Then
             intSelectedCity = cboSelectCity.SelectedIndex
         End If
 
+        While intCount < 5
+
+        End While
+
+        ' Making the ExpectedGrowth label and Population Growth listbox visible when an object is selected
         makeObjectsVisible()
     End Sub
 
