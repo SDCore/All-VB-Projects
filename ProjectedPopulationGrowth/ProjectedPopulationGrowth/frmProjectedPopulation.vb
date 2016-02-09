@@ -8,6 +8,7 @@
 ' User selects city from cboSelectCity, ListBox (lstPopulationGrowth) displays next 5 years of population growth based on 3% population growth
 ' File menu displays the "Display Present Population", "Clear", and "Exit" menu items.
 '  When user selects "Display Present Population", a second form opens and siaplys the current 10 largest cities and their populations
+' Comment everything
 
 Option Strict On
 
@@ -22,6 +23,8 @@ Public Class frmProjectedPopulation
         Dim filePath As String = "E:\Advanced VB\ProjectedPopulationGrowth\ProjectedPopulationGrowth\cities.txt"
         Dim intCount As Integer = 0
         Dim intFill As Integer
+        Dim strFileError As String = "File is not available. Please try again."
+        Dim strFileErrorTitle As String = "File Error"
 
         ' Checking is file exists... and everything else
         If IO.File.Exists(filePath) Then
@@ -39,12 +42,14 @@ Public Class frmProjectedPopulation
                 End If
             Next
         Else
-            MsgBox("Could not find the file. Please try again.", , "ERROR")
+            MsgBox(strFileError, , strFileErrorTitle)
+            Close()
         End If
     End Sub
 
     Private Sub cboSelectCity_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cboSelectCity.SelectedIndexChanged
-
+        ' Variables
+        Dim strSelectedCity As String
     End Sub
 
     Private Sub DisplayPresentPopulationToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DisplayPresentPopulationToolStripMenuItem.Click
