@@ -15,6 +15,7 @@ Public Class frmProjectedPopulation
 
     Public Shared _intArraySize As Integer = 20
     Private _strCityNames(_intArraySize) As String
+    Private _strCityPop(_intArraySize) As String
 
     Private Sub frmProjectedPopulation_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Variables
@@ -55,6 +56,8 @@ Public Class frmProjectedPopulation
         If cboSelectCity.SelectedIndex >= 0 Then
             intSelectedCity = cboSelectCity.SelectedIndex
         End If
+
+        
 
         While intCount < 5
 
