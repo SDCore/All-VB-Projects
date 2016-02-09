@@ -54,6 +54,8 @@ Public Class frmProjectedPopulation
         If cboSelectCity.SelectedIndex >= 0 Then
             intSelectedCity = cboSelectCity.SelectedIndex
         End If
+
+        makeObjectsVisible()
     End Sub
 
     Private Sub DisplayPresentPopulationToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DisplayPresentPopulationToolStripMenuItem.Click
@@ -66,6 +68,11 @@ Public Class frmProjectedPopulation
 
     Private Sub ExitToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ExitToolStripMenuItem.Click
         Close()
+    End Sub
+
+    Private Sub makeObjectsVisible()
+        lblExpectedGrowth.Visible = True
+        lstPopulationGrowth.Visible = True
     End Sub
 
 End Class
