@@ -49,7 +49,11 @@ Public Class frmProjectedPopulation
 
     Private Sub cboSelectCity_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cboSelectCity.SelectedIndexChanged
         ' Variables
-        Dim strSelectedCity As String
+        Dim intSelectedCity As Integer
+
+        If cboSelectCity.SelectedIndex >= 0 Then
+            intSelectedCity = cboSelectCity.SelectedIndex
+        End If
     End Sub
 
     Private Sub DisplayPresentPopulationToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DisplayPresentPopulationToolStripMenuItem.Click
