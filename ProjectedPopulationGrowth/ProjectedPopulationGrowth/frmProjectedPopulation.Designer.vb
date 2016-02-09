@@ -84,6 +84,7 @@ Partial Class frmProjectedPopulation
         Me.lblPresentPopulation.Size = New System.Drawing.Size(269, 17)
         Me.lblPresentPopulation.TabIndex = 4
         Me.lblPresentPopulation.Text = "Present Population in CITYNAME is 0,000,000"
+        Me.lblPresentPopulation.Visible = False
         '
         'lblExpectedGrowth
         '
@@ -93,6 +94,7 @@ Partial Class frmProjectedPopulation
         Me.lblExpectedGrowth.Size = New System.Drawing.Size(299, 17)
         Me.lblExpectedGrowth.TabIndex = 5
         Me.lblExpectedGrowth.Text = "Expected Population Growth over the next 5 years"
+        Me.lblExpectedGrowth.Visible = False
         '
         'lstPopulationGrowth
         '
@@ -102,6 +104,7 @@ Partial Class frmProjectedPopulation
         Me.lstPopulationGrowth.Name = "lstPopulationGrowth"
         Me.lstPopulationGrowth.Size = New System.Drawing.Size(557, 89)
         Me.lstPopulationGrowth.TabIndex = 6
+        Me.lstPopulationGrowth.Visible = False
         '
         'MenuStrip1
         '
