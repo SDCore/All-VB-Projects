@@ -1,0 +1,20 @@
+Detroit
+925051
+San Antonio
+1194222
+Dallas
+1211467
+San Diego
+1269532
+Phoenix
+1371960
+Philadelphia
+1492231
+Houston
+2144834
+Chicago
+2886251
+Los Angeles
+3859378
+New York City
+8214316

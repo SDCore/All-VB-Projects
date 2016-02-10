@@ -34,7 +34,6 @@ Partial Class frmProjectedPopulation
         Me.DisplayPresentPopulationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -112,7 +111,7 @@ Partial Class frmProjectedPopulation
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1172, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(584, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -141,21 +140,11 @@ Partial Class frmProjectedPopulation
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 17
-        Me.ListBox1.Location = New System.Drawing.Point(786, 101)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(311, 259)
-        Me.ListBox1.TabIndex = 8
-        '
         'frmProjectedPopulation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1172, 498)
-        Me.Controls.Add(Me.ListBox1)
+        Me.ClientSize = New System.Drawing.Size(584, 498)
         Me.Controls.Add(Me.lstPopulationGrowth)
         Me.Controls.Add(Me.lblExpectedGrowth)
         Me.Controls.Add(Me.lblPresentPopulation)
@@ -188,6 +177,5 @@ Partial Class frmProjectedPopulation
     Friend WithEvents DisplayPresentPopulationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ClearToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
 
 End Class

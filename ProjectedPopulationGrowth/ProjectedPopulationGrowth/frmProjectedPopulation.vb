@@ -4,7 +4,6 @@
 ' Purpose: To determine the population growth of cities over the next 5 years
 
 ' --TODO--
-' User selects city from cboSelectCity, ListBox (lstPopulationGrowth) displays next 5 years of population growth based on 3% population growth
 ' File menu displays the "Display Present Population", "Clear", and "Exit" menu items.
 '  When user selects "Display Present Population", a second form opens and siaplys the current 10 largest cities and their populations
 ' Comment everything
@@ -49,19 +48,42 @@ Public Class frmProjectedPopulation
 
     Private Sub cboSelectCity_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cboSelectCity.SelectedIndexChanged
         ' Variables
-        Dim intSelectedCity As Integer
-        Dim intCount As Integer
+        Dim objReader As IO.StreamReader
+        Dim filePath As String = "E:\Advanced VB\ProjectedPopulationGrowth\ProjectedPopulationGrowth\cities.txt"
+        Dim intCount As Integer = 0
+        Dim intCount2 As Integer = 0
+        Dim strFileError As String = "File is not available. Please try again."
+        Dim strFileErrorTitle As String = "File Error"
+        Dim intCityPop As Integer
 
-        ' ComboBox from Array
-        If cboSelectCity.SelectedIndex >= 0 Then
-            intSelectedCity = cboSelectCity.SelectedIndex
+        Dim strDetroit As String = "Detroit"
+
+        ' Checking is file exists... and everything else
+        If IO.File.Exists(filePath) Then
+            objReader = IO.File.OpenText(filePath)
+            Do While objReader.Peek <> -1
+                _strCityNames(intCount) = objReader.ReadLine()
+                intCount += 1
+                Array.Sort(_strCityNames)
+            Loop
+            objReader.Close()
+
+            While intCount2 > 0 And intCount2 < 9
+                If CDbl(cboSelectCity.Text) = CDbl(strDetroit) Then
+                    intCityPop = 925051
+                    While intCount2 < 4
+                        lstPopulationGrowth.Items.Add(intCityPop * 0.03)
+                    End While
+                ElseIf CDbl(cboSelectCity.Text) = CDbl("San Antonio") Then
+                    intCityPop = CInt(_strCityNames(1))
+                    lstPopulationGrowth.Items.Add(intCityPop.ToString())
+                End If
+            End While
+
+        Else
+            MsgBox(strFileError, , strFileErrorTitle)
+            Close()
         End If
-
-        
-
-        While intCount < 5
-
-        End While
 
         ' Making the ExpectedGrowth label and Population Growth listbox visible when an object is selected
         makeObjectsVisible()
