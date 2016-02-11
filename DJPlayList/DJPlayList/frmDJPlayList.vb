@@ -18,7 +18,7 @@ Public Class frmDJPlayList
 
     Private Sub frmDJPlayList_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Variables
-        Dim strFilePath As String = "E:\Advanced VB\DJPlayList\DJPlayasdList\songs.txt"
+        Dim strFilePath As String = "E:\Advanced VB\DJPlayList\DJPlayList\songs.txt"
         Dim strFileError As String = "File not found. Please try again."
         Dim strFileErrorTitle As String = "File Error"
 
@@ -33,6 +33,18 @@ Public Class frmDJPlayList
 
     Private Sub btnShowList_Click(sender As System.Object, e As System.EventArgs) Handles btnShowList.Click
         
+    End Sub
+
+    Private Sub DisplaySongListToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DisplaySongListToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub ClearToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ClearToolStripMenuItem.Click
+        lstSelectedSongs.Items.Clear()
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ExitToolStripMenuItem.Click
+        Close()
     End Sub
 
 End Class
