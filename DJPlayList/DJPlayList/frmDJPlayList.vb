@@ -16,6 +16,8 @@ Option Strict On
 
 Public Class frmDJPlayList
 
+    Dim _strSongTitle(156) As String
+
     Private Sub frmDJPlayList_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Variables
         Dim strFilePath As String = "E:\Advanced VB\DJPlayList\DJPlayList\songs.txt"
@@ -32,7 +34,7 @@ Public Class frmDJPlayList
     End Sub
 
     Private Sub btnShowList_Click(sender As System.Object, e As System.EventArgs) Handles btnShowList.Click
-        
+
     End Sub
 
     Private Sub DisplaySongListToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DisplaySongListToolStripMenuItem.Click
