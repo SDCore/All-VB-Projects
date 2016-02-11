@@ -1,7 +1,7 @@
 ﻿' Michael Voell
-' Compute Depreciation
-' 1/29/2016
-' Purpose: To calculate the depreciation of inventory items over time using information from a text file.
+' DJ Playlist
+' 2/11/2016
+' Purpose: To display songs in a playlist based on what genre is chosen.
 
 ' --TODO--
 ' On open, the app reads the values from the song list names songs.txt
