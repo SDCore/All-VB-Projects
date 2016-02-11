@@ -22,7 +22,7 @@ Public Class frmDJPlayList
         Dim strFileError As String = "File not found. Please try again."
         Dim strFileErrorTitle As String = "File Error"
 
-        ' Finding file error
+        ' Finding the file
         If IO.File.Exists(strFilePath) Then
 
         Else
