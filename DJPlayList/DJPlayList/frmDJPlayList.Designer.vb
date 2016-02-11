@@ -28,6 +28,12 @@ Partial Class frmDJPlayList
         Me.cboMusicGenre = New System.Windows.Forms.ComboBox()
         Me.lblSelectedSongs = New System.Windows.Forms.Label()
         Me.lstSelectedSongs = New System.Windows.Forms.ListBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DisplaySongListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnShowList
@@ -48,7 +54,7 @@ Partial Class frmDJPlayList
         Me.lblSelectType.AutoSize = True
         Me.lblSelectType.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSelectType.ForeColor = System.Drawing.Color.Red
-        Me.lblSelectType.Location = New System.Drawing.Point(12, 9)
+        Me.lblSelectType.Location = New System.Drawing.Point(12, 28)
         Me.lblSelectType.Name = "lblSelectType"
         Me.lblSelectType.Size = New System.Drawing.Size(150, 21)
         Me.lblSelectType.TabIndex = 1
@@ -57,7 +63,7 @@ Partial Class frmDJPlayList
         'cboMusicGenre
         '
         Me.cboMusicGenre.FormattingEnabled = True
-        Me.cboMusicGenre.Location = New System.Drawing.Point(12, 34)
+        Me.cboMusicGenre.Location = New System.Drawing.Point(12, 53)
         Me.cboMusicGenre.Name = "cboMusicGenre"
         Me.cboMusicGenre.Size = New System.Drawing.Size(460, 21)
         Me.cboMusicGenre.TabIndex = 2
@@ -85,6 +91,40 @@ Partial Class frmDJPlayList
         Me.lstSelectedSongs.Size = New System.Drawing.Size(460, 259)
         Me.lstSelectedSongs.TabIndex = 4
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(484, 24)
+        Me.MenuStrip1.TabIndex = 5
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DisplaySongListToolStripMenuItem, Me.ClearToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'DisplaySongListToolStripMenuItem
+        '
+        Me.DisplaySongListToolStripMenuItem.Name = "DisplaySongListToolStripMenuItem"
+        Me.DisplaySongListToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.DisplaySongListToolStripMenuItem.Text = "Display Song List"
+        '
+        'ClearToolStripMenuItem
+        '
+        Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.ClearToolStripMenuItem.Text = "Clear"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
         'frmDJPlayList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -96,10 +136,14 @@ Partial Class frmDJPlayList
         Me.Controls.Add(Me.cboMusicGenre)
         Me.Controls.Add(Me.lblSelectType)
         Me.Controls.Add(Me.btnShowList)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmDJPlayList"
         Me.Text = "DJ Hoster Playlist"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -109,5 +153,10 @@ Partial Class frmDJPlayList
     Friend WithEvents cboMusicGenre As System.Windows.Forms.ComboBox
     Friend WithEvents lblSelectedSongs As System.Windows.Forms.Label
     Friend WithEvents lstSelectedSongs As System.Windows.Forms.ListBox
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DisplaySongListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ClearToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
