@@ -16,7 +16,23 @@ Option Strict On
 
 Public Class frmDJPlayList
 
-    Private Sub btnShowList_Click(sender As System.Object, e As System.EventArgs) Handles btnShowList.Click
+    Private Sub frmDJPlayList_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        ' Variables
+        Dim strFilePath As String = "E:\Advanced VB\DJPlayList\DJPlayasdList\songs.txt"
+        Dim strFileError As String = "File not found. Please try again."
+        Dim strFileErrorTitle As String = "File Error"
 
+        ' Finding file error
+        If IO.File.Exists(strFilePath) Then
+
+        Else
+            MsgBox(strFileError, , strFileErrorTitle)
+            Close()
+        End If
     End Sub
+
+    Private Sub btnShowList_Click(sender As System.Object, e As System.EventArgs) Handles btnShowList.Click
+        
+    End Sub
+
 End Class
