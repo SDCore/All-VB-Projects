@@ -1,0 +1,9 @@
+E:\Advanced VB\DJPlayList\DJPlayList\bin\Debug\DJPlayList.exe
+E:\Advanced VB\DJPlayList\DJPlayList\bin\Debug\DJPlayList.pdb
+E:\Advanced VB\DJPlayList\DJPlayList\bin\Debug\DJPlayList.xml
+E:\Advanced VB\DJPlayList\DJPlayList\obj\x86\Debug\DJPlayList.frmDJPlayList.resources
+E:\Advanced VB\DJPlayList\DJPlayList\obj\x86\Debug\DJPlayList.Resources.resources
+E:\Advanced VB\DJPlayList\DJPlayList\obj\x86\Debug\DJPlayList.vbproj.GenerateResource.Cache
+E:\Advanced VB\DJPlayList\DJPlayList\obj\x86\Debug\DJPlayList.exe
+E:\Advanced VB\DJPlayList\DJPlayList\obj\x86\Debug\DJPlayList.xml
+E:\Advanced VB\DJPlayList\DJPlayList\obj\x86\Debug\DJPlayList.pdb
