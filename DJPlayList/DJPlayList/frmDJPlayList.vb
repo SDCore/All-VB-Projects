@@ -16,8 +16,6 @@ Option Strict On
 
 Public Class frmDJPlayList
 
-    Dim _strSongTitle(156) As String
-
     Private Sub frmDJPlayList_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Variables
         Dim strFilePath As String = "E:\Advanced VB\DJPlayList\DJPlayList\songs.txt"
@@ -27,11 +25,19 @@ Public Class frmDJPlayList
         Dim intCount As Integer
         Dim intFill As Integer
 
+        ' Arrays
+        Dim _strSongTitle(intCount) As String
+        Dim _strSongGenre(intCount) As String
+
         ' Finding the file
         If IO.File.Exists(strFilePath) Then
             ' Opening the text file
             objReader = IO.File.OpenText(strFilePath)
-
+            ' Read the file line-by-line until the file is completed
+            Do While objReader.Peek <> -1
+                _strSongTitle(intCount) = objReader.ReadLine()
+                _strSongGenre(intCount) = objReader.ReadLine()
+            Loop
         Else
             MsgBox(strFileError, , strFileErrorTitle)
             Close()
