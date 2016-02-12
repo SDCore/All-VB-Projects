@@ -51,7 +51,7 @@ Public Class frmDJPlayList
 
     Private Sub ClearToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ClearToolStripMenuItem.Click
         lstSelectedSongs.Items.Clear()
-        cboMusicGenre.Text = "Select an Item"
+        cboMusicGenre.Text = "Select a Genre"
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ExitToolStripMenuItem.Click
