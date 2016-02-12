@@ -24,20 +24,19 @@ Public Class frmDJPlayList
         Dim objReader As IO.StreamReader
         Dim intCount As Integer
         Dim intFill As Integer
-
-        ' Arrays
-        Dim _strSongTitle(intCount) As String
-        Dim _strSongGenre(intCount) As String
+        Dim strSongGenre(intCount) As String
+        Dim i As Integer = 0
 
         ' Finding the file
         If IO.File.Exists(strFilePath) Then
             ' Opening the text file
             objReader = IO.File.OpenText(strFilePath)
-            ' Read the file line-by-line until the file is completed
-            Do While objReader.Peek <> -1
-                _strSongTitle(intCount) = objReader.ReadLine()
-                _strSongGenre(intCount) = objReader.ReadLine()
-                intCount += 1
+            Do Until objReader.Peek = -1
+                ReDim Preserve strSongGenre(i)
+                strSongGenre(i) = objReader.ReadLine
+                MsgBox(strSongGenre(i))
+                cboMusicGenre.Items.Add(strSongGenre(i))
+                i += 1
             Loop
         Else
             MsgBox(strFileError, , strFileErrorTitle)
