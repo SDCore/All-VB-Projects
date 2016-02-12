@@ -34,7 +34,6 @@ Public Class frmDJPlayList
             Do Until objReader.Peek = -1
                 ReDim Preserve strSongGenre(i)
                 strSongGenre(i) = objReader.ReadLine
-                MsgBox(strSongGenre(i))
                 cboMusicGenre.Items.Add(strSongGenre(i))
                 i += 1
             Loop
