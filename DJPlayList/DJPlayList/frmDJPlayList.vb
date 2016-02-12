@@ -23,9 +23,14 @@ Public Class frmDJPlayList
         Dim strFilePath As String = "E:\Advanced VB\DJPlayList\DJPlayList\songs.txt"
         Dim strFileError As String = "File not found. Please try again."
         Dim strFileErrorTitle As String = "File Error"
+        Dim objReader As IO.StreamReader
+        Dim intCount As Integer
+        Dim intFill As Integer
 
         ' Finding the file
         If IO.File.Exists(strFilePath) Then
+            ' Opening the text file
+            objReader = IO.File.OpenText(strFilePath)
 
         Else
             MsgBox(strFileError, , strFileErrorTitle)
