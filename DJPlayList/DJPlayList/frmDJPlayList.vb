@@ -9,8 +9,6 @@
 ' A drop down list of the genres is available to select a music genre and dispaly songs of that type
 ' The user can select the Display Song List menu item to open a second form
 '  The second form displays the choice of displaying the playlist in the present play order or a sorted song order
-' Clear Button
-' Exit Button
 
 Option Strict On
 
@@ -53,6 +51,7 @@ Public Class frmDJPlayList
 
     Private Sub ClearToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ClearToolStripMenuItem.Click
         lstSelectedSongs.Items.Clear()
+        cboMusicGenre.Text = "Select an Item"
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ExitToolStripMenuItem.Click

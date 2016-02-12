@@ -67,6 +67,7 @@ Partial Class frmDJPlayList
         Me.cboMusicGenre.Name = "cboMusicGenre"
         Me.cboMusicGenre.Size = New System.Drawing.Size(460, 21)
         Me.cboMusicGenre.TabIndex = 2
+        Me.cboMusicGenre.Text = "Select an Item"
         '
         'lblSelectedSongs
         '
