@@ -37,6 +37,7 @@ Public Class frmDJPlayList
             Do While objReader.Peek <> -1
                 _strSongTitle(intCount) = objReader.ReadLine()
                 _strSongGenre(intCount) = objReader.ReadLine()
+                intCount += 1
             Loop
         Else
             MsgBox(strFileError, , strFileErrorTitle)
