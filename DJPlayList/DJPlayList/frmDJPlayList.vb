@@ -14,7 +14,7 @@ Option Strict On
 
 Public Class frmDJPlayList
 
-    Private _intSizeOfArray As Integer = 60
+    Private _intSizeOfArray As Integer = 52
     Private _strSongNames(_intSizeOfArray) As String
 
     Private Sub frmDJPlayList_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
