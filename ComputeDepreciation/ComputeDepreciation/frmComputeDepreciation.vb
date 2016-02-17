@@ -7,6 +7,35 @@ Option Strict On
 
 Public Class frmComputeDepreciation
 
+    Private _intLifeOfItems As Integer = 5
+    Public Shared _intSizeOfArray As Integer = 7
+    Public Shared _strInventoryItem(_intSizeOfArray) As String
+    Private _strItemId(_intSizeOfArray) As String
+    Private _decInitialPrice(_intSizeOfArray) As Decimal
+    Private _intQuantity(_intSizeOfArray) As Integer
+
+    Private Sub frmComputeDepreciation_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        Dim objReader As IO.StreamReader
+        Dim strFileLocation As String = "E:\Advanced VB\ComputeDepreciation\ComputeDepreciation\inventory.txt"
+        Dim intCount As Integer = 0
+        Dim intFill As Integer
+
+        If IO.File.Exists(strFileLocation) Then
+            objReader = IO.File.OpenText(strFileLocation)
+            Do While objReader.Peek <> -1
+                _strInventoryItem(intCount) = objReader.ReadLine()
+                _strItemId(intCount) = objReader.ReadLine()
+                intCount += 1
+            Loop
+            objReader.Close()
+
+            For intFill = 0 To (_strItemId.Length - 1)
+                cboInventoryItem.Items.Add(_strItemId(intFill))
+            Next
+        End If
+
+    End Sub
+
     Private Sub ExitToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ExitToolStripMenuItem.Click
         Close()
     End Sub
@@ -31,11 +60,5 @@ Public Class frmComputeDepreciation
         lblPresentValue.Visible = False
         lblYearDepreciation.Visible = False
         lblTotalDepreciation.Visible = False
-    End Sub
-
-    Private Sub frmComputeDepreciation_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        Dim objReader As IO.StreamReader
-        Dim strFileLocation As String = "E:\Advanced VB\ComputeDepreciation\ComputeDepreciation\inventory.txt"
-        Dim intCount As Integer
     End Sub
 End Class

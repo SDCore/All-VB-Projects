@@ -14,30 +14,30 @@ Option Strict On
 
 Public Class frmDJPlayList
 
+    Private _intSizeOfArray As Integer = 60
+    Private _strSongNames(_intSizeOfArray) As String
+
     Private Sub frmDJPlayList_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Variables
-        Dim strFilePath As String = "E:\Advanced VB\DJPlayList\DJPlayList\songs.txt"
-        Dim strFileError As String = "File not found. Please try again."
-        Dim strFileErrorTitle As String = "File Error"
         Dim objReader As IO.StreamReader
-        Dim intCount As Integer
+        Dim strFile As String = "E:\Advanced VB\DJPlayList\DJPlayList\songs.txt"
+        Dim intCount As Integer = 0
         Dim intFill As Integer
-        Dim strSongGenre(intCount) As String
-        Dim i As Integer = 0
 
-        ' Finding the file
-        If IO.File.Exists(strFilePath) Then
-            ' Opening the text file
-            objReader = IO.File.OpenText(strFilePath)
-            Do Until objReader.Peek = -1
-                ReDim Preserve strSongGenre(i)
-                strSongGenre(i) = objReader.ReadLine
-                cboMusicGenre.Items.Add(strSongGenre(i))
-                i += 1
+        If IO.File.Exists(strFile) Then
+            objReader = IO.File.OpenText(strFile)
+            Do While objReader.Peek <> -1
+                _strSongNames(intCount) = objReader.ReadLine()
+                intCount += 1
             Loop
+            objReader.Close()
+
+            For intFill = 0 To (_strSongNames.Length - 1)
+                cboMusicGenre.Items.Add(_strSongNames(intFill))
+                MsgBox(_strSongNames(intFill))
+            Next
         Else
-            MsgBox(strFileError, , strFileErrorTitle)
-            Close()
+            MsgBox("el no file-o")
         End If
     End Sub
 
