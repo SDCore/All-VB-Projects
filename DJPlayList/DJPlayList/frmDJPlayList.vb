@@ -21,6 +21,9 @@ Public Class frmDJPlayList
         ' Variables
         Dim objReader As IO.StreamReader
         Dim strFile As String = "E:\Advanced VB\DJPlayList\DJPlayList\songs.txt"
+        Dim strFileError as string = "File not found. Please try again."
+        Dim strFileErrorTitle as string = "File Error"
+        
         Dim intCount As Integer = 0
         Dim intFill As Integer
 
@@ -37,7 +40,7 @@ Public Class frmDJPlayList
                 MsgBox(_strSongNames(intFill))
             Next
         Else
-            MsgBox("el no file-o")
+            MsgBox(strFileError, , strFileErrorTitle)
         End If
     End Sub
 
