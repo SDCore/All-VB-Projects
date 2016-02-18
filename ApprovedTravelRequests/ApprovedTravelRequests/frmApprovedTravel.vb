@@ -1,4 +1,11 @@
-﻿Public Class frmApprovedTravel
+﻿' Michael Voell
+' Approved Travel Requests
+' 2/18/2016
+' Purpose: To look through a database and see approved travel requets from employees.
+
+Option Strict On
+
+Public Class frmApprovedTravel
 
     Private Sub ApprovedTravelRequestsBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs) Handles ApprovedTravelRequestsBindingNavigatorSaveItem.Click
         Me.Validate()
