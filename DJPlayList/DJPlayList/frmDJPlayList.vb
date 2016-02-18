@@ -6,7 +6,7 @@
 ' --TODO--
 ' On open, the app reads the values from the song list names songs.txt
 '  songs.txt includes song titles, genre, and length of each song
-' A drop down list of the genres is available to select a music genre and dispaly songs of that type
+' A drop down list of the genres is available to select a music genre and display songs of that type
 ' The user can select the Display Song List menu item to open a second form
 '  The second form displays the choice of displaying the playlist in the present play order or a sorted song order
 
@@ -25,20 +25,19 @@ Public Class frmDJPlayList
         Dim strFileErrorTitle as string = "File Error"
         
         Dim intCount As Integer = 0
-        Dim intFill As Integer
+        Dim strSongGenre(51) As String
 
         If IO.File.Exists(strFile) Then
             objReader = IO.File.OpenText(strFile)
-            Do While objReader.Peek <> -1
-                _strSongNames(intCount) = objReader.ReadLine()
+            Do Until objReader.Peek = -1
+                Dim tempName, tempDuration As String
+                ReDim Preserve strSongGenre(intCount)
+                tempName = objReader.ReadLine
+                strSongGenre(intCount) = objReader.ReadLine
+                tempDuration = objReader.ReadLine
+                cboMusicGenre.Items.Add(strSongGenre(intCount))
                 intCount += 1
             Loop
-            objReader.Close()
-
-            For intFill = 0 To (_strSongNames.Length - 1)
-                cboMusicGenre.Items.Add(_strSongNames(intFill))
-                MsgBox(_strSongNames(intFill))
-            Next
         Else
             MsgBox(strFileError, , strFileErrorTitle)
         End If
