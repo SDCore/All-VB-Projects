@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ApprovedTravelRequests", "ApprovedTravelRequests\ApprovedTravelRequests.vbproj", "{FFA979AB-BB1F-417D-A574-069FEC50F9BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFA979AB-BB1F-417D-A574-069FEC50F9BA}.Debug|x86.ActiveCfg = Debug|x86
+		{FFA979AB-BB1F-417D-A574-069FEC50F9BA}.Debug|x86.Build.0 = Debug|x86
+		{FFA979AB-BB1F-417D-A574-069FEC50F9BA}.Release|x86.ActiveCfg = Release|x86
+		{FFA979AB-BB1F-417D-A574-069FEC50F9BA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
