@@ -23,6 +23,8 @@ Public Class frmDJPlayList
         Dim strFile As String = "E:\Advanced VB\DJPlayList\DJPlayList\songs.txt"
         Dim strFileError As String = "File not found. Please try again."
         Dim strFileErrorTitle As String = "File Error"
+
+        ' Counting Integer and SongGenre array
         Dim intCount As Integer = 0
         Dim strSongGenre(51) As String
 
