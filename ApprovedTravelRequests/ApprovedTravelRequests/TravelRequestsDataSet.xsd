@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="TravelDataSet" targetNamespace="http://tempuri.org/TravelDataSet.xsd" xmlns:mstns="http://tempuri.org/TravelDataSet.xsd" xmlns="http://tempuri.org/TravelDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="TravelRequestsDataSet" targetNamespace="http://tempuri.org/TravelRequestsDataSet.xsd" xmlns:mstns="http://tempuri.org/TravelRequestsDataSet.xsd" xmlns="http://tempuri.org/TravelRequestsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="TravelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TravelConnectionString (MySettings)" PropertyReference="ApplicationSettings.ApprovedTravelRequests.My.MySettings.GlobalReference.Default.TravelConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="TravelRequestsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TravelRequestsConnectionString (MySettings)" PropertyReference="ApplicationSettings.ApprovedTravelRequests.My.MySettings.GlobalReference.Default.TravelRequestsConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ApprovedTravelRequestsTableAdapter" GeneratorDataComponentClassName="ApprovedTravelRequestsTableAdapter" Name="ApprovedTravelRequests" UserDataComponentName="ApprovedTravelRequestsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="TravelConnectionString (MySettings)" DbObjectName="ApprovedTravelRequests" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="TravelRequestsConnectionString (MySettings)" DbObjectName="ApprovedTravelRequests" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `ApprovedTravelRequests` WHERE ((`Employee ID` = ?) AND ((? = 1 AND `Last Name` IS NULL) OR (`Last Name` = ?)) AND ((? = 1 AND `First Name` IS NULL) OR (`First Name` = ?)) AND ((? = 1 AND `Purpose for Travel` IS NULL) OR (`Purpose for Travel` = ?)) AND ((? = 1 AND `Location` IS NULL) OR (`Location` = ?)) AND ((? = 1 AND `Trip Dates` IS NULL) OR (`Trip Dates` = ?)) AND ((? = 1 AND `Travel Cost` IS NULL) OR (`Travel Cost` = ?)))</CommandText>
@@ -95,7 +95,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="TravelDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TravelDataSet" msprop:Generator_UserDSName="TravelDataSet">
+  <xs:element name="TravelRequestsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TravelRequestsDataSet" msprop:Generator_UserDSName="TravelRequestsDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="ApprovedTravelRequests" msprop:Generator_TableClassName="ApprovedTravelRequestsDataTable" msprop:Generator_TableVarName="tableApprovedTravelRequests" msprop:Generator_TablePropName="ApprovedTravelRequests" msprop:Generator_RowDeletingName="ApprovedTravelRequestsRowDeleting" msprop:Generator_RowChangingName="ApprovedTravelRequestsRowChanging" msprop:Generator_RowEvHandlerName="ApprovedTravelRequestsRowChangeEventHandler" msprop:Generator_RowDeletedName="ApprovedTravelRequestsRowDeleted" msprop:Generator_UserTableName="ApprovedTravelRequests" msprop:Generator_RowChangedName="ApprovedTravelRequestsRowChanged" msprop:Generator_RowEvArgName="ApprovedTravelRequestsRowChangeEvent" msprop:Generator_RowClassName="ApprovedTravelRequestsRow">

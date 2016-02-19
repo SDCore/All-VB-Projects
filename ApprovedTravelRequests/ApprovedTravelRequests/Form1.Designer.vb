@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmApprovedTravel
+Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class frmApprovedTravel
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmApprovedTravel))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Dim Employee_IDLabel As System.Windows.Forms.Label
         Dim Last_NameLabel As System.Windows.Forms.Label
         Dim First_NameLabel As System.Windows.Forms.Label
@@ -31,11 +31,10 @@ Partial Class frmApprovedTravel
         Dim LocationLabel As System.Windows.Forms.Label
         Dim Trip_DatesLabel As System.Windows.Forms.Label
         Dim Travel_CostLabel As System.Windows.Forms.Label
-        Me.lblFormTitle = New System.Windows.Forms.Label()
-        Me.TravelDataSet = New ApprovedTravelRequests.TravelDataSet()
+        Me.TravelRequestsDataSet = New ApprovedTravelRequests.TravelRequestsDataSet()
         Me.ApprovedTravelRequestsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ApprovedTravelRequestsTableAdapter = New ApprovedTravelRequests.TravelDataSetTableAdapters.ApprovedTravelRequestsTableAdapter()
-        Me.TableAdapterManager = New ApprovedTravelRequests.TravelDataSetTableAdapters.TableAdapterManager()
+        Me.ApprovedTravelRequestsTableAdapter = New ApprovedTravelRequests.TravelRequestsDataSetTableAdapters.ApprovedTravelRequestsTableAdapter()
+        Me.TableAdapterManager = New ApprovedTravelRequests.TravelRequestsDataSetTableAdapters.TableAdapterManager()
         Me.ApprovedTravelRequestsBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
@@ -50,6 +49,7 @@ Partial Class frmApprovedTravel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.ApprovedTravelRequestsBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Employee_IDTextBox = New System.Windows.Forms.TextBox()
+        Me.frmApprovedTravel = New System.Windows.Forms.Label()
         Me.Last_NameTextBox = New System.Windows.Forms.TextBox()
         Me.First_NameTextBox = New System.Windows.Forms.TextBox()
         Me.Purpose_for_TravelTextBox = New System.Windows.Forms.TextBox()
@@ -57,7 +57,7 @@ Partial Class frmApprovedTravel
         Me.Trip_DatesTextBox = New System.Windows.Forms.TextBox()
         Me.Travel_CostTextBox = New System.Windows.Forms.TextBox()
         Me.btnTotalTravelCost = New System.Windows.Forms.Button()
-        Me.lblTotalTravelCost = New System.Windows.Forms.Label()
+        Me.lblTotalCost = New System.Windows.Forms.Label()
         Employee_IDLabel = New System.Windows.Forms.Label()
         Last_NameLabel = New System.Windows.Forms.Label()
         First_NameLabel = New System.Windows.Forms.Label()
@@ -65,32 +65,21 @@ Partial Class frmApprovedTravel
         LocationLabel = New System.Windows.Forms.Label()
         Trip_DatesLabel = New System.Windows.Forms.Label()
         Travel_CostLabel = New System.Windows.Forms.Label()
-        CType(Me.TravelDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TravelRequestsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApprovedTravelRequestsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApprovedTravelRequestsBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ApprovedTravelRequestsBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
         '
-        'lblFormTitle
+        'TravelRequestsDataSet
         '
-        Me.lblFormTitle.AutoSize = True
-        Me.lblFormTitle.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFormTitle.ForeColor = System.Drawing.Color.LightSeaGreen
-        Me.lblFormTitle.Location = New System.Drawing.Point(16, 25)
-        Me.lblFormTitle.Name = "lblFormTitle"
-        Me.lblFormTitle.Size = New System.Drawing.Size(474, 37)
-        Me.lblFormTitle.TabIndex = 0
-        Me.lblFormTitle.Text = "Intuition Approved Travel Requests"
-        '
-        'TravelDataSet
-        '
-        Me.TravelDataSet.DataSetName = "TravelDataSet"
-        Me.TravelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.TravelRequestsDataSet.DataSetName = "TravelRequestsDataSet"
+        Me.TravelRequestsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ApprovedTravelRequestsBindingSource
         '
         Me.ApprovedTravelRequestsBindingSource.DataMember = "ApprovedTravelRequests"
-        Me.ApprovedTravelRequestsBindingSource.DataSource = Me.TravelDataSet
+        Me.ApprovedTravelRequestsBindingSource.DataSource = Me.TravelRequestsDataSet
         '
         'ApprovedTravelRequestsTableAdapter
         '
@@ -100,7 +89,7 @@ Partial Class frmApprovedTravel
         '
         Me.TableAdapterManager.ApprovedTravelRequestsTableAdapter = Me.ApprovedTravelRequestsTableAdapter
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = ApprovedTravelRequests.TravelDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = ApprovedTravelRequests.TravelRequestsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'ApprovedTravelRequestsBindingNavigator
         '
@@ -116,8 +105,8 @@ Partial Class frmApprovedTravel
         Me.ApprovedTravelRequestsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ApprovedTravelRequestsBindingNavigator.Name = "ApprovedTravelRequestsBindingNavigator"
         Me.ApprovedTravelRequestsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ApprovedTravelRequestsBindingNavigator.Size = New System.Drawing.Size(506, 25)
-        Me.ApprovedTravelRequestsBindingNavigator.TabIndex = 1
+        Me.ApprovedTravelRequestsBindingNavigator.Size = New System.Drawing.Size(464, 25)
+        Me.ApprovedTravelRequestsBindingNavigator.TabIndex = 0
         Me.ApprovedTravelRequestsBindingNavigator.Text = "BindingNavigator1"
         '
         'BindingNavigatorMoveFirstItem
@@ -216,163 +205,159 @@ Partial Class frmApprovedTravel
         'Employee_IDLabel
         '
         Employee_IDLabel.AutoSize = True
-        Employee_IDLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Employee_IDLabel.Location = New System.Drawing.Point(12, 69)
+        Employee_IDLabel.Location = New System.Drawing.Point(16, 87)
         Employee_IDLabel.Name = "Employee_IDLabel"
-        Employee_IDLabel.Size = New System.Drawing.Size(84, 17)
-        Employee_IDLabel.TabIndex = 2
-        Employee_IDLabel.Text = "Employee ID:"
+        Employee_IDLabel.Size = New System.Drawing.Size(70, 13)
+        Employee_IDLabel.TabIndex = 1
+        Employee_IDLabel.Text = "Employee ID"
         '
         'Employee_IDTextBox
         '
         Me.Employee_IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ApprovedTravelRequestsBindingSource, "Employee ID", True))
-        Me.Employee_IDTextBox.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Employee_IDTextBox.Location = New System.Drawing.Point(15, 89)
+        Me.Employee_IDTextBox.Location = New System.Drawing.Point(19, 103)
         Me.Employee_IDTextBox.Name = "Employee_IDTextBox"
-        Me.Employee_IDTextBox.Size = New System.Drawing.Size(479, 25)
-        Me.Employee_IDTextBox.TabIndex = 3
+        Me.Employee_IDTextBox.Size = New System.Drawing.Size(422, 22)
+        Me.Employee_IDTextBox.TabIndex = 2
+        '
+        'frmApprovedTravel
+        '
+        Me.frmApprovedTravel.AutoSize = True
+        Me.frmApprovedTravel.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.frmApprovedTravel.ForeColor = System.Drawing.Color.DarkCyan
+        Me.frmApprovedTravel.Location = New System.Drawing.Point(12, 25)
+        Me.frmApprovedTravel.Name = "frmApprovedTravel"
+        Me.frmApprovedTravel.Size = New System.Drawing.Size(432, 37)
+        Me.frmApprovedTravel.TabIndex = 3
+        Me.frmApprovedTravel.Text = "Intuition Approved Travel Requests"
         '
         'Last_NameLabel
         '
         Last_NameLabel.AutoSize = True
-        Last_NameLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Last_NameLabel.Location = New System.Drawing.Point(12, 117)
+        Last_NameLabel.Location = New System.Drawing.Point(16, 134)
         Last_NameLabel.Name = "Last_NameLabel"
-        Last_NameLabel.Size = New System.Drawing.Size(73, 17)
+        Last_NameLabel.Size = New System.Drawing.Size(59, 13)
         Last_NameLabel.TabIndex = 4
-        Last_NameLabel.Text = "Last Name:"
+        Last_NameLabel.Text = "Last Name"
         '
         'Last_NameTextBox
         '
         Me.Last_NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ApprovedTravelRequestsBindingSource, "Last Name", True))
-        Me.Last_NameTextBox.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Last_NameTextBox.Location = New System.Drawing.Point(15, 137)
+        Me.Last_NameTextBox.Location = New System.Drawing.Point(19, 150)
         Me.Last_NameTextBox.Name = "Last_NameTextBox"
-        Me.Last_NameTextBox.Size = New System.Drawing.Size(479, 25)
+        Me.Last_NameTextBox.Size = New System.Drawing.Size(422, 22)
         Me.Last_NameTextBox.TabIndex = 5
         '
         'First_NameLabel
         '
         First_NameLabel.AutoSize = True
-        First_NameLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        First_NameLabel.Location = New System.Drawing.Point(12, 165)
+        First_NameLabel.Location = New System.Drawing.Point(16, 175)
         First_NameLabel.Name = "First_NameLabel"
-        First_NameLabel.Size = New System.Drawing.Size(74, 17)
+        First_NameLabel.Size = New System.Drawing.Size(61, 13)
         First_NameLabel.TabIndex = 6
-        First_NameLabel.Text = "First Name:"
+        First_NameLabel.Text = "First Name"
         '
         'First_NameTextBox
         '
         Me.First_NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ApprovedTravelRequestsBindingSource, "First Name", True))
-        Me.First_NameTextBox.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.First_NameTextBox.Location = New System.Drawing.Point(15, 185)
+        Me.First_NameTextBox.Location = New System.Drawing.Point(19, 191)
         Me.First_NameTextBox.Name = "First_NameTextBox"
-        Me.First_NameTextBox.Size = New System.Drawing.Size(479, 25)
+        Me.First_NameTextBox.Size = New System.Drawing.Size(422, 22)
         Me.First_NameTextBox.TabIndex = 7
         '
         'Purpose_for_TravelLabel
         '
         Purpose_for_TravelLabel.AutoSize = True
-        Purpose_for_TravelLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Purpose_for_TravelLabel.Location = New System.Drawing.Point(12, 213)
+        Purpose_for_TravelLabel.Location = New System.Drawing.Point(16, 216)
         Purpose_for_TravelLabel.Name = "Purpose_for_TravelLabel"
-        Purpose_for_TravelLabel.Size = New System.Drawing.Size(119, 17)
+        Purpose_for_TravelLabel.Size = New System.Drawing.Size(99, 13)
         Purpose_for_TravelLabel.TabIndex = 8
-        Purpose_for_TravelLabel.Text = "Purpose for Travel:"
+        Purpose_for_TravelLabel.Text = "Purpose for Travel"
         '
         'Purpose_for_TravelTextBox
         '
         Me.Purpose_for_TravelTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ApprovedTravelRequestsBindingSource, "Purpose for Travel", True))
-        Me.Purpose_for_TravelTextBox.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Purpose_for_TravelTextBox.Location = New System.Drawing.Point(15, 233)
+        Me.Purpose_for_TravelTextBox.Location = New System.Drawing.Point(19, 232)
         Me.Purpose_for_TravelTextBox.Name = "Purpose_for_TravelTextBox"
-        Me.Purpose_for_TravelTextBox.Size = New System.Drawing.Size(479, 25)
+        Me.Purpose_for_TravelTextBox.Size = New System.Drawing.Size(422, 22)
         Me.Purpose_for_TravelTextBox.TabIndex = 9
         '
         'LocationLabel
         '
         LocationLabel.AutoSize = True
-        LocationLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        LocationLabel.Location = New System.Drawing.Point(12, 261)
+        LocationLabel.Location = New System.Drawing.Point(16, 257)
         LocationLabel.Name = "LocationLabel"
-        LocationLabel.Size = New System.Drawing.Size(60, 17)
+        LocationLabel.Size = New System.Drawing.Size(51, 13)
         LocationLabel.TabIndex = 10
-        LocationLabel.Text = "Location:"
+        LocationLabel.Text = "Location"
         '
         'LocationTextBox
         '
         Me.LocationTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ApprovedTravelRequestsBindingSource, "Location", True))
-        Me.LocationTextBox.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LocationTextBox.Location = New System.Drawing.Point(15, 281)
+        Me.LocationTextBox.Location = New System.Drawing.Point(19, 273)
         Me.LocationTextBox.Name = "LocationTextBox"
-        Me.LocationTextBox.Size = New System.Drawing.Size(479, 25)
+        Me.LocationTextBox.Size = New System.Drawing.Size(422, 22)
         Me.LocationTextBox.TabIndex = 11
         '
         'Trip_DatesLabel
         '
         Trip_DatesLabel.AutoSize = True
-        Trip_DatesLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Trip_DatesLabel.Location = New System.Drawing.Point(12, 309)
+        Trip_DatesLabel.Location = New System.Drawing.Point(16, 298)
         Trip_DatesLabel.Name = "Trip_DatesLabel"
-        Trip_DatesLabel.Size = New System.Drawing.Size(71, 17)
+        Trip_DatesLabel.Size = New System.Drawing.Size(58, 13)
         Trip_DatesLabel.TabIndex = 12
-        Trip_DatesLabel.Text = "Trip Dates:"
+        Trip_DatesLabel.Text = "Trip Dates"
         '
         'Trip_DatesTextBox
         '
         Me.Trip_DatesTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ApprovedTravelRequestsBindingSource, "Trip Dates", True))
-        Me.Trip_DatesTextBox.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Trip_DatesTextBox.Location = New System.Drawing.Point(15, 329)
+        Me.Trip_DatesTextBox.Location = New System.Drawing.Point(19, 314)
         Me.Trip_DatesTextBox.Name = "Trip_DatesTextBox"
-        Me.Trip_DatesTextBox.Size = New System.Drawing.Size(479, 25)
+        Me.Trip_DatesTextBox.Size = New System.Drawing.Size(422, 22)
         Me.Trip_DatesTextBox.TabIndex = 13
         '
         'Travel_CostLabel
         '
         Travel_CostLabel.AutoSize = True
-        Travel_CostLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Travel_CostLabel.Location = New System.Drawing.Point(12, 357)
+        Travel_CostLabel.Location = New System.Drawing.Point(16, 339)
         Travel_CostLabel.Name = "Travel_CostLabel"
-        Travel_CostLabel.Size = New System.Drawing.Size(76, 17)
+        Travel_CostLabel.Size = New System.Drawing.Size(62, 13)
         Travel_CostLabel.TabIndex = 14
-        Travel_CostLabel.Text = "Travel Cost:"
+        Travel_CostLabel.Text = "Travel Cost"
         '
         'Travel_CostTextBox
         '
         Me.Travel_CostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ApprovedTravelRequestsBindingSource, "Travel Cost", True))
-        Me.Travel_CostTextBox.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Travel_CostTextBox.Location = New System.Drawing.Point(15, 377)
+        Me.Travel_CostTextBox.Location = New System.Drawing.Point(19, 355)
         Me.Travel_CostTextBox.Name = "Travel_CostTextBox"
-        Me.Travel_CostTextBox.Size = New System.Drawing.Size(479, 25)
+        Me.Travel_CostTextBox.Size = New System.Drawing.Size(422, 22)
         Me.Travel_CostTextBox.TabIndex = 15
         '
         'btnTotalTravelCost
         '
-        Me.btnTotalTravelCost.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTotalTravelCost.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTotalTravelCost.Location = New System.Drawing.Point(15, 409)
+        Me.btnTotalTravelCost.Location = New System.Drawing.Point(19, 384)
         Me.btnTotalTravelCost.Name = "btnTotalTravelCost"
-        Me.btnTotalTravelCost.Size = New System.Drawing.Size(479, 46)
+        Me.btnTotalTravelCost.Size = New System.Drawing.Size(422, 56)
         Me.btnTotalTravelCost.TabIndex = 16
         Me.btnTotalTravelCost.Text = "Total Travel Cost"
         Me.btnTotalTravelCost.UseVisualStyleBackColor = True
         '
-        'lblTotalTravelCost
+        'lblTotalCost
         '
-        Me.lblTotalTravelCost.AutoSize = True
-        Me.lblTotalTravelCost.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalTravelCost.Location = New System.Drawing.Point(67, 458)
-        Me.lblTotalTravelCost.Name = "lblTotalTravelCost"
-        Me.lblTotalTravelCost.Size = New System.Drawing.Size(373, 30)
-        Me.lblTotalTravelCost.TabIndex = 17
-        Me.lblTotalTravelCost.Text = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        Me.lblTotalCost.AutoSize = True
+        Me.lblTotalCost.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalCost.Location = New System.Drawing.Point(42, 443)
+        Me.lblTotalCost.Name = "lblTotalCost"
+        Me.lblTotalCost.Size = New System.Drawing.Size(373, 30)
+        Me.lblTotalCost.TabIndex = 17
+        Me.lblTotalCost.Text = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         '
-        'frmApprovedTravel
+        'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(506, 492)
-        Me.Controls.Add(Me.lblTotalTravelCost)
+        Me.ClientSize = New System.Drawing.Size(464, 478)
+        Me.Controls.Add(Me.lblTotalCost)
         Me.Controls.Add(Me.btnTotalTravelCost)
         Me.Controls.Add(Travel_CostLabel)
         Me.Controls.Add(Me.Travel_CostTextBox)
@@ -386,15 +371,14 @@ Partial Class frmApprovedTravel
         Me.Controls.Add(Me.First_NameTextBox)
         Me.Controls.Add(Last_NameLabel)
         Me.Controls.Add(Me.Last_NameTextBox)
+        Me.Controls.Add(Me.frmApprovedTravel)
         Me.Controls.Add(Employee_IDLabel)
         Me.Controls.Add(Me.Employee_IDTextBox)
         Me.Controls.Add(Me.ApprovedTravelRequestsBindingNavigator)
-        Me.Controls.Add(Me.lblFormTitle)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmApprovedTravel"
-        Me.Text = "Intuition Approved Travel Requests"
-        CType(Me.TravelDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Name = "Form1"
+        Me.Text = "Form1"
+        CType(Me.TravelRequestsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ApprovedTravelRequestsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ApprovedTravelRequestsBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ApprovedTravelRequestsBindingNavigator.ResumeLayout(False)
@@ -403,11 +387,10 @@ Partial Class frmApprovedTravel
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lblFormTitle As System.Windows.Forms.Label
-    Friend WithEvents TravelDataSet As ApprovedTravelRequests.TravelDataSet
+    Friend WithEvents TravelRequestsDataSet As ApprovedTravelRequests.TravelRequestsDataSet
     Friend WithEvents ApprovedTravelRequestsBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents ApprovedTravelRequestsTableAdapter As ApprovedTravelRequests.TravelDataSetTableAdapters.ApprovedTravelRequestsTableAdapter
-    Friend WithEvents TableAdapterManager As ApprovedTravelRequests.TravelDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents ApprovedTravelRequestsTableAdapter As ApprovedTravelRequests.TravelRequestsDataSetTableAdapters.ApprovedTravelRequestsTableAdapter
+    Friend WithEvents TableAdapterManager As ApprovedTravelRequests.TravelRequestsDataSetTableAdapters.TableAdapterManager
     Friend WithEvents ApprovedTravelRequestsBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -422,6 +405,7 @@ Partial Class frmApprovedTravel
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ApprovedTravelRequestsBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents Employee_IDTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents frmApprovedTravel As System.Windows.Forms.Label
     Friend WithEvents Last_NameTextBox As System.Windows.Forms.TextBox
     Friend WithEvents First_NameTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Purpose_for_TravelTextBox As System.Windows.Forms.TextBox
@@ -429,6 +413,6 @@ Partial Class frmApprovedTravel
     Friend WithEvents Trip_DatesTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Travel_CostTextBox As System.Windows.Forms.TextBox
     Friend WithEvents btnTotalTravelCost As System.Windows.Forms.Button
-    Friend WithEvents lblTotalTravelCost As System.Windows.Forms.Label
+    Friend WithEvents lblTotalCost As System.Windows.Forms.Label
 
 End Class

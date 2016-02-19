@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ApprovedTravelRequests", "ApprovedTravelRequests\ApprovedTravelRequests.vbproj", "{FFA979AB-BB1F-417D-A574-069FEC50F9BA}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ApprovedTravelRequests", "ApprovedTravelRequests\ApprovedTravelRequests.vbproj", "{C4EAF240-90BB-4E7F-9A70-2E034BECE768}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FFA979AB-BB1F-417D-A574-069FEC50F9BA}.Debug|x86.ActiveCfg = Debug|x86
-		{FFA979AB-BB1F-417D-A574-069FEC50F9BA}.Debug|x86.Build.0 = Debug|x86
-		{FFA979AB-BB1F-417D-A574-069FEC50F9BA}.Release|x86.ActiveCfg = Release|x86
-		{FFA979AB-BB1F-417D-A574-069FEC50F9BA}.Release|x86.Build.0 = Release|x86
+		{C4EAF240-90BB-4E7F-9A70-2E034BECE768}.Debug|x86.ActiveCfg = Debug|x86
+		{C4EAF240-90BB-4E7F-9A70-2E034BECE768}.Debug|x86.Build.0 = Debug|x86
+		{C4EAF240-90BB-4E7F-9A70-2E034BECE768}.Release|x86.ActiveCfg = Release|x86
+		{C4EAF240-90BB-4E7F-9A70-2E034BECE768}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
