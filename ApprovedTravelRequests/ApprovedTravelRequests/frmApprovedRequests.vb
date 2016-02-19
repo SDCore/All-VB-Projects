@@ -28,4 +28,32 @@ Public Class frmApprovedRequests
         End Try
 
     End Sub
+
+    Private Sub btnTotalTravelCost_Click(sender As System.Object, e As System.EventArgs) Handles btnTotalTravelCost.Click
+        ' strSQL is an SQL statemanet that select all the fields from the
+        ' Database table
+        Dim strSQL As String = "SELECT * FROM ApprovedTravelRequests"
+
+        ' Connection to DB
+        Dim strPath As String = "Provider=Microsoft.ACE.OLEDB.12.0 ;" _
+                                & "Data Source=E:\Advanced VB\ApprovedTravelRequests\ApprovedTravelRequests\bin\Debug\TravelRequests.accdb"
+        Dim odaTravel As New OleDb.OleDbDataAdapter(strSQL, strPath)
+
+        ' Variables
+        Dim datCost As New DataTable
+        Dim intCount As Integer
+        Dim decTotalCost As Decimal = 0D
+
+        ' Fill the DataTable with data
+        odaTravel.Fill(datCost)
+        ' Disconnect from database
+        odaTravel.Dispose()
+
+        For intCount = 0 To datCost.Rows.Count - 1
+            decTotalCost += Convert.ToDecimal(datCost.Rows(intCount)("Travel Cost"))
+        Next
+        lblTotalCost.Text = "Trip Approved. Total Cost: " _
+            & decTotalCost.ToString("C")
+
+    End Sub
 End Class

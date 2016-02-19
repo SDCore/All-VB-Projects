@@ -23,7 +23,6 @@ Partial Class frmApprovedRequests
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmApprovedRequests))
         Dim Employee_IDLabel As System.Windows.Forms.Label
         Dim Last_NameLabel As System.Windows.Forms.Label
         Dim First_NameLabel As System.Windows.Forms.Label
@@ -31,22 +30,23 @@ Partial Class frmApprovedRequests
         Dim LocationLabel As System.Windows.Forms.Label
         Dim Trip_DatesLabel As System.Windows.Forms.Label
         Dim Travel_CostLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmApprovedRequests))
         Me.TravelRequestsDataSet = New ApprovedTravelRequests.TravelRequestsDataSet()
         Me.ApprovedTravelRequestsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ApprovedTravelRequestsTableAdapter = New ApprovedTravelRequests.TravelRequestsDataSetTableAdapters.ApprovedTravelRequestsTableAdapter()
         Me.TableAdapterManager = New ApprovedTravelRequests.TravelRequestsDataSetTableAdapters.TableAdapterManager()
         Me.ApprovedTravelRequestsBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.ApprovedTravelRequestsBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Employee_IDTextBox = New System.Windows.Forms.TextBox()
         Me.frmApprovedTravel = New System.Windows.Forms.Label()
@@ -70,6 +70,69 @@ Partial Class frmApprovedRequests
         CType(Me.ApprovedTravelRequestsBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ApprovedTravelRequestsBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Employee_IDLabel
+        '
+        Employee_IDLabel.AutoSize = True
+        Employee_IDLabel.Location = New System.Drawing.Point(16, 87)
+        Employee_IDLabel.Name = "Employee_IDLabel"
+        Employee_IDLabel.Size = New System.Drawing.Size(70, 13)
+        Employee_IDLabel.TabIndex = 1
+        Employee_IDLabel.Text = "Employee ID"
+        '
+        'Last_NameLabel
+        '
+        Last_NameLabel.AutoSize = True
+        Last_NameLabel.Location = New System.Drawing.Point(16, 134)
+        Last_NameLabel.Name = "Last_NameLabel"
+        Last_NameLabel.Size = New System.Drawing.Size(59, 13)
+        Last_NameLabel.TabIndex = 4
+        Last_NameLabel.Text = "Last Name"
+        '
+        'First_NameLabel
+        '
+        First_NameLabel.AutoSize = True
+        First_NameLabel.Location = New System.Drawing.Point(16, 175)
+        First_NameLabel.Name = "First_NameLabel"
+        First_NameLabel.Size = New System.Drawing.Size(61, 13)
+        First_NameLabel.TabIndex = 6
+        First_NameLabel.Text = "First Name"
+        '
+        'Purpose_for_TravelLabel
+        '
+        Purpose_for_TravelLabel.AutoSize = True
+        Purpose_for_TravelLabel.Location = New System.Drawing.Point(16, 216)
+        Purpose_for_TravelLabel.Name = "Purpose_for_TravelLabel"
+        Purpose_for_TravelLabel.Size = New System.Drawing.Size(99, 13)
+        Purpose_for_TravelLabel.TabIndex = 8
+        Purpose_for_TravelLabel.Text = "Purpose for Travel"
+        '
+        'LocationLabel
+        '
+        LocationLabel.AutoSize = True
+        LocationLabel.Location = New System.Drawing.Point(16, 257)
+        LocationLabel.Name = "LocationLabel"
+        LocationLabel.Size = New System.Drawing.Size(51, 13)
+        LocationLabel.TabIndex = 10
+        LocationLabel.Text = "Location"
+        '
+        'Trip_DatesLabel
+        '
+        Trip_DatesLabel.AutoSize = True
+        Trip_DatesLabel.Location = New System.Drawing.Point(16, 298)
+        Trip_DatesLabel.Name = "Trip_DatesLabel"
+        Trip_DatesLabel.Size = New System.Drawing.Size(58, 13)
+        Trip_DatesLabel.TabIndex = 12
+        Trip_DatesLabel.Text = "Trip Dates"
+        '
+        'Travel_CostLabel
+        '
+        Travel_CostLabel.AutoSize = True
+        Travel_CostLabel.Location = New System.Drawing.Point(16, 339)
+        Travel_CostLabel.Name = "Travel_CostLabel"
+        Travel_CostLabel.Size = New System.Drawing.Size(62, 13)
+        Travel_CostLabel.TabIndex = 14
+        Travel_CostLabel.Text = "Travel Cost"
         '
         'TravelRequestsDataSet
         '
@@ -109,6 +172,31 @@ Partial Class frmApprovedRequests
         Me.ApprovedTravelRequestsBindingNavigator.TabIndex = 0
         Me.ApprovedTravelRequestsBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -141,16 +229,9 @@ Partial Class frmApprovedRequests
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -173,26 +254,8 @@ Partial Class frmApprovedRequests
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'ApprovedTravelRequestsBindingNavigatorSaveItem
         '
@@ -201,15 +264,6 @@ Partial Class frmApprovedRequests
         Me.ApprovedTravelRequestsBindingNavigatorSaveItem.Name = "ApprovedTravelRequestsBindingNavigatorSaveItem"
         Me.ApprovedTravelRequestsBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ApprovedTravelRequestsBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'Employee_IDLabel
-        '
-        Employee_IDLabel.AutoSize = True
-        Employee_IDLabel.Location = New System.Drawing.Point(16, 87)
-        Employee_IDLabel.Name = "Employee_IDLabel"
-        Employee_IDLabel.Size = New System.Drawing.Size(70, 13)
-        Employee_IDLabel.TabIndex = 1
-        Employee_IDLabel.Text = "Employee ID"
         '
         'Employee_IDTextBox
         '
@@ -230,15 +284,6 @@ Partial Class frmApprovedRequests
         Me.frmApprovedTravel.TabIndex = 3
         Me.frmApprovedTravel.Text = "Intuition Approved Travel Requests"
         '
-        'Last_NameLabel
-        '
-        Last_NameLabel.AutoSize = True
-        Last_NameLabel.Location = New System.Drawing.Point(16, 134)
-        Last_NameLabel.Name = "Last_NameLabel"
-        Last_NameLabel.Size = New System.Drawing.Size(59, 13)
-        Last_NameLabel.TabIndex = 4
-        Last_NameLabel.Text = "Last Name"
-        '
         'Last_NameTextBox
         '
         Me.Last_NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ApprovedTravelRequestsBindingSource, "Last Name", True))
@@ -246,15 +291,6 @@ Partial Class frmApprovedRequests
         Me.Last_NameTextBox.Name = "Last_NameTextBox"
         Me.Last_NameTextBox.Size = New System.Drawing.Size(422, 22)
         Me.Last_NameTextBox.TabIndex = 5
-        '
-        'First_NameLabel
-        '
-        First_NameLabel.AutoSize = True
-        First_NameLabel.Location = New System.Drawing.Point(16, 175)
-        First_NameLabel.Name = "First_NameLabel"
-        First_NameLabel.Size = New System.Drawing.Size(61, 13)
-        First_NameLabel.TabIndex = 6
-        First_NameLabel.Text = "First Name"
         '
         'First_NameTextBox
         '
@@ -264,15 +300,6 @@ Partial Class frmApprovedRequests
         Me.First_NameTextBox.Size = New System.Drawing.Size(422, 22)
         Me.First_NameTextBox.TabIndex = 7
         '
-        'Purpose_for_TravelLabel
-        '
-        Purpose_for_TravelLabel.AutoSize = True
-        Purpose_for_TravelLabel.Location = New System.Drawing.Point(16, 216)
-        Purpose_for_TravelLabel.Name = "Purpose_for_TravelLabel"
-        Purpose_for_TravelLabel.Size = New System.Drawing.Size(99, 13)
-        Purpose_for_TravelLabel.TabIndex = 8
-        Purpose_for_TravelLabel.Text = "Purpose for Travel"
-        '
         'Purpose_for_TravelTextBox
         '
         Me.Purpose_for_TravelTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ApprovedTravelRequestsBindingSource, "Purpose for Travel", True))
@@ -280,15 +307,6 @@ Partial Class frmApprovedRequests
         Me.Purpose_for_TravelTextBox.Name = "Purpose_for_TravelTextBox"
         Me.Purpose_for_TravelTextBox.Size = New System.Drawing.Size(422, 22)
         Me.Purpose_for_TravelTextBox.TabIndex = 9
-        '
-        'LocationLabel
-        '
-        LocationLabel.AutoSize = True
-        LocationLabel.Location = New System.Drawing.Point(16, 257)
-        LocationLabel.Name = "LocationLabel"
-        LocationLabel.Size = New System.Drawing.Size(51, 13)
-        LocationLabel.TabIndex = 10
-        LocationLabel.Text = "Location"
         '
         'LocationTextBox
         '
@@ -298,15 +316,6 @@ Partial Class frmApprovedRequests
         Me.LocationTextBox.Size = New System.Drawing.Size(422, 22)
         Me.LocationTextBox.TabIndex = 11
         '
-        'Trip_DatesLabel
-        '
-        Trip_DatesLabel.AutoSize = True
-        Trip_DatesLabel.Location = New System.Drawing.Point(16, 298)
-        Trip_DatesLabel.Name = "Trip_DatesLabel"
-        Trip_DatesLabel.Size = New System.Drawing.Size(58, 13)
-        Trip_DatesLabel.TabIndex = 12
-        Trip_DatesLabel.Text = "Trip Dates"
-        '
         'Trip_DatesTextBox
         '
         Me.Trip_DatesTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ApprovedTravelRequestsBindingSource, "Trip Dates", True))
@@ -314,15 +323,6 @@ Partial Class frmApprovedRequests
         Me.Trip_DatesTextBox.Name = "Trip_DatesTextBox"
         Me.Trip_DatesTextBox.Size = New System.Drawing.Size(422, 22)
         Me.Trip_DatesTextBox.TabIndex = 13
-        '
-        'Travel_CostLabel
-        '
-        Travel_CostLabel.AutoSize = True
-        Travel_CostLabel.Location = New System.Drawing.Point(16, 339)
-        Travel_CostLabel.Name = "Travel_CostLabel"
-        Travel_CostLabel.Size = New System.Drawing.Size(62, 13)
-        Travel_CostLabel.TabIndex = 14
-        Travel_CostLabel.Text = "Travel Cost"
         '
         'Travel_CostTextBox
         '
@@ -352,7 +352,7 @@ Partial Class frmApprovedRequests
         Me.lblTotalCost.TabIndex = 17
         Me.lblTotalCost.Text = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         '
-        'Form1
+        'frmApprovedRequests
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -376,7 +376,7 @@ Partial Class frmApprovedRequests
         Me.Controls.Add(Me.Employee_IDTextBox)
         Me.Controls.Add(Me.ApprovedTravelRequestsBindingNavigator)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Name = "Form1"
+        Me.Name = "frmApprovedRequests"
         Me.Text = "Form1"
         CType(Me.TravelRequestsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ApprovedTravelRequestsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
