@@ -1,0 +1,11 @@
+E:\Advanced VB\PowerSchool\PowerSchool\bin\Debug\StudentInfo.accdb
+E:\Advanced VB\PowerSchool\PowerSchool\bin\Debug\PowerSchool.exe.config
+E:\Advanced VB\PowerSchool\PowerSchool\bin\Debug\PowerSchool.exe
+E:\Advanced VB\PowerSchool\PowerSchool\bin\Debug\PowerSchool.pdb
+E:\Advanced VB\PowerSchool\PowerSchool\bin\Debug\PowerSchool.xml
+E:\Advanced VB\PowerSchool\PowerSchool\obj\x86\Debug\Powerschool.frmPowerSchool.resources
+E:\Advanced VB\PowerSchool\PowerSchool\obj\x86\Debug\Powerschool.Resources.resources
+E:\Advanced VB\PowerSchool\PowerSchool\obj\x86\Debug\PowerSchool.vbproj.GenerateResource.Cache
+E:\Advanced VB\PowerSchool\PowerSchool\obj\x86\Debug\PowerSchool.exe
+E:\Advanced VB\PowerSchool\PowerSchool\obj\x86\Debug\PowerSchool.xml
+E:\Advanced VB\PowerSchool\PowerSchool\obj\x86\Debug\PowerSchool.pdb
