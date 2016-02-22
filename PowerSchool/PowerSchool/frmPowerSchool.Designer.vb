@@ -23,28 +23,28 @@ Partial Class frmPowerSchool
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPowerSchool))
         Dim StudentIDLabel As System.Windows.Forms.Label
         Dim FirstNameLabel As System.Windows.Forms.Label
         Dim LastNameLabel As System.Windows.Forms.Label
         Dim YearInSchoolLabel As System.Windows.Forms.Label
         Dim GPALabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPowerSchool))
         Me.StudentInfoDataSet = New Powerschool.StudentInfoDataSet()
         Me.StudentInformationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StudentInformationTableAdapter = New Powerschool.StudentInfoDataSetTableAdapters.StudentInformationTableAdapter()
         Me.TableAdapterManager = New Powerschool.StudentInfoDataSetTableAdapters.TableAdapterManager()
         Me.StudentInformationBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.StudentInformationBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.StudentIDTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
@@ -61,6 +61,51 @@ Partial Class frmPowerSchool
         CType(Me.StudentInformationBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StudentInformationBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'StudentIDLabel
+        '
+        StudentIDLabel.AutoSize = True
+        StudentIDLabel.Location = New System.Drawing.Point(12, 52)
+        StudentIDLabel.Name = "StudentIDLabel"
+        StudentIDLabel.Size = New System.Drawing.Size(62, 13)
+        StudentIDLabel.TabIndex = 1
+        StudentIDLabel.Text = "Student ID"
+        '
+        'FirstNameLabel
+        '
+        FirstNameLabel.AutoSize = True
+        FirstNameLabel.Location = New System.Drawing.Point(12, 93)
+        FirstNameLabel.Name = "FirstNameLabel"
+        FirstNameLabel.Size = New System.Drawing.Size(64, 13)
+        FirstNameLabel.TabIndex = 3
+        FirstNameLabel.Text = "First Name:"
+        '
+        'LastNameLabel
+        '
+        LastNameLabel.AutoSize = True
+        LastNameLabel.Location = New System.Drawing.Point(12, 134)
+        LastNameLabel.Name = "LastNameLabel"
+        LastNameLabel.Size = New System.Drawing.Size(62, 13)
+        LastNameLabel.TabIndex = 5
+        LastNameLabel.Text = "Last Name:"
+        '
+        'YearInSchoolLabel
+        '
+        YearInSchoolLabel.AutoSize = True
+        YearInSchoolLabel.Location = New System.Drawing.Point(12, 175)
+        YearInSchoolLabel.Name = "YearInSchoolLabel"
+        YearInSchoolLabel.Size = New System.Drawing.Size(82, 13)
+        YearInSchoolLabel.TabIndex = 7
+        YearInSchoolLabel.Text = "Year In School:"
+        '
+        'GPALabel
+        '
+        GPALabel.AutoSize = True
+        GPALabel.Location = New System.Drawing.Point(12, 216)
+        GPALabel.Name = "GPALabel"
+        GPALabel.Size = New System.Drawing.Size(31, 13)
+        GPALabel.TabIndex = 9
+        GPALabel.Text = "GPA:"
         '
         'StudentInfoDataSet
         '
@@ -100,6 +145,31 @@ Partial Class frmPowerSchool
         Me.StudentInformationBindingNavigator.TabIndex = 0
         Me.StudentInformationBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -132,17 +202,10 @@ Partial Class frmPowerSchool
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -150,7 +213,7 @@ Partial Class frmPowerSchool
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -159,48 +222,21 @@ Partial Class frmPowerSchool
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'StudentInformationBindingNavigatorSaveItem
         '
         Me.StudentInformationBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.StudentInformationBindingNavigatorSaveItem.Image = CType(resources.GetObject("StudentInformationBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.StudentInformationBindingNavigatorSaveItem.Name = "StudentInformationBindingNavigatorSaveItem"
-        Me.StudentInformationBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.StudentInformationBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.StudentInformationBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'StudentIDLabel
-        '
-        StudentIDLabel.AutoSize = True
-        StudentIDLabel.Location = New System.Drawing.Point(12, 52)
-        StudentIDLabel.Name = "StudentIDLabel"
-        StudentIDLabel.Size = New System.Drawing.Size(62, 13)
-        StudentIDLabel.TabIndex = 1
-        StudentIDLabel.Text = "Student ID"
         '
         'StudentIDTextBox
         '
@@ -210,15 +246,6 @@ Partial Class frmPowerSchool
         Me.StudentIDTextBox.Size = New System.Drawing.Size(557, 22)
         Me.StudentIDTextBox.TabIndex = 2
         '
-        'FirstNameLabel
-        '
-        FirstNameLabel.AutoSize = True
-        FirstNameLabel.Location = New System.Drawing.Point(12, 93)
-        FirstNameLabel.Name = "FirstNameLabel"
-        FirstNameLabel.Size = New System.Drawing.Size(64, 13)
-        FirstNameLabel.TabIndex = 3
-        FirstNameLabel.Text = "First Name:"
-        '
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentInformationBindingSource, "firstName", True))
@@ -226,15 +253,6 @@ Partial Class frmPowerSchool
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(557, 22)
         Me.FirstNameTextBox.TabIndex = 4
-        '
-        'LastNameLabel
-        '
-        LastNameLabel.AutoSize = True
-        LastNameLabel.Location = New System.Drawing.Point(12, 134)
-        LastNameLabel.Name = "LastNameLabel"
-        LastNameLabel.Size = New System.Drawing.Size(62, 13)
-        LastNameLabel.TabIndex = 5
-        LastNameLabel.Text = "Last Name:"
         '
         'LastNameTextBox
         '
@@ -244,15 +262,6 @@ Partial Class frmPowerSchool
         Me.LastNameTextBox.Size = New System.Drawing.Size(557, 22)
         Me.LastNameTextBox.TabIndex = 6
         '
-        'YearInSchoolLabel
-        '
-        YearInSchoolLabel.AutoSize = True
-        YearInSchoolLabel.Location = New System.Drawing.Point(12, 175)
-        YearInSchoolLabel.Name = "YearInSchoolLabel"
-        YearInSchoolLabel.Size = New System.Drawing.Size(82, 13)
-        YearInSchoolLabel.TabIndex = 7
-        YearInSchoolLabel.Text = "Year In School:"
-        '
         'YearInSchoolTextBox
         '
         Me.YearInSchoolTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentInformationBindingSource, "yearInSchool", True))
@@ -260,15 +269,6 @@ Partial Class frmPowerSchool
         Me.YearInSchoolTextBox.Name = "YearInSchoolTextBox"
         Me.YearInSchoolTextBox.Size = New System.Drawing.Size(557, 22)
         Me.YearInSchoolTextBox.TabIndex = 8
-        '
-        'GPALabel
-        '
-        GPALabel.AutoSize = True
-        GPALabel.Location = New System.Drawing.Point(12, 216)
-        GPALabel.Name = "GPALabel"
-        GPALabel.Size = New System.Drawing.Size(31, 13)
-        GPALabel.TabIndex = 9
-        GPALabel.Text = "GPA:"
         '
         'GPATextBox
         '
@@ -282,7 +282,7 @@ Partial Class frmPowerSchool
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(584, 562)
+        Me.ClientSize = New System.Drawing.Size(584, 270)
         Me.Controls.Add(GPALabel)
         Me.Controls.Add(Me.GPATextBox)
         Me.Controls.Add(YearInSchoolLabel)
