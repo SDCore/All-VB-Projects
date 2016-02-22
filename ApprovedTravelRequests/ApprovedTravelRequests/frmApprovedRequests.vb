@@ -9,7 +9,6 @@ Public Class frmApprovedRequests
 
     Private Sub ApprovedTravelRequestsBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs) Handles ApprovedTravelRequestsBindingNavigatorSaveItem.Click
         ' Click event is created by the database wizard
-
         Me.Validate()
         Me.ApprovedTravelRequestsBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.TravelRequestsDataSet)
@@ -30,8 +29,8 @@ Public Class frmApprovedRequests
     End Sub
 
     Private Sub btnTotalTravelCost_Click(sender As System.Object, e As System.EventArgs) Handles btnTotalTravelCost.Click
-        ' strSQL is an SQL statemanet that select all the fields from the
-        ' Database table
+        ' strSQL is an SQL statemant that select all the fields from the table
+        ' Selecting table from database
         Dim strSQL As String = "SELECT * FROM ApprovedTravelRequests"
 
         ' Connection to DB
