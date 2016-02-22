@@ -48,9 +48,11 @@ Public Class frmApprovedRequests
         ' Disconnect from database
         odaTravel.Dispose()
 
+        ' Doing the math to calculate the total cost
         For intCount = 0 To datCost.Rows.Count - 1
             decTotalCost += Convert.ToDecimal(datCost.Rows(intCount)("Travel Cost"))
         Next
+        ' Displaying the total cost
         lblTotalCost.Text = "Trip Approved. Total Cost: " _
             & decTotalCost.ToString("C")
 
