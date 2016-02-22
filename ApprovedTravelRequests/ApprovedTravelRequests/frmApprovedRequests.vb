@@ -22,6 +22,7 @@ Public Class frmApprovedRequests
             'TODO: This line of code loads data into the 'TravelRequestsDataSet.ApprovedTravelRequests' table. You can move, or remove it, as needed.
             Me.ApprovedTravelRequestsTableAdapter.Fill(Me.TravelRequestsDataSet.ApprovedTravelRequests)
         Catch ex As Exception
+            ' Error displayed if the program could not connect to the database or find the database file
             MsgBox("Could not establish a connection with the database. Please try again.", , "Database Error")
             Close()
         End Try
