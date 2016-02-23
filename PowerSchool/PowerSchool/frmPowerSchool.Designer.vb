@@ -51,6 +51,8 @@ Partial Class frmPowerSchool
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
         Me.YearInSchoolTextBox = New System.Windows.Forms.TextBox()
         Me.GPATextBox = New System.Windows.Forms.TextBox()
+        Me.btnShowAverage = New System.Windows.Forms.Button()
+        Me.lblAverageGPA = New System.Windows.Forms.Label()
         StudentIDLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
         LastNameLabel = New System.Windows.Forms.Label()
@@ -65,7 +67,7 @@ Partial Class frmPowerSchool
         'StudentIDLabel
         '
         StudentIDLabel.AutoSize = True
-        StudentIDLabel.Location = New System.Drawing.Point(12, 52)
+        StudentIDLabel.Location = New System.Drawing.Point(12, 35)
         StudentIDLabel.Name = "StudentIDLabel"
         StudentIDLabel.Size = New System.Drawing.Size(62, 13)
         StudentIDLabel.TabIndex = 1
@@ -74,7 +76,7 @@ Partial Class frmPowerSchool
         'FirstNameLabel
         '
         FirstNameLabel.AutoSize = True
-        FirstNameLabel.Location = New System.Drawing.Point(12, 93)
+        FirstNameLabel.Location = New System.Drawing.Point(12, 76)
         FirstNameLabel.Name = "FirstNameLabel"
         FirstNameLabel.Size = New System.Drawing.Size(64, 13)
         FirstNameLabel.TabIndex = 3
@@ -83,7 +85,7 @@ Partial Class frmPowerSchool
         'LastNameLabel
         '
         LastNameLabel.AutoSize = True
-        LastNameLabel.Location = New System.Drawing.Point(12, 134)
+        LastNameLabel.Location = New System.Drawing.Point(12, 117)
         LastNameLabel.Name = "LastNameLabel"
         LastNameLabel.Size = New System.Drawing.Size(62, 13)
         LastNameLabel.TabIndex = 5
@@ -92,7 +94,7 @@ Partial Class frmPowerSchool
         'YearInSchoolLabel
         '
         YearInSchoolLabel.AutoSize = True
-        YearInSchoolLabel.Location = New System.Drawing.Point(12, 175)
+        YearInSchoolLabel.Location = New System.Drawing.Point(12, 158)
         YearInSchoolLabel.Name = "YearInSchoolLabel"
         YearInSchoolLabel.Size = New System.Drawing.Size(82, 13)
         YearInSchoolLabel.TabIndex = 7
@@ -101,7 +103,7 @@ Partial Class frmPowerSchool
         'GPALabel
         '
         GPALabel.AutoSize = True
-        GPALabel.Location = New System.Drawing.Point(12, 216)
+        GPALabel.Location = New System.Drawing.Point(12, 199)
         GPALabel.Name = "GPALabel"
         GPALabel.Size = New System.Drawing.Size(31, 13)
         GPALabel.TabIndex = 9
@@ -241,7 +243,7 @@ Partial Class frmPowerSchool
         'StudentIDTextBox
         '
         Me.StudentIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentInformationBindingSource, "studentID", True))
-        Me.StudentIDTextBox.Location = New System.Drawing.Point(15, 68)
+        Me.StudentIDTextBox.Location = New System.Drawing.Point(15, 51)
         Me.StudentIDTextBox.Name = "StudentIDTextBox"
         Me.StudentIDTextBox.Size = New System.Drawing.Size(557, 22)
         Me.StudentIDTextBox.TabIndex = 2
@@ -249,7 +251,7 @@ Partial Class frmPowerSchool
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentInformationBindingSource, "firstName", True))
-        Me.FirstNameTextBox.Location = New System.Drawing.Point(15, 109)
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(15, 92)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(557, 22)
         Me.FirstNameTextBox.TabIndex = 4
@@ -257,7 +259,7 @@ Partial Class frmPowerSchool
         'LastNameTextBox
         '
         Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentInformationBindingSource, "lastName", True))
-        Me.LastNameTextBox.Location = New System.Drawing.Point(15, 150)
+        Me.LastNameTextBox.Location = New System.Drawing.Point(15, 133)
         Me.LastNameTextBox.Name = "LastNameTextBox"
         Me.LastNameTextBox.Size = New System.Drawing.Size(557, 22)
         Me.LastNameTextBox.TabIndex = 6
@@ -265,7 +267,7 @@ Partial Class frmPowerSchool
         'YearInSchoolTextBox
         '
         Me.YearInSchoolTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentInformationBindingSource, "yearInSchool", True))
-        Me.YearInSchoolTextBox.Location = New System.Drawing.Point(15, 191)
+        Me.YearInSchoolTextBox.Location = New System.Drawing.Point(15, 174)
         Me.YearInSchoolTextBox.Name = "YearInSchoolTextBox"
         Me.YearInSchoolTextBox.Size = New System.Drawing.Size(557, 22)
         Me.YearInSchoolTextBox.TabIndex = 8
@@ -273,16 +275,38 @@ Partial Class frmPowerSchool
         'GPATextBox
         '
         Me.GPATextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentInformationBindingSource, "GPA", True))
-        Me.GPATextBox.Location = New System.Drawing.Point(15, 232)
+        Me.GPATextBox.Location = New System.Drawing.Point(15, 215)
         Me.GPATextBox.Name = "GPATextBox"
         Me.GPATextBox.Size = New System.Drawing.Size(557, 22)
         Me.GPATextBox.TabIndex = 10
+        '
+        'btnShowAverage
+        '
+        Me.btnShowAverage.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnShowAverage.Location = New System.Drawing.Point(15, 244)
+        Me.btnShowAverage.Name = "btnShowAverage"
+        Me.btnShowAverage.Size = New System.Drawing.Size(557, 45)
+        Me.btnShowAverage.TabIndex = 11
+        Me.btnShowAverage.Text = "Show Average GPA"
+        Me.btnShowAverage.UseVisualStyleBackColor = True
+        '
+        'lblAverageGPA
+        '
+        Me.lblAverageGPA.AutoSize = True
+        Me.lblAverageGPA.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAverageGPA.Location = New System.Drawing.Point(233, 292)
+        Me.lblAverageGPA.Name = "lblAverageGPA"
+        Me.lblAverageGPA.Size = New System.Drawing.Size(115, 17)
+        Me.lblAverageGPA.TabIndex = 12
+        Me.lblAverageGPA.Text = "Average GPA: 0.00"
         '
         'frmPowerSchool
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(584, 270)
+        Me.ClientSize = New System.Drawing.Size(584, 319)
+        Me.Controls.Add(Me.lblAverageGPA)
+        Me.Controls.Add(Me.btnShowAverage)
         Me.Controls.Add(GPALabel)
         Me.Controls.Add(Me.GPATextBox)
         Me.Controls.Add(YearInSchoolLabel)
@@ -328,5 +352,7 @@ Partial Class frmPowerSchool
     Friend WithEvents LastNameTextBox As System.Windows.Forms.TextBox
     Friend WithEvents YearInSchoolTextBox As System.Windows.Forms.TextBox
     Friend WithEvents GPATextBox As System.Windows.Forms.TextBox
+    Friend WithEvents btnShowAverage As System.Windows.Forms.Button
+    Friend WithEvents lblAverageGPA As System.Windows.Forms.Label
 
 End Class
