@@ -1,0 +1,76 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SpanishFoodStore
+</name>
+</assembly>
+<members>
+<member name="T:SpanishFoodStore.spanishfoodDataSet.StoreInventoryDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SpanishFoodStore.spanishfoodDataSet.StoreInventoryRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SpanishFoodStore.spanishfoodDataSet.StoreInventoryRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SpanishFoodStore.spanishfoodDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:SpanishFoodStore.spanishfoodDataSetTableAdapters.StoreInventoryTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:SpanishFoodStore.spanishfoodDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SpanishFoodStore.spanishfoodDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:SpanishFoodStore.spanishfoodDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SpanishFoodStore.spanishfoodDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:SpanishFoodStore.spanishfoodDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SpanishFoodStore.spanishfoodDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:SpanishFoodStore.spanishfoodDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:SpanishFoodStore.spanishfoodDataSetTableAdapters.TableAdapterManager.UpdateAll(SpanishFoodStore.spanishfoodDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:SpanishFoodStore.spanishfoodDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:SpanishFoodStore.spanishfoodDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:SpanishFoodStore.spanishfoodDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:SpanishFoodStore.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SpanishFoodStore.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:SpanishFoodStore.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
