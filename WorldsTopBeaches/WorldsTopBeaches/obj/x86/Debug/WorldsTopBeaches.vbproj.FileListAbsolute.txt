@@ -1,0 +1,11 @@
+E:\Advanced VB\WorldsTopBeaches\WorldsTopBeaches\bin\Debug\TopBeaches.accdb
+E:\Advanced VB\WorldsTopBeaches\WorldsTopBeaches\bin\Debug\WorldsTopBeaches.exe.config
+E:\Advanced VB\WorldsTopBeaches\WorldsTopBeaches\bin\Debug\WorldsTopBeaches.exe
+E:\Advanced VB\WorldsTopBeaches\WorldsTopBeaches\bin\Debug\WorldsTopBeaches.pdb
+E:\Advanced VB\WorldsTopBeaches\WorldsTopBeaches\bin\Debug\WorldsTopBeaches.xml
+E:\Advanced VB\WorldsTopBeaches\WorldsTopBeaches\obj\x86\Debug\WorldsTopBeaches.frmTopBeaches.resources
+E:\Advanced VB\WorldsTopBeaches\WorldsTopBeaches\obj\x86\Debug\WorldsTopBeaches.Resources.resources
+E:\Advanced VB\WorldsTopBeaches\WorldsTopBeaches\obj\x86\Debug\WorldsTopBeaches.vbproj.GenerateResource.Cache
+E:\Advanced VB\WorldsTopBeaches\WorldsTopBeaches\obj\x86\Debug\WorldsTopBeaches.exe
+E:\Advanced VB\WorldsTopBeaches\WorldsTopBeaches\obj\x86\Debug\WorldsTopBeaches.xml
+E:\Advanced VB\WorldsTopBeaches\WorldsTopBeaches\obj\x86\Debug\WorldsTopBeaches.pdb
