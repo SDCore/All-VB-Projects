@@ -16,6 +16,11 @@ Public Class frmPowerSchool
     End Sub
 
     Private Sub btnShowAverage_Click(sender As System.Object, e As System.EventArgs) Handles btnShowAverage.Click
+
+        ' Misc. Variables
+        Dim decTotal As Decimal
+        Dim decAverage As Decimal
+
         ' Selecting StudentInformation table from database
         Dim strSql As String = "SELECT * FROM StudentInformation"
 
@@ -34,9 +39,16 @@ Public Class frmPowerSchool
         ' Closes connection from database
         odaStudent.Dispose()
 
+        ' Going through each record and getting total GPA
         For intCount = 0 To datStudentInfo.Rows.Count - 1
-
+            decTotal = decTotal + Convert.ToDecimal(datStudentInfo.Rows(intCount)("GPA"))
         Next
+
+        ' Calculations
+        decAverage = decTotal / datStudentInfo.Rows.Count
+
+        ' Output to label
+        lblAverageGPA.Text = "Average GPA: " & decAverage.ToString("f2")
 
     End Sub
 End Class
