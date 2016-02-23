@@ -1,4 +1,11 @@
-﻿Public Class frmTopBeaches
+﻿' Michael Voell
+' Worlds Top Beaches
+' 2/23/2016
+' Purpose: Show all the information from a database regarding the worlds Top Beaches.
+
+Option Strict On
+
+Public Class frmTopBeaches
 
     Private Sub TopbeachesBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs) Handles TopbeachesBindingNavigatorSaveItem.Click
         Me.Validate()
