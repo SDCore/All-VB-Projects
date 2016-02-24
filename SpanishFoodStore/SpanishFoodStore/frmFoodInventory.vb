@@ -23,5 +23,13 @@ Public Class frmFoodInventory
         'TODO: This line of code loads data into the 'SpanishfoodDataSet.StoreInventory' table. You can move, or remove it, as needed.
         Me.StoreInventoryTableAdapter.Fill(Me.SpanishfoodDataSet.StoreInventory)
 
+        ' Select / Connecting to database
+        Dim strSQL As String = "SELECT * FROM StoreInventory"
+        Dim strPath As String = "Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\spanishfood.accdb"
+        Dim odaSpanishFood As New OleDb.OleDbDataAdapter(strSQL, strPath)
+        Dim datSpanishFoodFill As New DataTable
+        odaSpanishFood.Fill(datSpanishFoodFill)
+        odaSpanishFood.Dispose()
+
     End Sub
 End Class
