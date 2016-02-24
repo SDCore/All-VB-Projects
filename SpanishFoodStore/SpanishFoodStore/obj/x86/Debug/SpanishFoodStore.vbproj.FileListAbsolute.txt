@@ -3,9 +3,9 @@ E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\bin\Debug\SpanishFoodStore.exe.
 E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\bin\Debug\SpanishFoodStore.exe
 E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\bin\Debug\SpanishFoodStore.pdb
 E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\bin\Debug\SpanishFoodStore.xml
-E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\obj\x86\Debug\SpanishFoodStore.Form1.resources
 E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\obj\x86\Debug\SpanishFoodStore.Resources.resources
 E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\obj\x86\Debug\SpanishFoodStore.vbproj.GenerateResource.Cache
 E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\obj\x86\Debug\SpanishFoodStore.exe
 E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\obj\x86\Debug\SpanishFoodStore.xml
 E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\obj\x86\Debug\SpanishFoodStore.pdb
+E:\Advanced VB\SpanishFoodStore\SpanishFoodStore\obj\x86\Debug\SpanishFoodStore.frmFoodInventory.resources
