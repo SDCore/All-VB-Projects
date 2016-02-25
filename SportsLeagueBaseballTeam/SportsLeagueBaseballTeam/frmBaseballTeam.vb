@@ -36,20 +36,26 @@ Public Class frmBaseballTeam
         odaSportsLeague.Dispose()
 
         'Calculations
-        Dim intCount As Integer = 0
         Dim intAge12 As Integer
         Dim intAge13 As Integer
         Dim intAge14 As Integer
-        Dim decAgeAverage As Decimal
+        Dim decAgeAverage As Decimal = 0
+        Dim decAverageTotal As Decimal
 
         ' Calculating Average Age
         For intCount = 0 To datSportsLeagueFill.Rows.Count - 1
-            decAgeAverage = Convert.ToDecimal(datSportsLeagueFill.Rows(intCount)("Age")) + Convert.ToDecimal(datSportsLeagueFill.Rows(intCount)("Age"))
+            decAgeAverage += Convert.ToDecimal(datSportsLeagueFill.Rows(intCount)("Age"))
             intCount += 1
         Next
 
+        ' Average Calculation
+        decAverageTotal = decAgeAverage / datSportsLeagueFill.Rows.Count
+
         ' Outputting Average Age
-        lblAverageAge.Text = "Average Age: " & decAgeAverage.ToString()
+        lblAverageAge.Text = "Average Age: " & decAverageTotal.ToString("f2")
+        Label1.Text = decAgeAverage.ToString()
+
+
 
     End Sub
 End Class
