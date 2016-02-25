@@ -61,7 +61,8 @@ Partial Class frmBaseballTeam
         Me.Zip_CodeTextBox = New System.Windows.Forms.TextBox()
         Me.Telephone_NumberTextBox = New System.Windows.Forms.TextBox()
         Me.AgeTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCalculations = New System.Windows.Forms.Button()
+        Me.pboLogo = New System.Windows.Forms.PictureBox()
         Player_NumberLabel = New System.Windows.Forms.Label()
         First_NameLabel = New System.Windows.Forms.Label()
         Last_NameLabel = New System.Windows.Forms.Label()
@@ -76,6 +77,7 @@ Partial Class frmBaseballTeam
         CType(Me.TeamBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TeamBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TeamBindingNavigator.SuspendLayout()
+        CType(Me.pboLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LittleleagueDataSet
@@ -112,7 +114,7 @@ Partial Class frmBaseballTeam
         Me.TeamBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.TeamBindingNavigator.Name = "TeamBindingNavigator"
         Me.TeamBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.TeamBindingNavigator.Size = New System.Drawing.Size(584, 25)
+        Me.TeamBindingNavigator.Size = New System.Drawing.Size(496, 25)
         Me.TeamBindingNavigator.TabIndex = 0
         Me.TeamBindingNavigator.Text = "BindingNavigator1"
         '
@@ -151,14 +153,14 @@ Partial Class frmBaseballTeam
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -166,7 +168,7 @@ Partial Class frmBaseballTeam
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -175,13 +177,13 @@ Partial Class frmBaseballTeam
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorAddNewItem
         '
@@ -198,7 +200,7 @@ Partial Class frmBaseballTeam
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'TeamBindingNavigatorSaveItem
@@ -206,194 +208,225 @@ Partial Class frmBaseballTeam
         Me.TeamBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.TeamBindingNavigatorSaveItem.Image = CType(resources.GetObject("TeamBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.TeamBindingNavigatorSaveItem.Name = "TeamBindingNavigatorSaveItem"
-        Me.TeamBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.TeamBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.TeamBindingNavigatorSaveItem.Text = "Save Data"
         '
         'Player_NumberLabel
         '
         Player_NumberLabel.AutoSize = True
-        Player_NumberLabel.Location = New System.Drawing.Point(54, 144)
+        Player_NumberLabel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Player_NumberLabel.Location = New System.Drawing.Point(9, 144)
         Player_NumberLabel.Name = "Player_NumberLabel"
-        Player_NumberLabel.Size = New System.Drawing.Size(79, 13)
+        Player_NumberLabel.Size = New System.Drawing.Size(81, 13)
         Player_NumberLabel.TabIndex = 1
-        Player_NumberLabel.Text = "Player Number:"
+        Player_NumberLabel.Text = "Player Number"
         '
         'Player_NumberTextBox
         '
         Me.Player_NumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TeamBindingSource, "Player Number", True))
-        Me.Player_NumberTextBox.Location = New System.Drawing.Point(139, 141)
+        Me.Player_NumberTextBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Player_NumberTextBox.Location = New System.Drawing.Point(12, 160)
         Me.Player_NumberTextBox.Name = "Player_NumberTextBox"
-        Me.Player_NumberTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Player_NumberTextBox.Size = New System.Drawing.Size(231, 22)
         Me.Player_NumberTextBox.TabIndex = 2
         '
         'First_NameLabel
         '
         First_NameLabel.AutoSize = True
-        First_NameLabel.Location = New System.Drawing.Point(53, 172)
+        First_NameLabel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        First_NameLabel.Location = New System.Drawing.Point(246, 144)
         First_NameLabel.Name = "First_NameLabel"
-        First_NameLabel.Size = New System.Drawing.Size(60, 13)
+        First_NameLabel.Size = New System.Drawing.Size(64, 13)
         First_NameLabel.TabIndex = 3
         First_NameLabel.Text = "First Name:"
         '
         'First_NameTextBox
         '
         Me.First_NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TeamBindingSource, "First Name", True))
-        Me.First_NameTextBox.Location = New System.Drawing.Point(119, 169)
+        Me.First_NameTextBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.First_NameTextBox.Location = New System.Drawing.Point(249, 160)
         Me.First_NameTextBox.Name = "First_NameTextBox"
-        Me.First_NameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.First_NameTextBox.Size = New System.Drawing.Size(235, 22)
         Me.First_NameTextBox.TabIndex = 4
         '
         'Last_NameLabel
         '
         Last_NameLabel.AutoSize = True
-        Last_NameLabel.Location = New System.Drawing.Point(57, 201)
+        Last_NameLabel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Last_NameLabel.Location = New System.Drawing.Point(9, 183)
         Last_NameLabel.Name = "Last_NameLabel"
-        Last_NameLabel.Size = New System.Drawing.Size(61, 13)
+        Last_NameLabel.Size = New System.Drawing.Size(62, 13)
         Last_NameLabel.TabIndex = 5
         Last_NameLabel.Text = "Last Name:"
         '
         'Last_NameTextBox
         '
         Me.Last_NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TeamBindingSource, "Last Name", True))
-        Me.Last_NameTextBox.Location = New System.Drawing.Point(124, 198)
+        Me.Last_NameTextBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Last_NameTextBox.Location = New System.Drawing.Point(12, 199)
         Me.Last_NameTextBox.Name = "Last_NameTextBox"
-        Me.Last_NameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Last_NameTextBox.Size = New System.Drawing.Size(231, 22)
         Me.Last_NameTextBox.TabIndex = 6
         '
         'Parent_Name_s_Label
         '
         Parent_Name_s_Label.AutoSize = True
-        Parent_Name_s_Label.Location = New System.Drawing.Point(61, 236)
+        Parent_Name_s_Label.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Parent_Name_s_Label.Location = New System.Drawing.Point(246, 183)
         Parent_Name_s_Label.Name = "Parent_Name_s_Label"
-        Parent_Name_s_Label.Size = New System.Drawing.Size(83, 13)
+        Parent_Name_s_Label.Size = New System.Drawing.Size(86, 13)
         Parent_Name_s_Label.TabIndex = 7
         Parent_Name_s_Label.Text = "Parent Name(s):"
         '
         'Parent_Name_s_TextBox
         '
         Me.Parent_Name_s_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TeamBindingSource, "Parent Name(s)", True))
-        Me.Parent_Name_s_TextBox.Location = New System.Drawing.Point(150, 233)
+        Me.Parent_Name_s_TextBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Parent_Name_s_TextBox.Location = New System.Drawing.Point(249, 199)
         Me.Parent_Name_s_TextBox.Name = "Parent_Name_s_TextBox"
-        Me.Parent_Name_s_TextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Parent_Name_s_TextBox.Size = New System.Drawing.Size(235, 22)
         Me.Parent_Name_s_TextBox.TabIndex = 8
         '
         'AddressLabel
         '
         AddressLabel.AutoSize = True
-        AddressLabel.Location = New System.Drawing.Point(56, 289)
+        AddressLabel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        AddressLabel.Location = New System.Drawing.Point(9, 222)
         AddressLabel.Name = "AddressLabel"
-        AddressLabel.Size = New System.Drawing.Size(48, 13)
+        AddressLabel.Size = New System.Drawing.Size(51, 13)
         AddressLabel.TabIndex = 9
         AddressLabel.Text = "Address:"
         '
         'AddressTextBox
         '
         Me.AddressTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TeamBindingSource, "Address", True))
-        Me.AddressTextBox.Location = New System.Drawing.Point(110, 286)
+        Me.AddressTextBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddressTextBox.Location = New System.Drawing.Point(12, 238)
         Me.AddressTextBox.Name = "AddressTextBox"
-        Me.AddressTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.AddressTextBox.Size = New System.Drawing.Size(231, 22)
         Me.AddressTextBox.TabIndex = 10
         '
         'CityLabel
         '
         CityLabel.AutoSize = True
-        CityLabel.Location = New System.Drawing.Point(58, 334)
+        CityLabel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        CityLabel.Location = New System.Drawing.Point(246, 222)
         CityLabel.Name = "CityLabel"
-        CityLabel.Size = New System.Drawing.Size(27, 13)
+        CityLabel.Size = New System.Drawing.Size(29, 13)
         CityLabel.TabIndex = 11
         CityLabel.Text = "City:"
         '
         'CityTextBox
         '
         Me.CityTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TeamBindingSource, "City", True))
-        Me.CityTextBox.Location = New System.Drawing.Point(91, 331)
+        Me.CityTextBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CityTextBox.Location = New System.Drawing.Point(249, 238)
         Me.CityTextBox.Name = "CityTextBox"
-        Me.CityTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.CityTextBox.Size = New System.Drawing.Size(235, 22)
         Me.CityTextBox.TabIndex = 12
         '
         'StateLabel
         '
         StateLabel.AutoSize = True
-        StateLabel.Location = New System.Drawing.Point(57, 380)
+        StateLabel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        StateLabel.Location = New System.Drawing.Point(9, 261)
         StateLabel.Name = "StateLabel"
-        StateLabel.Size = New System.Drawing.Size(35, 13)
+        StateLabel.Size = New System.Drawing.Size(36, 13)
         StateLabel.TabIndex = 13
         StateLabel.Text = "State:"
         '
         'StateTextBox
         '
         Me.StateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TeamBindingSource, "State", True))
-        Me.StateTextBox.Location = New System.Drawing.Point(98, 377)
+        Me.StateTextBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StateTextBox.Location = New System.Drawing.Point(12, 277)
         Me.StateTextBox.Name = "StateTextBox"
-        Me.StateTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.StateTextBox.Size = New System.Drawing.Size(231, 22)
         Me.StateTextBox.TabIndex = 14
         '
         'Zip_CodeLabel
         '
         Zip_CodeLabel.AutoSize = True
-        Zip_CodeLabel.Location = New System.Drawing.Point(53, 423)
+        Zip_CodeLabel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Zip_CodeLabel.Location = New System.Drawing.Point(246, 261)
         Zip_CodeLabel.Name = "Zip_CodeLabel"
-        Zip_CodeLabel.Size = New System.Drawing.Size(53, 13)
+        Zip_CodeLabel.Size = New System.Drawing.Size(56, 13)
         Zip_CodeLabel.TabIndex = 15
         Zip_CodeLabel.Text = "Zip Code:"
         '
         'Zip_CodeTextBox
         '
         Me.Zip_CodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TeamBindingSource, "Zip Code", True))
-        Me.Zip_CodeTextBox.Location = New System.Drawing.Point(112, 420)
+        Me.Zip_CodeTextBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Zip_CodeTextBox.Location = New System.Drawing.Point(249, 277)
         Me.Zip_CodeTextBox.Name = "Zip_CodeTextBox"
-        Me.Zip_CodeTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Zip_CodeTextBox.Size = New System.Drawing.Size(235, 22)
         Me.Zip_CodeTextBox.TabIndex = 16
         '
         'Telephone_NumberLabel
         '
         Telephone_NumberLabel.AutoSize = True
-        Telephone_NumberLabel.Location = New System.Drawing.Point(57, 468)
+        Telephone_NumberLabel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Telephone_NumberLabel.Location = New System.Drawing.Point(9, 300)
         Telephone_NumberLabel.Name = "Telephone_NumberLabel"
-        Telephone_NumberLabel.Size = New System.Drawing.Size(101, 13)
+        Telephone_NumberLabel.Size = New System.Drawing.Size(108, 13)
         Telephone_NumberLabel.TabIndex = 17
         Telephone_NumberLabel.Text = "Telephone Number:"
         '
         'Telephone_NumberTextBox
         '
         Me.Telephone_NumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TeamBindingSource, "Telephone Number", True))
-        Me.Telephone_NumberTextBox.Location = New System.Drawing.Point(164, 465)
+        Me.Telephone_NumberTextBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Telephone_NumberTextBox.Location = New System.Drawing.Point(12, 316)
         Me.Telephone_NumberTextBox.Name = "Telephone_NumberTextBox"
-        Me.Telephone_NumberTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Telephone_NumberTextBox.Size = New System.Drawing.Size(231, 22)
         Me.Telephone_NumberTextBox.TabIndex = 18
         '
         'AgeLabel
         '
         AgeLabel.AutoSize = True
-        AgeLabel.Location = New System.Drawing.Point(58, 516)
+        AgeLabel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        AgeLabel.Location = New System.Drawing.Point(246, 300)
         AgeLabel.Name = "AgeLabel"
-        AgeLabel.Size = New System.Drawing.Size(29, 13)
+        AgeLabel.Size = New System.Drawing.Size(30, 13)
         AgeLabel.TabIndex = 19
         AgeLabel.Text = "Age:"
         '
         'AgeTextBox
         '
         Me.AgeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TeamBindingSource, "Age", True))
-        Me.AgeTextBox.Location = New System.Drawing.Point(93, 513)
+        Me.AgeTextBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AgeTextBox.Location = New System.Drawing.Point(249, 316)
         Me.AgeTextBox.Name = "AgeTextBox"
-        Me.AgeTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.AgeTextBox.Size = New System.Drawing.Size(235, 22)
         Me.AgeTextBox.TabIndex = 20
         '
-        'Button1
+        'btnCalculations
         '
-        Me.Button1.Location = New System.Drawing.Point(362, 491)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 21
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCalculations.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalculations.Location = New System.Drawing.Point(12, 344)
+        Me.btnCalculations.Name = "btnCalculations"
+        Me.btnCalculations.Size = New System.Drawing.Size(472, 56)
+        Me.btnCalculations.TabIndex = 21
+        Me.btnCalculations.Text = "Calculate Ages"
+        Me.btnCalculations.UseVisualStyleBackColor = True
+        '
+        'pboLogo
+        '
+        Me.pboLogo.Image = CType(resources.GetObject("pboLogo.Image"), System.Drawing.Image)
+        Me.pboLogo.Location = New System.Drawing.Point(12, 28)
+        Me.pboLogo.Name = "pboLogo"
+        Me.pboLogo.Size = New System.Drawing.Size(472, 113)
+        Me.pboLogo.TabIndex = 22
+        Me.pboLogo.TabStop = False
         '
         'frmBaseballTeam
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(584, 562)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(496, 562)
+        Me.Controls.Add(Me.pboLogo)
+        Me.Controls.Add(Me.btnCalculations)
         Me.Controls.Add(AgeLabel)
         Me.Controls.Add(Me.AgeTextBox)
         Me.Controls.Add(Telephone_NumberLabel)
@@ -415,6 +448,7 @@ Partial Class frmBaseballTeam
         Me.Controls.Add(Player_NumberLabel)
         Me.Controls.Add(Me.Player_NumberTextBox)
         Me.Controls.Add(Me.TeamBindingNavigator)
+        Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "frmBaseballTeam"
         Me.Text = "Sports League Baseball Team"
         CType(Me.LittleleagueDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -422,6 +456,7 @@ Partial Class frmBaseballTeam
         CType(Me.TeamBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TeamBindingNavigator.ResumeLayout(False)
         Me.TeamBindingNavigator.PerformLayout()
+        CType(Me.pboLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -453,6 +488,7 @@ Partial Class frmBaseballTeam
     Friend WithEvents Zip_CodeTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Telephone_NumberTextBox As System.Windows.Forms.TextBox
     Friend WithEvents AgeTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnCalculations As System.Windows.Forms.Button
+    Friend WithEvents pboLogo As System.Windows.Forms.PictureBox
 
 End Class

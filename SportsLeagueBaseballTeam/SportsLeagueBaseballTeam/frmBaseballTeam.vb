@@ -25,7 +25,7 @@ Public Class frmBaseballTeam
 
     End Sub
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles btnCalculations.Click
         ' Select / Connecting to database
         Dim strSQL As String = "SELECT * FROM Team"
         Dim strPath As String = "Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\littleleague.accdb"
