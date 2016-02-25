@@ -26,6 +26,7 @@ Public Class frmBaseballTeam
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles btnCalculations.Click
+
         ' Select / Connecting to database
         Dim strSQL As String = "SELECT * FROM Team"
         Dim strPath As String = "Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\littleleague.accdb"
@@ -33,5 +34,20 @@ Public Class frmBaseballTeam
         Dim datSportsLeagueFill As New DataTable
         odaSportsLeague.Fill(datSportsLeagueFill)
         odaSportsLeague.Dispose()
+
+        'Calculations
+        Dim intCount As Integer = 0
+        Dim intAge12 As Integer
+        Dim intAge13 As Integer
+        Dim intAge14 As Integer
+        Dim decAgeAverage As Decimal
+
+        For intCount = 0 To datSportsLeagueFill.Rows.Count - 1
+            decAgeAverage = Convert.ToDecimal(datSportsLeagueFill.Rows(intCount)("Age")) + Convert.ToDecimal(datSportsLeagueFill.Rows(intCount)("Age"))
+            intCount += 1
+        Next
+
+        lblAverageAge.Text = "Average Age: " & decAgeAverage.ToString()
+
     End Sub
 End Class
