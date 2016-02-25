@@ -1,0 +1,11 @@
+E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\bin\Debug\littleleague.accdb
+E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\bin\Debug\SportsLeagueBaseballTeam.exe.config
+E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\bin\Debug\SportsLeagueBaseballTeam.exe
+E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\bin\Debug\SportsLeagueBaseballTeam.pdb
+E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\bin\Debug\SportsLeagueBaseballTeam.xml
+E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\obj\x86\Debug\SportsLeagueBaseballTeam.frmBaseballTeam.resources
+E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\obj\x86\Debug\SportsLeagueBaseballTeam.Resources.resources
+E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\obj\x86\Debug\SportsLeagueBaseballTeam.vbproj.GenerateResource.Cache
+E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\obj\x86\Debug\SportsLeagueBaseballTeam.exe
+E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\obj\x86\Debug\SportsLeagueBaseballTeam.xml
+E:\Advanced VB\SportsLeagueBaseballTeam\SportsLeagueBaseballTeam\obj\x86\Debug\SportsLeagueBaseballTeam.pdb
