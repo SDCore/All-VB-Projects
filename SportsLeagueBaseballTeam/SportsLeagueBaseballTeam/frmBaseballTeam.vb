@@ -42,11 +42,13 @@ Public Class frmBaseballTeam
         Dim intAge14 As Integer
         Dim decAgeAverage As Decimal
 
+        ' Calculating Average Age
         For intCount = 0 To datSportsLeagueFill.Rows.Count - 1
             decAgeAverage = Convert.ToDecimal(datSportsLeagueFill.Rows(intCount)("Age")) + Convert.ToDecimal(datSportsLeagueFill.Rows(intCount)("Age"))
             intCount += 1
         Next
 
+        ' Outputting Average Age
         lblAverageAge.Text = "Average Age: " & decAgeAverage.ToString()
 
     End Sub
