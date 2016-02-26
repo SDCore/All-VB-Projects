@@ -3,9 +3,6 @@
 ' 2/25/2016
 ' Purpose: To show the information of a sports league and compare information.
 
-' --TODO--
-' Try/Catch statement to catch whether or not a connection to the database could be established
-
 Option Strict On
 
 Public Class frmBaseballTeam
@@ -29,7 +26,7 @@ Public Class frmBaseballTeam
 
     End Sub
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles btnCalculations.Click
+    Private Sub btnCalculations_Click(sender As System.Object, e As System.EventArgs) Handles btnCalculations.Click
 
         ' Select / Connecting to database
         Dim strSQL As String = "SELECT * FROM Team"
