@@ -4,7 +4,6 @@
 ' Purpose: To show the information of a sports league and compare information.
 
 ' --TODO--
-' Count the number of 12, 13, and 14 year olds seperately
 ' Calculate the total average of all the ages
 ' Try/Catch statement to catch whether or not a connection to the database could be established
 
@@ -52,8 +51,8 @@ Public Class frmBaseballTeam
         decAverageTotal = decAgeAverage / datSportsLeagueFill.Rows.Count
 
         ' Outputting Average Age
-        lblAverageAge.Text = "Average Age: " & decAverageTotal.ToString("f2")
-        Label1.Text = decAgeAverage.ToString()
+        lblAverageAge.Visible = True
+        lblAverageAge.Text = "Average Age: " & decAverageTotal.ToString("f2") & " Years"
 
     End Sub
 End Class

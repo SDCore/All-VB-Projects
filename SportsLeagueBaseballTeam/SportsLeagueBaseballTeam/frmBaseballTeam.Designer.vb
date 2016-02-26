@@ -63,12 +63,7 @@ Partial Class frmBaseballTeam
         Me.AgeTextBox = New System.Windows.Forms.TextBox()
         Me.btnCalculations = New System.Windows.Forms.Button()
         Me.pboLogo = New System.Windows.Forms.PictureBox()
-        Me.lblAges12 = New System.Windows.Forms.Label()
-        Me.lblAges13 = New System.Windows.Forms.Label()
-        Me.lblAges14 = New System.Windows.Forms.Label()
         Me.lblAverageAge = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Player_NumberLabel = New System.Windows.Forms.Label()
         First_NameLabel = New System.Windows.Forms.Label()
         Last_NameLabel = New System.Windows.Forms.Label()
@@ -414,7 +409,7 @@ Partial Class frmBaseballTeam
         Me.btnCalculations.Name = "btnCalculations"
         Me.btnCalculations.Size = New System.Drawing.Size(472, 56)
         Me.btnCalculations.TabIndex = 21
-        Me.btnCalculations.Text = "Calculate Ages"
+        Me.btnCalculations.Text = "Calculate Average Age"
         Me.btnCalculations.UseVisualStyleBackColor = True
         '
         'pboLogo
@@ -423,78 +418,27 @@ Partial Class frmBaseballTeam
         Me.pboLogo.Location = New System.Drawing.Point(12, 28)
         Me.pboLogo.Name = "pboLogo"
         Me.pboLogo.Size = New System.Drawing.Size(472, 113)
+        Me.pboLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pboLogo.TabIndex = 22
         Me.pboLogo.TabStop = False
-        '
-        'lblAges12
-        '
-        Me.lblAges12.AutoSize = True
-        Me.lblAges12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAges12.Location = New System.Drawing.Point(13, 403)
-        Me.lblAges12.Name = "lblAges12"
-        Me.lblAges12.Size = New System.Drawing.Size(128, 21)
-        Me.lblAges12.TabIndex = 23
-        Me.lblAges12.Text = "12 Year Olds:  00"
-        '
-        'lblAges13
-        '
-        Me.lblAges13.AutoSize = True
-        Me.lblAges13.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAges13.Location = New System.Drawing.Point(186, 403)
-        Me.lblAges13.Name = "lblAges13"
-        Me.lblAges13.Size = New System.Drawing.Size(124, 21)
-        Me.lblAges13.TabIndex = 24
-        Me.lblAges13.Text = "13 Year Olds: 00"
-        '
-        'lblAges14
-        '
-        Me.lblAges14.AutoSize = True
-        Me.lblAges14.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAges14.Location = New System.Drawing.Point(360, 403)
-        Me.lblAges14.Name = "lblAges14"
-        Me.lblAges14.Size = New System.Drawing.Size(124, 21)
-        Me.lblAges14.TabIndex = 25
-        Me.lblAges14.Text = "14 Year Olds: 00"
         '
         'lblAverageAge
         '
         Me.lblAverageAge.AutoSize = True
         Me.lblAverageAge.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAverageAge.Location = New System.Drawing.Point(175, 422)
+        Me.lblAverageAge.Location = New System.Drawing.Point(152, 403)
         Me.lblAverageAge.Name = "lblAverageAge"
-        Me.lblAverageAge.Size = New System.Drawing.Size(144, 21)
+        Me.lblAverageAge.Size = New System.Drawing.Size(186, 21)
         Me.lblAverageAge.TabIndex = 26
-        Me.lblAverageAge.Text = "Average Age: 00.00"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(364, 437)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
-        Me.Label1.TabIndex = 27
-        Me.Label1.Text = "Label1"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(31, 437)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 13)
-        Me.Label2.TabIndex = 28
-        Me.Label2.Text = "Label2"
+        Me.lblAverageAge.Text = "Average Age: 00.00 Years"
+        Me.lblAverageAge.Visible = False
         '
         'frmBaseballTeam
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(496, 452)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(496, 430)
         Me.Controls.Add(Me.lblAverageAge)
-        Me.Controls.Add(Me.lblAges14)
-        Me.Controls.Add(Me.lblAges13)
-        Me.Controls.Add(Me.lblAges12)
         Me.Controls.Add(Me.pboLogo)
         Me.Controls.Add(Me.btnCalculations)
         Me.Controls.Add(AgeLabel)
@@ -560,11 +504,6 @@ Partial Class frmBaseballTeam
     Friend WithEvents AgeTextBox As System.Windows.Forms.TextBox
     Friend WithEvents btnCalculations As System.Windows.Forms.Button
     Friend WithEvents pboLogo As System.Windows.Forms.PictureBox
-    Friend WithEvents lblAges12 As System.Windows.Forms.Label
-    Friend WithEvents lblAges13 As System.Windows.Forms.Label
-    Friend WithEvents lblAges14 As System.Windows.Forms.Label
     Friend WithEvents lblAverageAge As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class
