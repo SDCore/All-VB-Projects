@@ -428,9 +428,9 @@ Partial Class frmBaseballTeam
         Me.lblAverageAge.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAverageAge.Location = New System.Drawing.Point(152, 403)
         Me.lblAverageAge.Name = "lblAverageAge"
-        Me.lblAverageAge.Size = New System.Drawing.Size(186, 21)
+        Me.lblAverageAge.Size = New System.Drawing.Size(177, 21)
         Me.lblAverageAge.TabIndex = 26
-        Me.lblAverageAge.Text = "Average Age: 00.00 Years"
+        Me.lblAverageAge.Text = "Average Age: 00.0 Years"
         Me.lblAverageAge.Visible = False
         '
         'frmBaseballTeam

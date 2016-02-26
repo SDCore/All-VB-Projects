@@ -21,6 +21,7 @@ Public Class frmFoodInventory
             Me.StoreInventoryTableAdapter.Fill(Me.SpanishfoodDataSet.StoreInventory)
         Catch ex As Exception
             MsgBox("Could not connect to database. Please try again.", , "Database Connection Error")
+            Close()
         End Try
 
     End Sub

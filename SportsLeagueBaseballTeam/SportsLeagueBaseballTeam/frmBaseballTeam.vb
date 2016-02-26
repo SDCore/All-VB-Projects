@@ -4,7 +4,6 @@
 ' Purpose: To show the information of a sports league and compare information.
 
 ' --TODO--
-' Calculate the total average of all the ages
 ' Try/Catch statement to catch whether or not a connection to the database could be established
 
 Option Strict On
@@ -20,7 +19,13 @@ Public Class frmBaseballTeam
 
     Private Sub frmBaseballTeam_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'LittleleagueDataSet.Team' table. You can move, or remove it, as needed.
-        Me.TeamTableAdapter.Fill(Me.LittleleagueDataSet.Team)
+
+        Try
+            Me.TeamTableAdapter.Fill(Me.LittleleagueDataSet.Team)
+        Catch ex As Exception
+            MsgBox("Could not establish connection to database. Please try again.", , "Database Error")
+            Close()
+        End Try
 
     End Sub
 
@@ -52,7 +57,7 @@ Public Class frmBaseballTeam
 
         ' Outputting Average Age
         lblAverageAge.Visible = True
-        lblAverageAge.Text = "Average Age: " & decAverageTotal.ToString("f2") & " Years"
+        lblAverageAge.Text = "Average Age: " & decAverageTotal.ToString("f1") & " Years"
 
     End Sub
 End Class
