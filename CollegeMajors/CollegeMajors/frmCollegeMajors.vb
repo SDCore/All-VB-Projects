@@ -3,6 +3,10 @@
 ' 2/26/2016
 ' Purpose: To see the percentage of students in a specific major
 
+' --TODO--
+' Clicking Find Total button object to compute total number of students presently in majors
+' User can select a college major from a combo box and it will display the percentage of students participating in said major
+
 Option Strict On
 
 Public Class frmCollegeMajors
