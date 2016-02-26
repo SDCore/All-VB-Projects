@@ -1,0 +1,11 @@
+E:\Advanced VB\CollegeMajors\CollegeMajors\bin\Debug\colleges.accdb
+E:\Advanced VB\CollegeMajors\CollegeMajors\bin\Debug\CollegeMajors.exe.config
+E:\Advanced VB\CollegeMajors\CollegeMajors\bin\Debug\CollegeMajors.exe
+E:\Advanced VB\CollegeMajors\CollegeMajors\bin\Debug\CollegeMajors.pdb
+E:\Advanced VB\CollegeMajors\CollegeMajors\bin\Debug\CollegeMajors.xml
+E:\Advanced VB\CollegeMajors\CollegeMajors\obj\x86\Debug\CollegeMajors.frmCollegeMajors.resources
+E:\Advanced VB\CollegeMajors\CollegeMajors\obj\x86\Debug\CollegeMajors.Resources.resources
+E:\Advanced VB\CollegeMajors\CollegeMajors\obj\x86\Debug\CollegeMajors.vbproj.GenerateResource.Cache
+E:\Advanced VB\CollegeMajors\CollegeMajors\obj\x86\Debug\CollegeMajors.exe
+E:\Advanced VB\CollegeMajors\CollegeMajors\obj\x86\Debug\CollegeMajors.xml
+E:\Advanced VB\CollegeMajors\CollegeMajors\obj\x86\Debug\CollegeMajors.pdb
