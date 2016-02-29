@@ -52,6 +52,7 @@ Public Class frmCollegeMajors
         ' Displaying number of students in all majors
         lblTotalStudents.Text = "Total Amount of Students in Majors: " & decTotal.ToString()
 
+        ' Getting selected item from Combo Box
 
 
     End Sub
