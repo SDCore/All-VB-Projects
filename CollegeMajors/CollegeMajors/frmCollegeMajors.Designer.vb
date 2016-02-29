@@ -52,6 +52,8 @@ Partial Class frmCollegeMajors
         Me.DegreeComboBox = New System.Windows.Forms.ComboBox()
         Me.lblTotalStudents = New System.Windows.Forms.Label()
         Me.lblStudentsInSelectedMajor = New System.Windows.Forms.Label()
+        Me.CollegeMajorsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CollegeMajorsBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         DepartmentLabel = New System.Windows.Forms.Label()
         Number_in_DegreeLabel = New System.Windows.Forms.Label()
         DegreeLabel1 = New System.Windows.Forms.Label()
@@ -60,6 +62,8 @@ Partial Class frmCollegeMajors
         CType(Me.CollegeMajorsBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CollegeMajorsBindingNavigator.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CollegeMajorsBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CollegeMajorsBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DepartmentLabel
@@ -269,6 +273,8 @@ Partial Class frmCollegeMajors
         'DegreeComboBox
         '
         Me.DegreeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CollegeMajorsBindingSource, "Degree", True))
+        Me.DegreeComboBox.DataSource = Me.CollegeMajorsBindingSource2
+        Me.DegreeComboBox.DisplayMember = "Degree"
         Me.DegreeComboBox.FormattingEnabled = True
         Me.DegreeComboBox.Location = New System.Drawing.Point(64, 305)
         Me.DegreeComboBox.Name = "DegreeComboBox"
@@ -294,6 +300,16 @@ Partial Class frmCollegeMajors
         Me.lblStudentsInSelectedMajor.Size = New System.Drawing.Size(320, 21)
         Me.lblStudentsInSelectedMajor.TabIndex = 13
         Me.lblStudentsInSelectedMajor.Text = "Percentage of Students in __________: 00%"
+        '
+        'CollegeMajorsBindingSource1
+        '
+        Me.CollegeMajorsBindingSource1.DataMember = "CollegeMajors"
+        Me.CollegeMajorsBindingSource1.DataSource = Me.CollegesDataSet
+        '
+        'CollegeMajorsBindingSource2
+        '
+        Me.CollegeMajorsBindingSource2.DataMember = "CollegeMajors"
+        Me.CollegeMajorsBindingSource2.DataSource = Me.CollegesDataSet
         '
         'frmCollegeMajors
         '
@@ -322,6 +338,8 @@ Partial Class frmCollegeMajors
         Me.CollegeMajorsBindingNavigator.ResumeLayout(False)
         Me.CollegeMajorsBindingNavigator.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CollegeMajorsBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CollegeMajorsBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -351,5 +369,7 @@ Partial Class frmCollegeMajors
     Friend WithEvents DegreeComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents lblTotalStudents As System.Windows.Forms.Label
     Friend WithEvents lblStudentsInSelectedMajor As System.Windows.Forms.Label
+    Friend WithEvents CollegeMajorsBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents CollegeMajorsBindingSource2 As System.Windows.Forms.BindingSource
 
 End Class
