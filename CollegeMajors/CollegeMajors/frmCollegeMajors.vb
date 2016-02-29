@@ -46,10 +46,12 @@ Public Class frmCollegeMajors
         ' Calculation Variables
         Dim decTotal As Decimal
 
+        ' Counting number of students in all majors
         For intCount = 0 To datCollegeInfo.Rows.Count - 1
             decTotal = decTotal + Convert.ToDecimal(datCollegeInfo.Rows(intCount)("Number in Degree"))
         Next
 
+        ' Displaying number of students in all majors
         lblTotalStudents.Text = "Total Amount of Students in Majors: " & decTotal.ToString()
 
     End Sub
