@@ -34,7 +34,7 @@ Public Class frmCollegeMajors
 
         ' Database Connection
         Dim strSql As String = "SELECT * FROM CollegeMajors"
-        Dim strPath As String = "Provider=Microsoft.ACE.ALEDB.12.0;" & "Data Source=E:\Advanced VB\CollegeMajors\CollegeMajors\colleges.accdb"
+        Dim strPath As String = "Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=E:\Advanced VB\CollegeMajors\CollegeMajors\colleges.accdb"
 
         Dim odaColleges As New OleDb.OleDbDataAdapter(strSql, strPath)
         Dim datCollegeInfo As New DataTable
@@ -43,6 +43,14 @@ Public Class frmCollegeMajors
 
         odaColleges.Dispose()
 
-        
+        ' Calculation Variables
+        Dim decTotal As Decimal
+
+        For intCount = 0 To datCollegeInfo.Rows.Count - 1
+            decTotal = decTotal + Convert.ToDecimal(datCollegeInfo.Rows(intCount)("Number in Degree"))
+        Next
+
+        lblTotalStudents.Text = "Total Amount of Students in Majors: " & decTotal.ToString()
+
     End Sub
 End Class
