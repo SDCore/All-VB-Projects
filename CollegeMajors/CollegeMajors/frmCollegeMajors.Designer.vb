@@ -23,40 +23,62 @@ Partial Class frmCollegeMajors
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCollegeMajors))
         Dim DepartmentLabel As System.Windows.Forms.Label
-        Dim DegreeLabel As System.Windows.Forms.Label
         Dim Number_in_DegreeLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCollegeMajors))
+        Dim DegreeLabel1 As System.Windows.Forms.Label
         Me.CollegesDataSet = New CollegeMajors.collegesDataSet()
         Me.CollegeMajorsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CollegeMajorsTableAdapter = New CollegeMajors.collegesDataSetTableAdapters.CollegeMajorsTableAdapter()
         Me.TableAdapterManager = New CollegeMajors.collegesDataSetTableAdapters.TableAdapterManager()
         Me.CollegeMajorsBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.CollegeMajorsBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.DepartmentTextBox = New System.Windows.Forms.TextBox()
-        Me.DegreeTextBox = New System.Windows.Forms.TextBox()
         Me.Number_in_DegreeTextBox = New System.Windows.Forms.TextBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnFindTotal = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.DegreeComboBox = New System.Windows.Forms.ComboBox()
+        Me.lblTotalStudents = New System.Windows.Forms.Label()
+        Me.lblStudentsInSelectedMajor = New System.Windows.Forms.Label()
         DepartmentLabel = New System.Windows.Forms.Label()
-        DegreeLabel = New System.Windows.Forms.Label()
         Number_in_DegreeLabel = New System.Windows.Forms.Label()
+        DegreeLabel1 = New System.Windows.Forms.Label()
         CType(Me.CollegesDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CollegeMajorsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CollegeMajorsBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CollegeMajorsBindingNavigator.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'DepartmentLabel
+        '
+        DepartmentLabel.AutoSize = True
+        DepartmentLabel.Location = New System.Drawing.Point(14, 282)
+        DepartmentLabel.Name = "DepartmentLabel"
+        DepartmentLabel.Size = New System.Drawing.Size(68, 13)
+        DepartmentLabel.TabIndex = 1
+        DepartmentLabel.Text = "Department"
+        '
+        'Number_in_DegreeLabel
+        '
+        Number_in_DegreeLabel.AutoSize = True
+        Number_in_DegreeLabel.Location = New System.Drawing.Point(14, 332)
+        Number_in_DegreeLabel.Name = "Number_in_DegreeLabel"
+        Number_in_DegreeLabel.Size = New System.Drawing.Size(101, 13)
+        Number_in_DegreeLabel.TabIndex = 5
+        Number_in_DegreeLabel.Text = "Number in Degree"
         '
         'CollegesDataSet
         '
@@ -92,9 +114,34 @@ Partial Class frmCollegeMajors
         Me.CollegeMajorsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.CollegeMajorsBindingNavigator.Name = "CollegeMajorsBindingNavigator"
         Me.CollegeMajorsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.CollegeMajorsBindingNavigator.Size = New System.Drawing.Size(367, 25)
+        Me.CollegeMajorsBindingNavigator.Size = New System.Drawing.Size(377, 25)
         Me.CollegeMajorsBindingNavigator.TabIndex = 0
         Me.CollegeMajorsBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -128,16 +175,9 @@ Partial Class frmCollegeMajors
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -160,26 +200,8 @@ Partial Class frmCollegeMajors
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'CollegeMajorsBindingNavigatorSaveItem
         '
@@ -189,53 +211,18 @@ Partial Class frmCollegeMajors
         Me.CollegeMajorsBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.CollegeMajorsBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'DepartmentLabel
-        '
-        DepartmentLabel.AutoSize = True
-        DepartmentLabel.Location = New System.Drawing.Point(12, 96)
-        DepartmentLabel.Name = "DepartmentLabel"
-        DepartmentLabel.Size = New System.Drawing.Size(68, 13)
-        DepartmentLabel.TabIndex = 1
-        DepartmentLabel.Text = "Department"
-        '
         'DepartmentTextBox
         '
         Me.DepartmentTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CollegeMajorsBindingSource, "Department", True))
-        Me.DepartmentTextBox.Location = New System.Drawing.Point(86, 93)
+        Me.DepartmentTextBox.Location = New System.Drawing.Point(88, 279)
         Me.DepartmentTextBox.Name = "DepartmentTextBox"
         Me.DepartmentTextBox.Size = New System.Drawing.Size(269, 22)
         Me.DepartmentTextBox.TabIndex = 2
         '
-        'DegreeLabel
-        '
-        DegreeLabel.AutoSize = True
-        DegreeLabel.Location = New System.Drawing.Point(12, 121)
-        DegreeLabel.Name = "DegreeLabel"
-        DegreeLabel.Size = New System.Drawing.Size(44, 13)
-        DegreeLabel.TabIndex = 3
-        DegreeLabel.Text = "Degree"
-        '
-        'DegreeTextBox
-        '
-        Me.DegreeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CollegeMajorsBindingSource, "Degree", True))
-        Me.DegreeTextBox.Location = New System.Drawing.Point(62, 118)
-        Me.DegreeTextBox.Name = "DegreeTextBox"
-        Me.DegreeTextBox.Size = New System.Drawing.Size(293, 22)
-        Me.DegreeTextBox.TabIndex = 4
-        '
-        'Number_in_DegreeLabel
-        '
-        Number_in_DegreeLabel.AutoSize = True
-        Number_in_DegreeLabel.Location = New System.Drawing.Point(12, 146)
-        Number_in_DegreeLabel.Name = "Number_in_DegreeLabel"
-        Number_in_DegreeLabel.Size = New System.Drawing.Size(101, 13)
-        Number_in_DegreeLabel.TabIndex = 5
-        Number_in_DegreeLabel.Text = "Number in Degree"
-        '
         'Number_in_DegreeTextBox
         '
         Me.Number_in_DegreeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CollegeMajorsBindingSource, "Number in Degree", True))
-        Me.Number_in_DegreeTextBox.Location = New System.Drawing.Point(119, 143)
+        Me.Number_in_DegreeTextBox.Location = New System.Drawing.Point(121, 329)
         Me.Number_in_DegreeTextBox.Name = "Number_in_DegreeTextBox"
         Me.Number_in_DegreeTextBox.Size = New System.Drawing.Size(236, 22)
         Me.Number_in_DegreeTextBox.TabIndex = 6
@@ -252,25 +239,76 @@ Partial Class frmCollegeMajors
         '
         'btnFindTotal
         '
-        Me.btnFindTotal.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFindTotal.Location = New System.Drawing.Point(13, 171)
+        Me.btnFindTotal.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFindTotal.Location = New System.Drawing.Point(15, 357)
         Me.btnFindTotal.Name = "btnFindTotal"
         Me.btnFindTotal.Size = New System.Drawing.Size(342, 54)
         Me.btnFindTotal.TabIndex = 8
         Me.btnFindTotal.Text = "Find Total"
         Me.btnFindTotal.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(17, 93)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(340, 180)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
+        'DegreeLabel1
+        '
+        DegreeLabel1.AutoSize = True
+        DegreeLabel1.Location = New System.Drawing.Point(14, 308)
+        DegreeLabel1.Name = "DegreeLabel1"
+        DegreeLabel1.Size = New System.Drawing.Size(44, 13)
+        DegreeLabel1.TabIndex = 10
+        DegreeLabel1.Text = "Degree"
+        '
+        'DegreeComboBox
+        '
+        Me.DegreeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CollegeMajorsBindingSource, "Degree", True))
+        Me.DegreeComboBox.FormattingEnabled = True
+        Me.DegreeComboBox.Location = New System.Drawing.Point(64, 305)
+        Me.DegreeComboBox.Name = "DegreeComboBox"
+        Me.DegreeComboBox.Size = New System.Drawing.Size(293, 21)
+        Me.DegreeComboBox.TabIndex = 11
+        '
+        'lblTotalStudents
+        '
+        Me.lblTotalStudents.AutoSize = True
+        Me.lblTotalStudents.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalStudents.Location = New System.Drawing.Point(21, 426)
+        Me.lblTotalStudents.Name = "lblTotalStudents"
+        Me.lblTotalStudents.Size = New System.Drawing.Size(325, 21)
+        Me.lblTotalStudents.TabIndex = 12
+        Me.lblTotalStudents.Text = "Total Amount of Students in Majors: 0000"
+        '
+        'lblStudentsInSelectedMajor
+        '
+        Me.lblStudentsInSelectedMajor.AutoSize = True
+        Me.lblStudentsInSelectedMajor.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStudentsInSelectedMajor.Location = New System.Drawing.Point(22, 447)
+        Me.lblStudentsInSelectedMajor.Name = "lblStudentsInSelectedMajor"
+        Me.lblStudentsInSelectedMajor.Size = New System.Drawing.Size(320, 21)
+        Me.lblStudentsInSelectedMajor.TabIndex = 13
+        Me.lblStudentsInSelectedMajor.Text = "Percentage of Students in __________: 00%"
+        '
         'frmCollegeMajors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(367, 312)
+        Me.ClientSize = New System.Drawing.Size(377, 479)
+        Me.Controls.Add(Me.lblStudentsInSelectedMajor)
+        Me.Controls.Add(Me.lblTotalStudents)
+        Me.Controls.Add(DegreeLabel1)
+        Me.Controls.Add(Me.DegreeComboBox)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnFindTotal)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Number_in_DegreeLabel)
         Me.Controls.Add(Me.Number_in_DegreeTextBox)
-        Me.Controls.Add(DegreeLabel)
-        Me.Controls.Add(Me.DegreeTextBox)
         Me.Controls.Add(DepartmentLabel)
         Me.Controls.Add(Me.DepartmentTextBox)
         Me.Controls.Add(Me.CollegeMajorsBindingNavigator)
@@ -283,6 +321,7 @@ Partial Class frmCollegeMajors
         CType(Me.CollegeMajorsBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CollegeMajorsBindingNavigator.ResumeLayout(False)
         Me.CollegeMajorsBindingNavigator.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -305,9 +344,12 @@ Partial Class frmCollegeMajors
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents CollegeMajorsBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents DepartmentTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DegreeTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Number_in_DegreeTextBox As System.Windows.Forms.TextBox
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents btnFindTotal As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents DegreeComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents lblTotalStudents As System.Windows.Forms.Label
+    Friend WithEvents lblStudentsInSelectedMajor As System.Windows.Forms.Label
 
 End Class
