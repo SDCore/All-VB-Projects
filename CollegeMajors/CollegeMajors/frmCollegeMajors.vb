@@ -51,15 +51,20 @@ Public Class frmCollegeMajors
 
         ' Getting selected item from Combo Box
         Dim intDegreeRow As Integer = DegreeComboBox.SelectedIndex
+
+        ' Calculation variables
         Dim decStudentsInMajor As Decimal
         Dim decPercentage As Decimal
         Dim strSelectedMajor As String
 
+        ' Getting the amount in the selected major and the name of the selected major (from combobox selection)
         decStudentsInMajor = CDec(datCollegeInfo.Rows(intDegreeRow)("Number in Degree"))
         strSelectedMajor = CStr(datCollegeInfo.Rows(intDegreeRow)("Degree"))
 
+        ' Calculating percentage in the selected major)
         decPercentage = decStudentsInMajor / decTotal
 
+        ' Outputting the percentage to "Percentage of Students in ______: 00%" label
         lblStudentsInSelectedMajor.Text = "Percentage of Students in " & strSelectedMajor & ": " & decPercentage.ToString("P")
 
     End Sub
