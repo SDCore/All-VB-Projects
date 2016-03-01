@@ -3,9 +3,6 @@
 ' 2/26/2016
 ' Purpose: To see the percentage of students in a specific major
 
-' --TODO--
-' User can select a college major from a combo box and it will display the percentage of students participating in said major
-
 Option Strict On
 
 Public Class frmCollegeMajors
@@ -53,7 +50,17 @@ Public Class frmCollegeMajors
         lblTotalStudents.Text = "Total Amount of Students in Majors: " & decTotal.ToString()
 
         ' Getting selected item from Combo Box
+        Dim intDegreeRow As Integer = DegreeComboBox.SelectedIndex
+        Dim decStudentsInMajor As Decimal
+        Dim decPercentage As Decimal
+        Dim strSelectedMajor As String
 
+        decStudentsInMajor = CDec(datCollegeInfo.Rows(intDegreeRow)("Number in Degree"))
+        strSelectedMajor = CStr(datCollegeInfo.Rows(intDegreeRow)("Degree"))
+
+        decPercentage = decStudentsInMajor / decTotal
+
+        lblStudentsInSelectedMajor.Text = "Percentage of Students in " & strSelectedMajor & ": " & decPercentage.ToString("P")
 
     End Sub
 End Class
