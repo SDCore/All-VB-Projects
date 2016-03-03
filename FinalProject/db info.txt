@@ -1,0 +1,13 @@
+FIELDS NEEDED
+id: ###
+item-name: AAA
+crafting-time: ###
+crafting-type: #
+amount-given: ##
+base-research: AAA
+
+crafting type (subprocedure):
+0 = hand
+1 = assembly machine 1
+2 = assembly machine 2
+3 = assembly machine 3
