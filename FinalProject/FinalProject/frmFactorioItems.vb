@@ -1,4 +1,9 @@
-﻿Public Class frmFactorioItems
+﻿' Michael Voell
+' Factorio Item Repository - Final Project
+' 3/4/2016
+' Purpose: To display information based on item information, and to showcase all the things learned in the class.
+
+Public Class frmFactorioItems
 
     Private Sub Factorio_itemsBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs) Handles Factorio_itemsBindingNavigatorSaveItem.Click
         Me.Validate()
