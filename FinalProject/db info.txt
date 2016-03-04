@@ -11,3 +11,9 @@ crafting type (subprocedure):
 1 = assembly machine 1
 2 = assembly machine 2
 3 = assembly machine 3
+4 = pumpjack
+5 = chemical plant
+6 = stone furnace
+7 = steel furnace
+8 = electronic furnace
+9 = other
