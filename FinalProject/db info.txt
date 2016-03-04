@@ -21,3 +21,6 @@ crafting type (subprocedure):
 outputs:
 total crafting time
 average crafting time
+
+total crafting time: 271.6
+average crafting time: 8.23

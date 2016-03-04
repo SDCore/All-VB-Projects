@@ -19,12 +19,18 @@ Public Class frmFactorioItems
 
     Private Sub frmFactorioItems_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the '_factorio_itemsDataSet._factorio_items' table. You can move, or remove it, as needed.
+
+        ' Catching an exception if the database could not be found
         Try
             Me.Factorio_itemsTableAdapter.Fill(Me._factorio_itemsDataSet._factorio_items)
         Catch ex As Exception
             MsgBox("Could not establish connection to database. Please try again.", , "Database Error")
             Close()
         End Try
+
+    End Sub
+
+    Private Sub btnCalculate_Click(sender As System.Object, e As System.EventArgs) Handles btnCalculate.Click
 
     End Sub
 End Class
