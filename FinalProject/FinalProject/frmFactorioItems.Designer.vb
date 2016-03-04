@@ -57,6 +57,7 @@ Partial Class frmFactorioItems
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblTotalCraftingTime = New System.Windows.Forms.Label()
         Me.lblAverageCraftingTime = New System.Windows.Forms.Label()
+        Me.btnCalculate = New System.Windows.Forms.Button()
         IDLabel = New System.Windows.Forms.Label()
         Item_nameLabel = New System.Windows.Forms.Label()
         Crafting_timeLabel = New System.Windows.Forms.Label()
@@ -344,11 +345,22 @@ Partial Class frmFactorioItems
         Me.lblAverageCraftingTime.TabIndex = 16
         Me.lblAverageCraftingTime.Text = "Average Crafting Time: 000 Seconds"
         '
+        'btnCalculate
+        '
+        Me.btnCalculate.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalculate.Location = New System.Drawing.Point(15, 367)
+        Me.btnCalculate.Name = "btnCalculate"
+        Me.btnCalculate.Size = New System.Drawing.Size(443, 54)
+        Me.btnCalculate.TabIndex = 17
+        Me.btnCalculate.Text = "Calculate"
+        Me.btnCalculate.UseVisualStyleBackColor = True
+        '
         'frmFactorioItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(470, 486)
+        Me.ClientSize = New System.Drawing.Size(470, 436)
+        Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.lblAverageCraftingTime)
         Me.Controls.Add(Me.lblTotalCraftingTime)
         Me.Controls.Add(Me.lblTitle)
@@ -407,5 +419,6 @@ Partial Class frmFactorioItems
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents lblTotalCraftingTime As System.Windows.Forms.Label
     Friend WithEvents lblAverageCraftingTime As System.Windows.Forms.Label
+    Friend WithEvents btnCalculate As System.Windows.Forms.Button
 
 End Class
