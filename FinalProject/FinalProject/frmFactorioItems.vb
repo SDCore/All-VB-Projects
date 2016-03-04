@@ -3,6 +3,11 @@
 ' 3/4/2016
 ' Purpose: To display information based on item information, and to showcase all the things learned in the class.
 
+' --TODO--
+' Output total amount of crafting time
+' Output average amount of crafting time
+' MORE LATER
+
 Public Class frmFactorioItems
 
     Private Sub Factorio_itemsBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs) Handles Factorio_itemsBindingNavigatorSaveItem.Click
@@ -14,7 +19,12 @@ Public Class frmFactorioItems
 
     Private Sub frmFactorioItems_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the '_factorio_itemsDataSet._factorio_items' table. You can move, or remove it, as needed.
-        Me.Factorio_itemsTableAdapter.Fill(Me._factorio_itemsDataSet._factorio_items)
+        Try
+            Me.Factorio_itemsTableAdapter.Fill(Me._factorio_itemsDataSet._factorio_items)
+        Catch ex As Exception
+            MsgBox("Could not establish connection to database. Please try again.", , "Database Error")
+            Close()
+        End Try
 
     End Sub
 End Class
