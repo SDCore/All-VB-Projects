@@ -17,3 +17,7 @@ crafting type (subprocedure):
 7 = steel furnace
 8 = electronic furnace
 9 = other
+
+outputs:
+total crafting time
+average crafting time
