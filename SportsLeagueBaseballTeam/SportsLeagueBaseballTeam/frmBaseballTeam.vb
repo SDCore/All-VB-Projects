@@ -37,9 +37,6 @@ Public Class frmBaseballTeam
         odaSportsLeague.Dispose()
 
         'Calculations
-        Dim intAge12 As Integer
-        Dim intAge13 As Integer
-        Dim intAge14 As Integer
         Dim intCount As Integer = 0
         Dim decAgeAverage As Decimal
         Dim decAverageTotal As Decimal

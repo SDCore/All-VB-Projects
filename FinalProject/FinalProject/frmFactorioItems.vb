@@ -32,5 +32,13 @@ Public Class frmFactorioItems
 
     Private Sub btnCalculate_Click(sender As System.Object, e As System.EventArgs) Handles btnCalculate.Click
 
+        ' Select / Connecting to database
+        Dim strSQL As String = "SELECT * FROM StoreInventory"
+        Dim strPath As String = "Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=E:\Advanced VB\FinalProject\FinalProject\factorio-items.accdb"
+        Dim odaFactorioItem As New OleDb.OleDbDataAdapter(strSQL, strPath)
+        Dim datFactorioItemFill As New DataTable
+        odaFactorioItem.Fill(datFactorioItemFill)
+        odaFactorioItem.Dispose()
+
     End Sub
 End Class
