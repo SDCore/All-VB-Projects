@@ -99,6 +99,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_factorio_itemsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_factorio_itemsDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_factorio_itemsDataSet1.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmFactorioItems.resx">
@@ -132,6 +137,17 @@
     </None>
     <None Include="_factorio_itemsDataSet.xss">
       <DependentUpon>_factorio_itemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_factorio_itemsDataSet1.xsc">
+      <DependentUpon>_factorio_itemsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_factorio_itemsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_factorio_itemsDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_factorio_itemsDataSet1.xss">
+      <DependentUpon>_factorio_itemsDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

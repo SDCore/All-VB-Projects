@@ -6,15 +6,15 @@ FinalProject
 </name>
 </assembly>
 <members>
-<member name="T:FinalProject._factorio_itemsDataSet._factorio_itemsDataTable">
+<member name="T:FinalProject._factorio_itemsDataSet.tblFactorioDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:FinalProject._factorio_itemsDataSet._factorio_itemsRow">
+</member><member name="T:FinalProject._factorio_itemsDataSet.tblFactorioRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:FinalProject._factorio_itemsDataSet._factorio_itemsRowChangeEvent">
+</member><member name="T:FinalProject._factorio_itemsDataSet.tblFactorioRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -22,7 +22,7 @@ Row event argument class
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="T:FinalProject._factorio_itemsDataSetTableAdapters.factorio_itemsTableAdapter">
+</member><member name="T:FinalProject._factorio_itemsDataSetTableAdapters.tblFactorioTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

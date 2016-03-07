@@ -25,7 +25,7 @@ Option Explicit On
 Partial Public Class _factorio_itemsDataSet
     Inherits Global.System.Data.DataSet
     
-    Private _tablefactorio_items As _factorio_itemsDataTable
+    Private tabletblFactorio As tblFactorioDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class _factorio_itemsDataSet
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("factorio-items")) Is Nothing) Then
-                MyBase.Tables.Add(New _factorio_itemsDataTable(ds.Tables("factorio-items")))
+            If (Not (ds.Tables("tblFactorio")) Is Nothing) Then
+                MyBase.Tables.Add(New tblFactorioDataTable(ds.Tables("tblFactorio")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class _factorio_itemsDataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property _factorio_items() As _factorio_itemsDataTable
+    Public ReadOnly Property tblFactorio() As tblFactorioDataTable
         Get
-            Return Me._tablefactorio_items
+            Return Me.tabletblFactorio
         End Get
     End Property
     
@@ -153,8 +153,8 @@ Partial Public Class _factorio_itemsDataSet
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("factorio-items")) Is Nothing) Then
-                MyBase.Tables.Add(New _factorio_itemsDataTable(ds.Tables("factorio-items")))
+            If (Not (ds.Tables("tblFactorio")) Is Nothing) Then
+                MyBase.Tables.Add(New tblFactorioDataTable(ds.Tables("tblFactorio")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class _factorio_itemsDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me._tablefactorio_items = CType(MyBase.Tables("factorio-items"),_factorio_itemsDataTable)
+        Me.tabletblFactorio = CType(MyBase.Tables("tblFactorio"),tblFactorioDataTable)
         If (initTable = true) Then
-            If (Not (Me._tablefactorio_items) Is Nothing) Then
-                Me._tablefactorio_items.InitVars
+            If (Not (Me.tabletblFactorio) Is Nothing) Then
+                Me.tabletblFactorio.InitVars
             End If
         End If
     End Sub
@@ -204,13 +204,13 @@ Partial Public Class _factorio_itemsDataSet
         Me.Namespace = "http://tempuri.org/_factorio_itemsDataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me._tablefactorio_items = New _factorio_itemsDataTable()
-        MyBase.Tables.Add(Me._tablefactorio_items)
+        Me.tabletblFactorio = New tblFactorioDataTable()
+        MyBase.Tables.Add(Me.tabletblFactorio)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerialize_factorio_items() As Boolean
+    Private Function ShouldSerializetblFactorio() As Boolean
         Return false
     End Function
     
@@ -273,15 +273,15 @@ Partial Public Class _factorio_itemsDataSet
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub _factorio_itemsRowChangeEventHandler(ByVal sender As Object, ByVal e As _factorio_itemsRowChangeEvent)
+    Public Delegate Sub tblFactorioRowChangeEventHandler(ByVal sender As Object, ByVal e As tblFactorioRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class _factorio_itemsDataTable
-        Inherits Global.System.Data.TypedTableBase(Of _factorio_itemsRow)
+    Partial Public Class tblFactorioDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tblFactorioRow)
         
         Private columnID As Global.System.Data.DataColumn
         
@@ -299,7 +299,7 @@ Partial Public Class _factorio_itemsDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "factorio-items"
+            Me.TableName = "tblFactorio"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -389,50 +389,50 @@ Partial Public Class _factorio_itemsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As _factorio_itemsRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tblFactorioRow
             Get
-                Return CType(Me.Rows(index),_factorio_itemsRow)
+                Return CType(Me.Rows(index),tblFactorioRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event _factorio_itemsRowChanging As _factorio_itemsRowChangeEventHandler
+        Public Event tblFactorioRowChanging As tblFactorioRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event _factorio_itemsRowChanged As _factorio_itemsRowChangeEventHandler
+        Public Event tblFactorioRowChanged As tblFactorioRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event _factorio_itemsRowDeleting As _factorio_itemsRowChangeEventHandler
+        Public Event tblFactorioRowDeleting As tblFactorioRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event _factorio_itemsRowDeleted As _factorio_itemsRowChangeEventHandler
+        Public Event tblFactorioRowDeleted As tblFactorioRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub Add_factorio_itemsRow(ByVal row As _factorio_itemsRow)
+        Public Overloads Sub AddtblFactorioRow(ByVal row As tblFactorioRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Add_factorio_itemsRow(ByVal _item_name As String, ByVal _crafting_time As Decimal, ByVal _crafting_type As Integer, ByVal _amount_given As Integer, ByVal _base_research As String) As _factorio_itemsRow
-            Dim row_factorio_itemsRow As _factorio_itemsRow = CType(Me.NewRow,_factorio_itemsRow)
+        Public Overloads Function AddtblFactorioRow(ByVal _item_name As String, ByVal _crafting_time As Decimal, ByVal _crafting_type As Integer, ByVal _amount_given As Integer, ByVal _base_research As String) As tblFactorioRow
+            Dim rowtblFactorioRow As tblFactorioRow = CType(Me.NewRow,tblFactorioRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, _item_name, _crafting_time, _crafting_type, _amount_given, _base_research}
-            row_factorio_itemsRow.ItemArray = columnValuesArray
-            Me.Rows.Add(row_factorio_itemsRow)
-            Return row_factorio_itemsRow
+            rowtblFactorioRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtblFactorioRow)
+            Return rowtblFactorioRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByID(ByVal ID As Integer) As _factorio_itemsRow
-            Return CType(Me.Rows.Find(New Object() {ID}),_factorio_itemsRow)
+        Public Function FindByID(ByVal ID As Integer) As tblFactorioRow
+            Return CType(Me.Rows.Find(New Object() {ID}),tblFactorioRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As _factorio_itemsDataTable = CType(MyBase.Clone,_factorio_itemsDataTable)
+            Dim cln As tblFactorioDataTable = CType(MyBase.Clone,tblFactorioDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -440,7 +440,7 @@ Partial Public Class _factorio_itemsDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New _factorio_itemsDataTable()
+            Return New tblFactorioDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -487,34 +487,32 @@ Partial Public Class _factorio_itemsDataSet
             Me.columnID.Unique = true
             Me._columnitem_name.MaxLength = 255
             Me._columnbase_research.MaxLength = 255
-            Me.ExtendedProperties.Add("Generator_TableVarName", "_tablefactorio_items")
-            Me.ExtendedProperties.Add("Generator_UserTableName", "factorio-items")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function New_factorio_itemsRow() As _factorio_itemsRow
-            Return CType(Me.NewRow,_factorio_itemsRow)
+        Public Function NewtblFactorioRow() As tblFactorioRow
+            Return CType(Me.NewRow,tblFactorioRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New _factorio_itemsRow(builder)
+            Return New tblFactorioRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(_factorio_itemsRow)
+            Return GetType(tblFactorioRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me._factorio_itemsRowChangedEvent) Is Nothing) Then
-                RaiseEvent _factorio_itemsRowChanged(Me, New _factorio_itemsRowChangeEvent(CType(e.Row,_factorio_itemsRow), e.Action))
+            If (Not (Me.tblFactorioRowChangedEvent) Is Nothing) Then
+                RaiseEvent tblFactorioRowChanged(Me, New tblFactorioRowChangeEvent(CType(e.Row,tblFactorioRow), e.Action))
             End If
         End Sub
         
@@ -522,8 +520,8 @@ Partial Public Class _factorio_itemsDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me._factorio_itemsRowChangingEvent) Is Nothing) Then
-                RaiseEvent _factorio_itemsRowChanging(Me, New _factorio_itemsRowChangeEvent(CType(e.Row,_factorio_itemsRow), e.Action))
+            If (Not (Me.tblFactorioRowChangingEvent) Is Nothing) Then
+                RaiseEvent tblFactorioRowChanging(Me, New tblFactorioRowChangeEvent(CType(e.Row,tblFactorioRow), e.Action))
             End If
         End Sub
         
@@ -531,8 +529,8 @@ Partial Public Class _factorio_itemsDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me._factorio_itemsRowDeletedEvent) Is Nothing) Then
-                RaiseEvent _factorio_itemsRowDeleted(Me, New _factorio_itemsRowChangeEvent(CType(e.Row,_factorio_itemsRow), e.Action))
+            If (Not (Me.tblFactorioRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tblFactorioRowDeleted(Me, New tblFactorioRowChangeEvent(CType(e.Row,tblFactorioRow), e.Action))
             End If
         End Sub
         
@@ -540,14 +538,14 @@ Partial Public Class _factorio_itemsDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me._factorio_itemsRowDeletingEvent) Is Nothing) Then
-                RaiseEvent _factorio_itemsRowDeleting(Me, New _factorio_itemsRowChangeEvent(CType(e.Row,_factorio_itemsRow), e.Action))
+            If (Not (Me.tblFactorioRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tblFactorioRowDeleting(Me, New tblFactorioRowChangeEvent(CType(e.Row,tblFactorioRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Remove_factorio_itemsRow(ByVal row As _factorio_itemsRow)
+        Public Sub RemovetblFactorioRow(ByVal row As tblFactorioRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -574,7 +572,7 @@ Partial Public Class _factorio_itemsDataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "_factorio_itemsDataTable"
+            attribute2.FixedValue = "tblFactorioDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -621,26 +619,26 @@ Partial Public Class _factorio_itemsDataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class _factorio_itemsRow
+    Partial Public Class tblFactorioRow
         Inherits Global.System.Data.DataRow
         
-        Private _tablefactorio_items As _factorio_itemsDataTable
+        Private tabletblFactorio As tblFactorioDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me._tablefactorio_items = CType(Me.Table,_factorio_itemsDataTable)
+            Me.tabletblFactorio = CType(Me.Table,tblFactorioDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property ID() As Integer
             Get
-                Return CType(Me(Me._tablefactorio_items.IDColumn),Integer)
+                Return CType(Me(Me.tabletblFactorio.IDColumn),Integer)
             End Get
             Set
-                Me(Me._tablefactorio_items.IDColumn) = value
+                Me(Me.tabletblFactorio.IDColumn) = value
             End Set
         End Property
         
@@ -649,13 +647,13 @@ Partial Public Class _factorio_itemsDataSet
         Public Property _item_name() As String
             Get
                 Try 
-                    Return CType(Me(Me._tablefactorio_items._item_nameColumn),String)
+                    Return CType(Me(Me.tabletblFactorio._item_nameColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'item-name' in table 'factorio-items' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'item-name' in table 'tblFactorio' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me._tablefactorio_items._item_nameColumn) = value
+                Me(Me.tabletblFactorio._item_nameColumn) = value
             End Set
         End Property
         
@@ -664,13 +662,13 @@ Partial Public Class _factorio_itemsDataSet
         Public Property _crafting_time() As Decimal
             Get
                 Try 
-                    Return CType(Me(Me._tablefactorio_items._crafting_timeColumn),Decimal)
+                    Return CType(Me(Me.tabletblFactorio._crafting_timeColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'crafting-time' in table 'factorio-items' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'crafting-time' in table 'tblFactorio' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me._tablefactorio_items._crafting_timeColumn) = value
+                Me(Me.tabletblFactorio._crafting_timeColumn) = value
             End Set
         End Property
         
@@ -679,13 +677,13 @@ Partial Public Class _factorio_itemsDataSet
         Public Property _crafting_type() As Integer
             Get
                 Try 
-                    Return CType(Me(Me._tablefactorio_items._crafting_typeColumn),Integer)
+                    Return CType(Me(Me.tabletblFactorio._crafting_typeColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'crafting-type' in table 'factorio-items' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'crafting-type' in table 'tblFactorio' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me._tablefactorio_items._crafting_typeColumn) = value
+                Me(Me.tabletblFactorio._crafting_typeColumn) = value
             End Set
         End Property
         
@@ -694,13 +692,13 @@ Partial Public Class _factorio_itemsDataSet
         Public Property _amount_given() As Integer
             Get
                 Try 
-                    Return CType(Me(Me._tablefactorio_items._amount_givenColumn),Integer)
+                    Return CType(Me(Me.tabletblFactorio._amount_givenColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'amount-given' in table 'factorio-items' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'amount-given' in table 'tblFactorio' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me._tablefactorio_items._amount_givenColumn) = value
+                Me(Me.tabletblFactorio._amount_givenColumn) = value
             End Set
         End Property
         
@@ -709,74 +707,74 @@ Partial Public Class _factorio_itemsDataSet
         Public Property _base_research() As String
             Get
                 Try 
-                    Return CType(Me(Me._tablefactorio_items._base_researchColumn),String)
+                    Return CType(Me(Me.tabletblFactorio._base_researchColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'base-research' in table 'factorio-items' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'base-research' in table 'tblFactorio' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me._tablefactorio_items._base_researchColumn) = value
+                Me(Me.tabletblFactorio._base_researchColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Is_item_nameNull() As Boolean
-            Return Me.IsNull(Me._tablefactorio_items._item_nameColumn)
+            Return Me.IsNull(Me.tabletblFactorio._item_nameColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Set_item_nameNull()
-            Me(Me._tablefactorio_items._item_nameColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletblFactorio._item_nameColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Is_crafting_timeNull() As Boolean
-            Return Me.IsNull(Me._tablefactorio_items._crafting_timeColumn)
+            Return Me.IsNull(Me.tabletblFactorio._crafting_timeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Set_crafting_timeNull()
-            Me(Me._tablefactorio_items._crafting_timeColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletblFactorio._crafting_timeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Is_crafting_typeNull() As Boolean
-            Return Me.IsNull(Me._tablefactorio_items._crafting_typeColumn)
+            Return Me.IsNull(Me.tabletblFactorio._crafting_typeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Set_crafting_typeNull()
-            Me(Me._tablefactorio_items._crafting_typeColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletblFactorio._crafting_typeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Is_amount_givenNull() As Boolean
-            Return Me.IsNull(Me._tablefactorio_items._amount_givenColumn)
+            Return Me.IsNull(Me.tabletblFactorio._amount_givenColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Set_amount_givenNull()
-            Me(Me._tablefactorio_items._amount_givenColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletblFactorio._amount_givenColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Is_base_researchNull() As Boolean
-            Return Me.IsNull(Me._tablefactorio_items._base_researchColumn)
+            Return Me.IsNull(Me.tabletblFactorio._base_researchColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Set_base_researchNull()
-            Me(Me._tablefactorio_items._base_researchColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletblFactorio._base_researchColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -784,16 +782,16 @@ Partial Public Class _factorio_itemsDataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class _factorio_itemsRowChangeEvent
+    Public Class tblFactorioRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As _factorio_itemsRow
+        Private eventRow As tblFactorioRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As _factorio_itemsRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As tblFactorioRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -801,7 +799,7 @@ Partial Public Class _factorio_itemsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As _factorio_itemsRow
+        Public ReadOnly Property Row() As tblFactorioRow
             Get
                 Return Me.eventRow
             End Get
@@ -828,7 +826,7 @@ Namespace _factorio_itemsDataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class factorio_itemsTableAdapter
+    Partial Public Class tblFactorioTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
@@ -945,7 +943,7 @@ Namespace _factorio_itemsDataSetTableAdapters
             Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "factorio-items"
+            tableMapping.DataSetTable = "tblFactorio"
             tableMapping.ColumnMappings.Add("ID", "ID")
             tableMapping.ColumnMappings.Add("item-name", "item-name")
             tableMapping.ColumnMappings.Add("crafting-time", "crafting-time")
@@ -955,11 +953,11 @@ Namespace _factorio_itemsDataSetTableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `factorio-items` WHERE ((`ID` = ?) AND ((? = 1 AND `item-name` IS NUL"& _ 
-                "L) OR (`item-name` = ?)) AND ((? = 1 AND `crafting-time` IS NULL) OR (`crafting-"& _ 
-                "time` = ?)) AND ((? = 1 AND `crafting-type` IS NULL) OR (`crafting-type` = ?)) A"& _ 
-                "ND ((? = 1 AND `amount-given` IS NULL) OR (`amount-given` = ?)) AND ((? = 1 AND "& _ 
-                "`base-research` IS NULL) OR (`base-research` = ?)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `tblFactorio` WHERE ((`ID` = ?) AND ((? = 1 AND `item-name` IS NULL) "& _ 
+                "OR (`item-name` = ?)) AND ((? = 1 AND `crafting-time` IS NULL) OR (`crafting-tim"& _ 
+                "e` = ?)) AND ((? = 1 AND `crafting-type` IS NULL) OR (`crafting-type` = ?)) AND "& _ 
+                "((? = 1 AND `amount-given` IS NULL) OR (`amount-given` = ?)) AND ((? = 1 AND `ba"& _ 
+                "se-research` IS NULL) OR (`base-research` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_item-name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "item-name", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -974,8 +972,8 @@ Namespace _factorio_itemsDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_base-research", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "base-research", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `factorio-items` (`item-name`, `crafting-time`, `crafting-type`, `amo"& _ 
-                "unt-given`, `base-research`) VALUES (?, ?, ?, ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tblFactorio` (`item-name`, `crafting-time`, `crafting-type`, `amount"& _ 
+                "-given`, `base-research`) VALUES (?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("item-name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "item-name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("crafting-time", Global.System.Data.OleDb.OleDbType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(1,Byte), "crafting-time", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -984,12 +982,12 @@ Namespace _factorio_itemsDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("base-research", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "base-research", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `factorio-items` SET `item-name` = ?, `crafting-time` = ?, `crafting-type`"& _ 
-                " = ?, `amount-given` = ?, `base-research` = ? WHERE ((`ID` = ?) AND ((? = 1 AND "& _ 
-                "`item-name` IS NULL) OR (`item-name` = ?)) AND ((? = 1 AND `crafting-time` IS NU"& _ 
-                "LL) OR (`crafting-time` = ?)) AND ((? = 1 AND `crafting-type` IS NULL) OR (`craf"& _ 
-                "ting-type` = ?)) AND ((? = 1 AND `amount-given` IS NULL) OR (`amount-given` = ?)"& _ 
-                ") AND ((? = 1 AND `base-research` IS NULL) OR (`base-research` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `tblFactorio` SET `item-name` = ?, `crafting-time` = ?, `crafting-type` = "& _ 
+                "?, `amount-given` = ?, `base-research` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `it"& _ 
+                "em-name` IS NULL) OR (`item-name` = ?)) AND ((? = 1 AND `crafting-time` IS NULL)"& _ 
+                " OR (`crafting-time` = ?)) AND ((? = 1 AND `crafting-type` IS NULL) OR (`craftin"& _ 
+                "g-type` = ?)) AND ((? = 1 AND `amount-given` IS NULL) OR (`amount-given` = ?)) A"& _ 
+                "ND ((? = 1 AND `base-research` IS NULL) OR (`base-research` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("item-name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "item-name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("crafting-time", Global.System.Data.OleDb.OleDbType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(1,Byte), "crafting-time", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -1023,7 +1021,7 @@ Namespace _factorio_itemsDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT ID, [item-name], [crafting-time], [crafting-type], [amount-given], [base-r"& _ 
-                "esearch] FROM [factorio-items]"
+                "esearch] FROM tblFactorio"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -1031,7 +1029,7 @@ Namespace _factorio_itemsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As _factorio_itemsDataSet._factorio_itemsDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _factorio_itemsDataSet.tblFactorioDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1044,9 +1042,9 @@ Namespace _factorio_itemsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As _factorio_itemsDataSet._factorio_itemsDataTable
+        Public Overloads Overridable Function GetData() As _factorio_itemsDataSet.tblFactorioDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As _factorio_itemsDataSet._factorio_itemsDataTable = New _factorio_itemsDataSet._factorio_itemsDataTable()
+            Dim dataTable As _factorio_itemsDataSet.tblFactorioDataTable = New _factorio_itemsDataSet.tblFactorioDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -1054,7 +1052,7 @@ Namespace _factorio_itemsDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As _factorio_itemsDataSet._factorio_itemsDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _factorio_itemsDataSet.tblFactorioDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
@@ -1062,7 +1060,7 @@ Namespace _factorio_itemsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As _factorio_itemsDataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "factorio-items")
+            Return Me.Adapter.Update(dataSet, "tblFactorio")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1275,7 +1273,7 @@ Namespace _factorio_itemsDataSetTableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _factorio_itemsTableAdapter As factorio_itemsTableAdapter
+        Private _tblFactorioTableAdapter As tblFactorioTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -1297,12 +1295,12 @@ Namespace _factorio_itemsDataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property factorio_itemsTableAdapter() As factorio_itemsTableAdapter
+        Public Property tblFactorioTableAdapter() As tblFactorioTableAdapter
             Get
-                Return Me._factorio_itemsTableAdapter
+                Return Me._tblFactorioTableAdapter
             End Get
             Set
-                Me._factorio_itemsTableAdapter = value
+                Me._tblFactorioTableAdapter = value
             End Set
         End Property
         
@@ -1325,9 +1323,9 @@ Namespace _factorio_itemsDataSetTableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._factorio_itemsTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._factorio_itemsTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._factorio_itemsTableAdapter.Connection
+                If ((Not (Me._tblFactorioTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._tblFactorioTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._tblFactorioTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -1342,7 +1340,7 @@ Namespace _factorio_itemsDataSetTableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._factorio_itemsTableAdapter) Is Nothing) Then
+                If (Not (Me._tblFactorioTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -1356,12 +1354,12 @@ Namespace _factorio_itemsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateUpdatedRows(ByVal dataSet As _factorio_itemsDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._factorio_itemsTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet._factorio_items.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._tblFactorioTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tblFactorio.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._factorio_itemsTableAdapter.Update(updatedRows))
+                    result = (result + Me._tblFactorioTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -1375,11 +1373,11 @@ Namespace _factorio_itemsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateInsertedRows(ByVal dataSet As _factorio_itemsDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._factorio_itemsTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet._factorio_items.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._tblFactorioTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.tblFactorio.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._factorio_itemsTableAdapter.Update(addedRows))
+                    result = (result + Me._tblFactorioTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -1393,11 +1391,11 @@ Namespace _factorio_itemsDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As _factorio_itemsDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._factorio_itemsTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet._factorio_items.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._tblFactorioTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tblFactorio.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._factorio_itemsTableAdapter.Update(deletedRows))
+                    result = (result + Me._tblFactorioTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -1442,8 +1440,8 @@ Namespace _factorio_itemsDataSetTableAdapters
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._factorio_itemsTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._factorio_itemsTableAdapter.Connection) = false)) Then
+            If ((Not (Me._tblFactorioTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._tblFactorioTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
@@ -1479,13 +1477,13 @@ Namespace _factorio_itemsDataSetTableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._factorio_itemsTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._factorio_itemsTableAdapter, Me._factorio_itemsTableAdapter.Connection)
-                    Me._factorio_itemsTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
-                    Me._factorio_itemsTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
-                    If Me._factorio_itemsTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._factorio_itemsTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._factorio_itemsTableAdapter.Adapter)
+                If (Not (Me._tblFactorioTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._tblFactorioTableAdapter, Me._tblFactorioTableAdapter.Connection)
+                    Me._tblFactorioTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._tblFactorioTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._tblFactorioTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._tblFactorioTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._tblFactorioTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -1548,9 +1546,9 @@ Namespace _factorio_itemsDataSetTableAdapters
                 If workConnOpened Then
                     workConnection.Close
                 End If
-                If (Not (Me._factorio_itemsTableAdapter) Is Nothing) Then
-                    Me._factorio_itemsTableAdapter.Connection = CType(revertConnections(Me._factorio_itemsTableAdapter),Global.System.Data.OleDb.OleDbConnection)
-                    Me._factorio_itemsTableAdapter.Transaction = Nothing
+                If (Not (Me._tblFactorioTableAdapter) Is Nothing) Then
+                    Me._tblFactorioTableAdapter.Connection = CType(revertConnections(Me._tblFactorioTableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._tblFactorioTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

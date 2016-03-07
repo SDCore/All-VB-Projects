@@ -1,0 +1,11 @@
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\bin\Debug\factorio-items.accdb
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\bin\Debug\FinalFinalProject.exe.config
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\bin\Debug\FinalFinalProject.exe
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\bin\Debug\FinalFinalProject.pdb
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\bin\Debug\FinalFinalProject.xml
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\obj\x86\Debug\FinalFinalProject.Resources.resources
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\obj\x86\Debug\FinalFinalProject.vbproj.GenerateResource.Cache
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\obj\x86\Debug\FinalFinalProject.exe
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\obj\x86\Debug\FinalFinalProject.xml
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\obj\x86\Debug\FinalFinalProject.pdb
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\obj\x86\Debug\FinalFinalProject.frmFactorioItems.resources
