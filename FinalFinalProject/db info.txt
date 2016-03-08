@@ -7,12 +7,12 @@ amount-given: ##
 base-research: AAA
 
 crafting type (subprocedure):
-0 = hand --
-2 = assembly machine 2 --1
-4 = pumpjack --2
-5 = chemical plant --3
-6 = stone furnace --4
-9 = other --5
+0 = hand
+1 = assembly machine 2
+2 = pumpjack
+3 = chemical plant
+4 = stone furnace
+5 = other
 
 outputs:
 total crafting time

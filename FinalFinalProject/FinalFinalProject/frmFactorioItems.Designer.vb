@@ -23,13 +23,12 @@ Partial Class frmFactorioItems
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim IDLabel As System.Windows.Forms.Label
         Dim Item_nameLabel As System.Windows.Forms.Label
         Dim Crafting_timeLabel As System.Windows.Forms.Label
-        Dim Crafting_typeLabel As System.Windows.Forms.Label
         Dim Amount_givenLabel As System.Windows.Forms.Label
         Dim Base_researchLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFactorioItems))
+        Dim IDLabel As System.Windows.Forms.Label
         Me._factorio_itemsDataSet = New FinalFinalProject._factorio_itemsDataSet()
         Me.TblFactorioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblFactorioTableAdapter = New FinalFinalProject._factorio_itemsDataSetTableAdapters.tblFactorioTableAdapter()
@@ -49,37 +48,27 @@ Partial Class frmFactorioItems
         Me.TblFactorioBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.IDComboBox = New System.Windows.Forms.ComboBox()
         Me.Item_nameTextBox = New System.Windows.Forms.TextBox()
         Me.Crafting_timeTextBox = New System.Windows.Forms.TextBox()
-        Me.Crafting_typeTextBox = New System.Windows.Forms.TextBox()
         Me.Amount_givenTextBox = New System.Windows.Forms.TextBox()
         Me.Base_researchTextBox = New System.Windows.Forms.TextBox()
         Me.btnCalculate = New System.Windows.Forms.Button()
         Me.lblAverageTime = New System.Windows.Forms.Label()
         Me.lblTotalCraftingTime = New System.Windows.Forms.Label()
         Me.lblCraftingType = New System.Windows.Forms.Label()
-        IDLabel = New System.Windows.Forms.Label()
+        Me.IDComboBox = New System.Windows.Forms.ComboBox()
+        Me.Crafting_typeLabel1 = New System.Windows.Forms.Label()
         Item_nameLabel = New System.Windows.Forms.Label()
         Crafting_timeLabel = New System.Windows.Forms.Label()
-        Crafting_typeLabel = New System.Windows.Forms.Label()
         Amount_givenLabel = New System.Windows.Forms.Label()
         Base_researchLabel = New System.Windows.Forms.Label()
+        IDLabel = New System.Windows.Forms.Label()
         CType(Me._factorio_itemsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblFactorioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblFactorioBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TblFactorioBindingNavigator.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'IDLabel
-        '
-        IDLabel.AutoSize = True
-        IDLabel.Location = New System.Drawing.Point(9, 206)
-        IDLabel.Name = "IDLabel"
-        IDLabel.Size = New System.Drawing.Size(18, 13)
-        IDLabel.TabIndex = 4
-        IDLabel.Text = "ID"
         '
         'Item_nameLabel
         '
@@ -99,15 +88,6 @@ Partial Class frmFactorioItems
         Crafting_timeLabel.TabIndex = 7
         Crafting_timeLabel.Text = "Crafting Time"
         '
-        'Crafting_typeLabel
-        '
-        Crafting_typeLabel.AutoSize = True
-        Crafting_typeLabel.Location = New System.Drawing.Point(9, 285)
-        Crafting_typeLabel.Name = "Crafting_typeLabel"
-        Crafting_typeLabel.Size = New System.Drawing.Size(75, 13)
-        Crafting_typeLabel.TabIndex = 9
-        Crafting_typeLabel.Text = "Crafting Type"
-        '
         'Amount_givenLabel
         '
         Amount_givenLabel.AutoSize = True
@@ -120,7 +100,7 @@ Partial Class frmFactorioItems
         'Base_researchLabel
         '
         Base_researchLabel.AutoSize = True
-        Base_researchLabel.Location = New System.Drawing.Point(225, 285)
+        Base_researchLabel.Location = New System.Drawing.Point(9, 287)
         Base_researchLabel.Name = "Base_researchLabel"
         Base_researchLabel.Size = New System.Drawing.Size(80, 13)
         Base_researchLabel.TabIndex = 13
@@ -277,15 +257,6 @@ Partial Class frmFactorioItems
         Me.lblTitle.TabIndex = 4
         Me.lblTitle.Text = "Item Manager"
         '
-        'IDComboBox
-        '
-        Me.IDComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblFactorioBindingSource, "ID", True))
-        Me.IDComboBox.FormattingEnabled = True
-        Me.IDComboBox.Location = New System.Drawing.Point(12, 222)
-        Me.IDComboBox.Name = "IDComboBox"
-        Me.IDComboBox.Size = New System.Drawing.Size(210, 21)
-        Me.IDComboBox.TabIndex = 5
-        '
         'Item_nameTextBox
         '
         Me.Item_nameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblFactorioBindingSource, "item-name", True))
@@ -302,14 +273,6 @@ Partial Class frmFactorioItems
         Me.Crafting_timeTextBox.Size = New System.Drawing.Size(210, 22)
         Me.Crafting_timeTextBox.TabIndex = 8
         '
-        'Crafting_typeTextBox
-        '
-        Me.Crafting_typeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblFactorioBindingSource, "crafting-type", True))
-        Me.Crafting_typeTextBox.Location = New System.Drawing.Point(12, 301)
-        Me.Crafting_typeTextBox.Name = "Crafting_typeTextBox"
-        Me.Crafting_typeTextBox.Size = New System.Drawing.Size(210, 22)
-        Me.Crafting_typeTextBox.TabIndex = 10
-        '
         'Amount_givenTextBox
         '
         Me.Amount_givenTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblFactorioBindingSource, "amount-given", True))
@@ -321,9 +284,9 @@ Partial Class frmFactorioItems
         'Base_researchTextBox
         '
         Me.Base_researchTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblFactorioBindingSource, "base-research", True))
-        Me.Base_researchTextBox.Location = New System.Drawing.Point(228, 301)
+        Me.Base_researchTextBox.Location = New System.Drawing.Point(12, 301)
         Me.Base_researchTextBox.Name = "Base_researchTextBox"
-        Me.Base_researchTextBox.Size = New System.Drawing.Size(215, 22)
+        Me.Base_researchTextBox.Size = New System.Drawing.Size(431, 22)
         Me.Base_researchTextBox.TabIndex = 14
         '
         'btnCalculate
@@ -362,15 +325,45 @@ Partial Class frmFactorioItems
         Me.lblCraftingType.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCraftingType.Location = New System.Drawing.Point(135, 429)
         Me.lblCraftingType.Name = "lblCraftingType"
-        Me.lblCraftingType.Size = New System.Drawing.Size(185, 21)
+        Me.lblCraftingType.Size = New System.Drawing.Size(81, 21)
         Me.lblCraftingType.TabIndex = 18
-        Me.lblCraftingType.Text = "Crafted In: TYPEOFCRAFT"
+        Me.lblCraftingType.Text = "Crafted In:"
+        '
+        'IDLabel
+        '
+        IDLabel.AutoSize = True
+        IDLabel.Location = New System.Drawing.Point(9, 206)
+        IDLabel.Name = "IDLabel"
+        IDLabel.Size = New System.Drawing.Size(18, 13)
+        IDLabel.TabIndex = 18
+        IDLabel.Text = "ID"
+        '
+        'IDComboBox
+        '
+        Me.IDComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblFactorioBindingSource, "ID", True))
+        Me.IDComboBox.FormattingEnabled = True
+        Me.IDComboBox.Location = New System.Drawing.Point(12, 222)
+        Me.IDComboBox.Name = "IDComboBox"
+        Me.IDComboBox.Size = New System.Drawing.Size(210, 21)
+        Me.IDComboBox.TabIndex = 19
+        '
+        'Crafting_typeLabel1
+        '
+        Me.Crafting_typeLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TblFactorioBindingSource, "crafting-type", True))
+        Me.Crafting_typeLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Crafting_typeLabel1.Location = New System.Drawing.Point(218, 429)
+        Me.Crafting_typeLabel1.Name = "Crafting_typeLabel1"
+        Me.Crafting_typeLabel1.Size = New System.Drawing.Size(225, 23)
+        Me.Crafting_typeLabel1.TabIndex = 20
         '
         'frmFactorioItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(463, 457)
+        Me.ClientSize = New System.Drawing.Size(463, 455)
+        Me.Controls.Add(Me.Crafting_typeLabel1)
+        Me.Controls.Add(IDLabel)
+        Me.Controls.Add(Me.IDComboBox)
         Me.Controls.Add(Me.lblCraftingType)
         Me.Controls.Add(Me.lblTotalCraftingTime)
         Me.Controls.Add(Me.lblAverageTime)
@@ -379,18 +372,15 @@ Partial Class frmFactorioItems
         Me.Controls.Add(Me.Base_researchTextBox)
         Me.Controls.Add(Amount_givenLabel)
         Me.Controls.Add(Me.Amount_givenTextBox)
-        Me.Controls.Add(Crafting_typeLabel)
-        Me.Controls.Add(Me.Crafting_typeTextBox)
         Me.Controls.Add(Crafting_timeLabel)
         Me.Controls.Add(Me.Crafting_timeTextBox)
         Me.Controls.Add(Item_nameLabel)
         Me.Controls.Add(Me.Item_nameTextBox)
-        Me.Controls.Add(IDLabel)
-        Me.Controls.Add(Me.IDComboBox)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TblFactorioBindingNavigator)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmFactorioItems"
         Me.Text = "Factorio Item Manager"
         CType(Me._factorio_itemsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -422,15 +412,15 @@ Partial Class frmFactorioItems
     Friend WithEvents TblFactorioBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lblTitle As System.Windows.Forms.Label
-    Friend WithEvents IDComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Item_nameTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Crafting_timeTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Crafting_typeTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Amount_givenTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Base_researchTextBox As System.Windows.Forms.TextBox
     Friend WithEvents btnCalculate As System.Windows.Forms.Button
     Friend WithEvents lblAverageTime As System.Windows.Forms.Label
     Friend WithEvents lblTotalCraftingTime As System.Windows.Forms.Label
     Friend WithEvents lblCraftingType As System.Windows.Forms.Label
+    Friend WithEvents IDComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Crafting_typeLabel1 As System.Windows.Forms.Label
 
 End Class

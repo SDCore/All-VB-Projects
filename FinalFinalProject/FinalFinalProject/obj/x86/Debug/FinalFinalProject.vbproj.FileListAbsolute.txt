@@ -9,3 +9,4 @@ E:\Advanced VB\FinalFinalProject\FinalFinalProject\obj\x86\Debug\FinalFinalProje
 E:\Advanced VB\FinalFinalProject\FinalFinalProject\obj\x86\Debug\FinalFinalProject.xml
 E:\Advanced VB\FinalFinalProject\FinalFinalProject\obj\x86\Debug\FinalFinalProject.pdb
 E:\Advanced VB\FinalFinalProject\FinalFinalProject\obj\x86\Debug\FinalFinalProject.frmFactorioItems.resources
+E:\Advanced VB\FinalFinalProject\FinalFinalProject\obj\x86\Debug\FinalFinalProject.SplashScreen1.resources

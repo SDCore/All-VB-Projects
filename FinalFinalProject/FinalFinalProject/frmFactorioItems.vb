@@ -28,6 +28,16 @@ Public Class frmFactorioItems
             Close()
         End Try
 
+        ' Select / Connecting to database
+        Dim strSQL As String = "SELECT * FROM tblFactorio"
+        Dim strPath As String = "Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=E:\Advanced VB\FinalProject\FinalProject\factorio-items.accdb"
+        Dim odaFactorioItem As New OleDb.OleDbDataAdapter(strSQL, strPath)
+        Dim datFactorioItemFill As New DataTable
+        odaFactorioItem.Fill(datFactorioItemFill)
+        odaFactorioItem.Dispose()
+
+
+
     End Sub
 
     Private Sub btnCalculate_Click(sender As System.Object, e As System.EventArgs) Handles btnCalculate.Click
@@ -55,47 +65,22 @@ Public Class frmFactorioItems
         ' Get selected ID from ComboBox
         Dim intIDRow As Integer = IDComboBox.SelectedIndex + 1
 
-        ' Calculations
-        Dim decCraftingType As Decimal
-        Dim strCraftingType As String
+        Dim strCraftingType As String = Crafting_typeLabel1.Text
 
-        ' Getting Crafting Type
-        decCraftingType = CDec(datFactorioItemFill.Rows(intIDRow)("crafting-type"))
-
-        Select Case decCraftingType
+        Select Case strCraftingType
             Case 0
-                strCraftingType = "Hand"
+                Crafting_typeLabel1.Text = "Hand"
             Case 1
-                strCraftingType = "Assembly Machine 1"
+                Crafting_typeLabel1.Text = "Assembly Machine 2"
             Case 2
-                strCraftingType = "Assembly Machine 2"
+                Crafting_typeLabel1.Text = "Pumpjack"
             Case 3
-                strCraftingType = "Assembly Machine 3"
+                Crafting_typeLabel1.Text = "Chemical Plant"
             Case 4
-                strCraftingType = "Pumpjack"
+                Crafting_typeLabel1.Text = "Stone Furnace"
             Case 5
-                strCraftingType = "Chemical Plant"
-            Case 6
-                strCraftingType = "Stone Furnace"
-            Case 7
-                strCraftingType = "Steel Furnace"
-            Case 8
-                strCraftingType = "Electronic Furnace"
-            Case 9
-                strCraftingType = "Other"
+                Crafting_typeLabel1.Text = "Other"
         End Select
-
-        lblCraftingType.Text = strCraftingType
-
-        ' Getting the amount in the selected major and the name of the selected major (from combobox selection)
-        'decStudentsInMajor = CDec(datCollegeInfo.Rows(intDegreeRow)("Number in Degree"))
-        'strSelectedMajor = CStr(datCollegeInfo.Rows(intDegreeRow)("Degree"))
-
-        ' Calculating percentage in the selected major)
-        'decPercentage = decStudentsInMajor / decTotal
-
-        ' Outputting the percentage to "Percentage of Students in ______: 00%" label
-        'lblStudentsInSelectedMajor.Text = "Percentage of Students in " & strSelectedMajor & ": " & decPercentage.ToString("P")
 
     End Sub
 End Class

@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("FinalFinalProject")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Mundelein High School")> 
-<Assembly: AssemblyProduct("FinalFinalProject")> 
-<Assembly: AssemblyCopyright("Copyright © Mundelein High School 2016")> 
+<Assembly: AssemblyTitle("Factorio Item Manager")> 
+<Assembly: AssemblyDescription("Manage Factorio Items")> 
+<Assembly: AssemblyCompany("Jayit Inc.")> 
+<Assembly: AssemblyProduct("Factorio Item Manager")> 
+<Assembly: AssemblyCopyright("Copyright © Jayit Studio 2016")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
