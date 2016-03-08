@@ -4,9 +4,7 @@
 ' Purpose: To display information based on item information, and to showcase all the things learned in the class.
 
 ' --TODO--
-' Output total amount of crafting time
-' Output average amount of crafting time
-' MORE LATER
+
 
 Public Class frmFactorioItems
 
@@ -52,9 +50,7 @@ Public Class frmFactorioItems
 
         ' Calculation Variables
         Dim decAverageTotal As Decimal
-        Dim decTotalTotal As Decimal
         Dim decTotal As Decimal
-        Dim decAverageTime As Decimal
 
         For intCount = 0 To datFactorioItemFill.Rows.Count - 1
             decTotal = decTotal + datFactorioItemFill(intCount)("crafting-time")

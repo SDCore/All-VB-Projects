@@ -325,7 +325,7 @@ Partial Class frmFactorioItems
         '
         Me.lblCraftingType.AutoSize = True
         Me.lblCraftingType.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCraftingType.Location = New System.Drawing.Point(135, 429)
+        Me.lblCraftingType.Location = New System.Drawing.Point(143, 429)
         Me.lblCraftingType.Name = "lblCraftingType"
         Me.lblCraftingType.Size = New System.Drawing.Size(81, 21)
         Me.lblCraftingType.TabIndex = 18
