@@ -250,8 +250,10 @@ Partial Class frmFactorioItems
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
+        Me.lblTitle.BackColor = System.Drawing.Color.Transparent
         Me.lblTitle.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(12, 144)
+        Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(202, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.lblTitle.Location = New System.Drawing.Point(125, 144)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(199, 37)
         Me.lblTitle.TabIndex = 4

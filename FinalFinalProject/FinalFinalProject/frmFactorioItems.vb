@@ -50,6 +50,21 @@ Public Class frmFactorioItems
         odaFactorioItem.Fill(datFactorioItemFill)
         odaFactorioItem.Dispose()
 
+        ' Calculation Variables
+        Dim decAverageTotal As Decimal
+        Dim decTotalTotal As Decimal
+        Dim decTotal As Decimal
+        Dim decAverageTime As Decimal
+
+        For intCount = 0 To datFactorioItemFill.Rows.Count - 1
+            decTotal = decTotal + datFactorioItemFill(intCount)("crafting-time")
+        Next
+
+        decAverageTotal = decTotal / datFactorioItemFill.Rows.Count
+
+        lblAverageTime.Text = "Average Crafting Time: " & decAverageTotal.ToString("f2") & "s"
+        lblTotalCraftingTime.Text = "Total Crafting Time: " & decTotal.ToString("f2") & "s"
+
     End Sub
 
     Private Sub TblFactorioBindingNavigator_RefreshItems(sender As System.Object, e As System.EventArgs) Handles TblFactorioBindingNavigator.RefreshItems

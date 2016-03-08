@@ -61,7 +61,7 @@ Public Class frmCollegeMajors
         decStudentsInMajor = CDec(datCollegeInfo.Rows(intDegreeRow)("Number in Degree"))
         strSelectedMajor = CStr(datCollegeInfo.Rows(intDegreeRow)("Degree"))
 
-        ' Calculating percentage in the selected major)
+        ' Calculating percentage in the selected major
         decPercentage = decStudentsInMajor / decTotal
 
         ' Outputting the percentage to "Percentage of Students in ______: 00%" label
